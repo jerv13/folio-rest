@@ -1,0 +1,18 @@
+{
+    title: '',
+    subtitle: '',
+    address: {
+        address: '',
+        addressMore: '',
+        city: '',
+        state: '',
+        zip: ''
+    },
+    sections: [
+        {
+            title: '',
+            data: '',
+            view: ''
+        }
+    ]
+}
