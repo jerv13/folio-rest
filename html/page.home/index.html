@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html id="ng-app"ng-app="page.home">
+    <head>
+        <title>Home</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Language" content="en" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <link rel="stylesheet" href="../css/core.css" />
+        <link rel="stylesheet" href="../css/module.header.css" />
+
+        <script src="../js.lib/angular/angular-1.2.6/angular.min.js"></script>
+        <script src="../js.lib/angular/angular-1.2.6/angular-route.min.js"></script>
+        <script src='../js.lib/jquery/jquery-1.10.2.min.js'></script>
+
+        <script src="../js.core/core.js"></script>
+
+        <script src="home.js"></script>
+        <script src="../module.header/module.js"></script>
+
+    </head>
+    <body ng-controller="homePageController">
+        <div id="jrv_page">
+            <header id="jrv_page_header">
+
+                <div module-header-include data="moduleHeaderData"></div>
+
+                *{{moduleHeaderData.data.title}}*
+            </header>
+
+            <nav id="jrv_page_nav">
+
+                <section class="module_nav">
+                    <header>NAV Heading</header>
+                    <div>
+                        <ul>
+                            <li><div>One</div></li>
+                            <li><div>Two</div></li>
+                            <li>
+                                <div>Three(sub)</div>
+                                <ul>
+                                    <li><div>four</div></li>
+                                    <li><div>five</div></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <footer>NAV FOOTER</footer>
+                </section>
+
+            </nav>
+
+            <div id="jrv_page_content">
+
+                <div id="jrv_page_content_1">
+
+                </div>
+
+                <div id="jrv_page_content_2">
+
+                    <section class="module_contact">
+                        <header>Contact Heading</header>
+                        <div>{{test}}</div>
+                        <footer>Contact FOOTER</footer>
+                    </section>
+
+                </div>
+
+                <div id="jrv_page_content_3">
+
+                    <section class="module_res">
+                        <header>Content Heading</header>
+                        <article>CONTENT</article>
+                        <footer>Content FOOTER</footer>
+                    </section>
+
+                </div>
+
+                <div id="jrv_page_content_4">
+                    <aside class="module_aside"></aside>
+                </div>
+
+                <div id="jrv_page_content_5"></div>
+            </div>
+
+            <footer id="jrv_page_footer">
+
+                <section class="module_footer">
+                    <div class="header">footer Heading</div>
+                    <div class="content">
+                        <ul>
+                            <li><div>One</div></li>
+                            <li><div>Two</div></li>
+                            <li>
+                                <div>Three(sub)</div>
+                                <ul>
+                                    <li><div>four</div></li>
+                                    <li><div>five</div></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer">footer FOOTER</div>
+                </section>
+
+            </footer>
+        </div>
+    </body>
+</html>

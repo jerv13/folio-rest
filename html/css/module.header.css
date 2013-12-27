@@ -1,0 +1,44 @@
+.module_header {
+    background-color: #DDDDDD;
+    border: .1em solid #000000;
+    border-radius:.5em;
+    display: block;
+    margin: 0em;
+    overflow: hidden;
+    padding: .5em;
+    position: relative;
+    width: 20em;
+}
+.module_header:after {
+    clear:both;
+}
+
+.module_header .header {
+    font-weight: bold;
+    padding: .2em 0 0 0;
+}
+
+.module_header .content {
+    padding: .2em 0 0 .2em;
+}
+
+.module_header .footer {
+    color: #999999;
+    font-size: .8em;
+    padding: .2em 0 0 0;
+}
+
+.module_header .edit {
+    background-color: rgba(255,255,255,.5);
+    border: .1em solid rgba(255,0,0,.5);
+    border-radius:.5em;
+    color: rgba(255,0,0,.5);
+    cursor: pointer;
+    font-size: .8em;
+    padding: .1em;
+    position: absolute; top: 0em; right: 0em;
+}
+
+.module_header div .editing {
+    border: .1em dotted #999999;
+}
