@@ -33,10 +33,7 @@ Nice to haves:
 
 ToDo
 ----
-- Create data files
-- Populate page data
 - Page Design
-
 - Create basic get services (PHP)
 
 NOTES
