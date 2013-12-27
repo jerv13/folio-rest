@@ -34,9 +34,10 @@ Nice to haves:
 ToDo
 ----
 - Create data files
-- Create basic get services (PHP)
 - Populate page data
 - Page Design
+
+- Create basic get services (PHP)
 
 NOTES
 -----
