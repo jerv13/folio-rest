@@ -4,8 +4,9 @@ Features
         - Playfull - UFO Game
         - Business - Crisp and professional
         
-    - Small display friendly
-    
+    - Small display friendly (mobile device)
+        - Media queries
+        
     - Content:
         - resume
         - skills
@@ -25,7 +26,10 @@ Features
             - res
             - about
             - skills
-        
+        - Game
+
+ToDo
+----
 
 NOTES
 -----
@@ -41,15 +45,7 @@ NOTES
     - CSS
     - HTML
     - API
-        
-        site
-            resume
-            skills
-            about
-            contact
-            
-        
-    
+   
 - Layout save
     - Cookie or local storage
     -? Layout save to server (later with admin role.. requires auth and roles)
