@@ -15,6 +15,7 @@
         <script src='../js.lib/jquery/jquery-1.10.2.min.js'></script>
 
         <script src="../js.core/core.js"></script>
+        <script src="../js.core/service.http.js"></script>
 
         <script src="home.js"></script>
         <script src="../module.header/module.js"></script>
@@ -23,14 +24,11 @@
     <body ng-controller="homePageController">
         <div id="jrv_page">
             <header id="jrv_page_header">
-
                 <div module-header-include data="moduleHeaderData"></div>
-
-                *{{moduleHeaderData.data.title}}*
             </header>
 
             <nav id="jrv_page_nav">
-
+                ---{{resume | json}}---
                 <section class="module_nav">
                     <header>NAV Heading</header>
                     <div>

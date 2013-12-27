@@ -63,7 +63,7 @@
                 "intro": "",
                 "tagline": ""
             }
-        },
+        }
     },
     "interests": {
         "id": "0",
@@ -110,7 +110,7 @@
                     "intro": "",
                     "tagline": ""
                 }
-            },
+            }
         ]
     },
     "experience": {
@@ -129,7 +129,7 @@
                 },
                 "dateRange": {
                     "start": "2012-08-01T00:00:00Z",
-                    "end": "",
+                    "end": ""
                 },
                 "company": {
                     "name": "",
@@ -146,7 +146,7 @@
                 },
                 "dateRange": {
                     "start": "2009-12-15T00:00:00Z",
-                    "end": "2009-12-15T00:00:00Z",
+                    "end": "2009-12-15T00:00:00Z"
                 },
                 "company": {
                     "name": "",
@@ -163,7 +163,7 @@
                 },
                 "dateRange": {
                     "start": "2009-12-15T00:00:00Z",
-                    "end": "2009-12-15T00:00:00Z",
+                    "end": "2009-12-15T00:00:00Z"
                 },
                 "company": {
                     "name": "",
@@ -190,13 +190,17 @@
                 },
                 "dateRange": {
                     "start": "2002-12-15T00:00:00Z",
-                    "end": "2003-12-15T00:00:00Z",
+                    "end": "2003-12-15T00:00:00Z"
                 },
                 "company": {
                     "name": "University of Advancing Technology",
                     "summary": "",
                     "address": null,
                     "contacts": []
+                },
+                "degree": {
+                    "type": "Assoc. of Arts",
+                    "data": "2003-12-15T00:00:00Z"
                 }
             }
         ]

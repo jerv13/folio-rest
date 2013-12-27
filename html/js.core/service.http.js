@@ -1,84 +1,100 @@
-angular.module('service.http', ['$http'])
-    .factory('service.http', function($http) {
+angular.module('service.http', [])
+    .factory('coreHttp', ['$http', function($http) {
 
-    var Http = function() {
+        var CoreHttp = function() {
 
-        var self = this;
-        self.defaultHeaders = {};
-        self.defaultMessage = 'An unknown error has occurred.';
+            var self = this;
+            self.defaultHeaders = {};
+            self.defaultMessage = 'An unknown error has occurred.';
+            self.invalidDataMessage = 'Server data was not return in a valid format.';
+            self.comErrorMessage = 'There was an error talking to the server.';
 
-        self.buildHeaders = function(headers) {
+            self.buildHeaders = function(headers) {
 
-            if (typeof(headers) === 'undefined') {
+                if (typeof(headers) === 'undefined') {
 
-                return self.defaultHeaders;
-            }
+                    return self.defaultHeaders;
+                }
 
-            return headers;
-        };
+                return headers;
+            };
 
-        self.get = function(url, data, onSucces, onFail, headers) {
-            //@todo
-        };
+            self.get = function(url, data, onSuccess, onFail, headers) {
+                var config = {
+                    method: 'GET',
+                    url: url,
+                    params: data,
+                    headers: self.buildHeaders(headers)
+                };
 
-        self.post = function() {
-            //@todo
-        };
+                self.execute(config, onSuccess, onFail);
+            };
 
-        self.put = function() {
-            //@todo
-        };
+            self.post = function(url, data, onSuccess, onFail, headers) {
+                //@todo
+            };
 
-        self.del = function() {
-            //@todo
-        };
+            self.put = function(url, data, onSuccess, onFail, headers) {
+                //@todo
+            };
 
-        self.execute = function(config, onSuccess, onFail) {
+            self.del = function(url, data, onSuccess, onFail, headers) {
+                //@todo
+            };
 
-            config.headers = self.buildHeaders(config.headers);
+            self.execute = function(config, onSuccess, onFail) {
 
-            $http(config).
-                success(function(data, status, headers, config) {
+                config.headers = self.buildHeaders(config.headers);
 
-                if (typeof(data) !== 'object' || typeof(data.code) === 'undefined' || typeof(data.message) === 'undefined' || typeof(data.data) === 'undefined') {
+                $http(config).
+                    success(function(data, status, headers, config) {
 
-                    if (typeof(onFail) === 'function') {
+                    if (typeof(data) !== 'object' || typeof(data.code) === 'undefined' || typeof(data.message) === 'undefined' || typeof(data.data) === 'undefined') {
 
-                        onFail({code: 500, message: 'Server data was not return in a valid format.'});
+                        if (typeof(onFail) === 'function') {
+
+                            onFail({code: 500, message: self.invalidDataMessage});
+                        }
+                        return;
+                    }
+
+                    if (data.code > 0 || status !== 200) {
+
+                        if (!data.message) {
+
+                            data.message = self.defaultMessage;
+                        }
+
+                        if (!data.code) {
+
+                            data.code = status;
+                        }
+
+                        if (typeof(onFail) === 'function') {
+                            onFail({code: data.code, message: data.message});
+                        }
+                        return;
+                    }
+
+                    if ((typeof(onSuccess) === 'function')) {
+
+                        onSuccess(data.data, config);
+
                     }
                     return;
-                }
+                }).
+                    error(function(data, status, headers, config) {
 
-                if (data.code > 0) {
-
-                    if(!data.message){
-
-                        data.message = self.defaultMessage
-                    }
-
+                    console.log(data);
                     if (typeof(onFail) === 'function') {
 
-                        onFail({code: data.code, message: data.message});
+                        onFail({code: status, message: self.comErrorMessage});
                     }
                     return;
-                }
+                });
 
-                if ((typeof(onSuccess) === 'function')) {
-
-                    onSuccess(data.data, config);
-
-                }
-                return;
-            }).
-                error(function(data, status, headers, config) {
-
-                if (typeof(onFail) === 'function') {
-
-                    onFail({code: status, message: 'There was an error talking to the server.'});
-                }
-                return;
-            });
-
+            };
         };
-    };
-});
+
+        return new CoreHttp();
+    }]);
