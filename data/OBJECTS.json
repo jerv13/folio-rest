@@ -12,6 +12,7 @@
         "intro": "",
         "tagline": ""
     },
+
     "published": {
         "idUserAuthor": "",
         "published": true,
@@ -26,11 +27,11 @@
         "idUser": "",
         "history": []
     },
-    "acl": {},
     "dateRange": {
         "start": "2009-12-15T00:00:00Z",
         "end": "2009-12-15T00:00:00Z"
     },
+    
     "address": {
         "address": "",
         "addressMore": "",
@@ -49,5 +50,7 @@
         "summary": "",
         "address": null,
         "contacts": []
-    }
+    },
+    
+    "acl": {}
 }
