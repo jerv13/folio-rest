@@ -14,13 +14,16 @@
         <script src="../js.lib/angular/angular-1.2.6/angular-route.min.js"></script>
         <script src='../js.lib/jquery/jquery-1.10.2.min.js'></script>
 
+        <!-- server based configurations -->
+        <script src="http://localhost/@folioREST/folioREST/server.php/server.config.php?returntype=javascript&varname=jfolioServerConfig"></script>
+
         <script src="../js.core/jfolio.config.js"></script>
         <script src="../js.core/jfolio.core.js"></script>
         <script src="../js.core/jfolio.http.js"></script>
 
         <script src="home.js"></script>
-        <script src="../module.header/module.js"></script>
-        <script src="../module.res/module.js"></script>
+        <script src="../module/header/module.js"></script>
+        <script src="../module/resume.biz/module.js"></script>
 
     </head>
     <body ng-controller="homePageController">
@@ -68,8 +71,8 @@
 
                 <div id="jrv_page_content_3">
                     RESUME :
-                    <section class="module_res">
-                        <div module-res1-include></div>
+                    <section class="module resume biz">
+                        <div module-resume-biz-include></div>
                     </section>
                     : RESUME
                 </div>

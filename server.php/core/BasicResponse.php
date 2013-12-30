@@ -1,6 +1,6 @@
 <?php
 class BasicResponse {
-    
-    public $code = null; // int
+
+    public $code = 200; // int
     public $message = ''; // string
 }

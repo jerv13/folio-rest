@@ -1,0 +1,12 @@
+{
+    "coreConfig": {
+    },
+    "httpConfig": {
+        "url": {
+            "scheme": "http",
+            "hostname": "localhost",
+            "port": "",
+            "basepath": "@folioREST/folioREST/server.php"
+        }
+    }
+}

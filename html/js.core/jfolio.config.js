@@ -1,17 +1,4 @@
-/* @todo this is to be loaded from server as a js file */
-var jfolioServerConfig = {
-    coreConfig: {
-    },
-    httpConfig: {
-        url: {
-            scheme: "http",
-            hostname: "localhost",
-            port: "80",
-            basepath: "@folioREST/folioREST/server.php"
-        }
-    }
-};
-/* ------ */
+/* expects a global var: jfolioServerConfig */
 angular.module('jfolio.config', [])
 
     .factory('coreConfig', [function() {
@@ -26,8 +13,8 @@ angular.module('jfolio.config', [])
             var self = this;
 
             self.url = {
-                scheme: "http",
-                hostname: "localhost",
+                scheme: "",
+                hostname: "/",
                 port: "",
                 basepath: "@folioREST/folioREST/server.php"
             };
@@ -41,12 +28,12 @@ angular.module('jfolio.config', [])
 
             self.getFullUrl = function(filepath) {
 
-                return self.url.scheme + "://" + self.url.hostname + (self.url.port.length > 0 ? ":" : "") + self.url.port + "/" + self.url.basepath + "/" + ((typeof(filepath) === "string") ? filepath : "");
+                return self.url.scheme + (self.url.scheme.length > 0 ? "://" : "/") + self.url.hostname + (self.url.port.length > 0 ? ":" : "") + self.url.port + "/" + self.url.basepath + "/" + ((typeof(filepath) === "string") ? filepath : "");
             };
         };
 
         var httpConfig = new HttpConfig();
-        if(jfolioServerConfig.httpConfig){
+        if(jfolioServerConfig && jfolioServerConfig.httpConfig && jfolioServerConfig.httpConfig.url){
 
             httpConfig.setUrl(jfolioServerConfig.httpConfig.url);
         }

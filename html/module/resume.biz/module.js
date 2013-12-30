@@ -1,11 +1,11 @@
-angular.module('module.res1', ['ngRoute', 'jfolio.http'])
+angular.module('module.resume.biz', ['ngRoute', 'jfolio.http'])
 
-    .directive('moduleRes1Include', ['coreHttp', function(coreHttp) {
+    .directive('moduleResumeBizInclude', ['coreHttp', function(coreHttp) {
 
         return {
             restrict: 'A',
             //template : '',
-            templateUrl: '../module.res/module.tpl',
+            templateUrl: '../module/resume.biz/module.tpl',
 
             link: function(scope, element, attrs, ngModel) {
 
@@ -16,11 +16,12 @@ angular.module('module.res1', ['ngRoute', 'jfolio.http'])
                 };
 
                 var fail = function(exception) {
-                    console.log("@todo - real error");
+                    console.log("@todo - real error moduleResumeBizInclude");
                     console.log(exception);
                 };
 
                 var url = coreHttp.buildUrl('resume.php');
+                console.log("URL: " + url);
                 coreHttp.get(url, {key: 'resume'}, success, fail);
 
             }

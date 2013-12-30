@@ -64,7 +64,7 @@ angular.module('jfolio.http', ['jfolio.config'])
                         return;
                     }
 
-                    if (data.code > 0 || status !== 200) {
+                    if (data.code !== 200 || status !== 200) {
 
                         if (!data.message) {
 
@@ -92,6 +92,7 @@ angular.module('jfolio.http', ['jfolio.config'])
                     error(function(data, status, headers, config) {
 
                     console.log(data);
+                    console.log(status);
                     if (typeof(onFail) === 'function') {
 
                         onFail({code: status, message: self.comErrorMessage});

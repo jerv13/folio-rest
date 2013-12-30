@@ -1,7 +1,7 @@
 <?php
 require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'DataResponse.php');
 
-class Test {
+class SiteHeader {
 
     public $view = null; // object
 
@@ -33,4 +33,4 @@ class Test {
     }
 }
 
-Test::main();
+SiteHeader::main();
