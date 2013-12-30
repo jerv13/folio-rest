@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('page.home',['ngRoute','core','service.http','module.header']);
+angular.module('page.home',['ngRoute','jfolio.core','jfolio.http','module.header', 'module.res1']);
 
-var homePageController = function($scope, coreHttp){
+var homePageController = function($scope){
 
     $scope.moduleHeaderData = {
         data : {
@@ -11,22 +11,6 @@ var homePageController = function($scope, coreHttp){
             tagline: 'tagline'
         }
     };
-
-    $scope.resume = null;
-
-    var success = function(data, config){
-
-        $scope.resume = data;
-    };
-
-    var fail = function(exception){
-
-        $scope.resume = exception;
-    };
-
-    coreHttp.get('http://localhost/@folioREST/folioREST/server.php/resume.phpl', {key:'resume'}, success, fail);
-
-
 };
 
-homePageController.$inject = ['$scope', 'coreHttp'];
+homePageController.$inject = ['$scope'];

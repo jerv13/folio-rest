@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('core', [])
+angular.module('jfolio.core', [])
 
-// Content Editable
+    // Content Editable
     .directive('contenteditable', function($sce) {
     return {
         restrict: 'A', // only activate on element attribute

@@ -1,208 +1,206 @@
 {
-    "resume": {
+    "id": "0",
+    "content": {
+        "title": "James C. Jervis",
+        "body": "",
+        "detail": {
+            "subtitle": "Web Application Developer and Web Application Architect",
+            "summary": "",
+            "points": [],
+            "intro": "",
+            "tagline": ""
+        }
+    },
+    "contentAddress": {
         "id": "0",
         "content": {
-            "title": "James C. Jervis",
+            "title": "Address",
             "body": "",
+            "detail": null
+        },
+        "address": {
+            "address": "",
+            "addressMore": "",
+            "city": "",
+            "state": "",
+            "zip": ""
+        }
+    },
+    "contentContact": {
+        "id": "0",
+        "content": {
+            "title": "Contact",
+            "body": "",
+            "detail": null
+        },
+        "contact": {
+            "name": "James C. Jervis",
+            "phone": "636-866-7720",
+            "email": "james@jervdesign.com",
+            "site": "james.jervdesign.com"
+        }
+    },
+    "contentSummary": {
+        "id": "0",
+        "content": {
+            "title": "Summary",
+            "body": "I place great value in being a part of an idealistic, creative team that is pushing the envelope to bring unique concepts to life.  As a developer, I need the opportunity to utilize my application concepts and designs as well as my developer skills.  As an web application architect, my primary goals are user experience, security and extensibility.  As a leader, I understand the technologies, I get involved directly with the team to help them succeed and I am open and honest.",
             "detail": {
-                "subtitle": "Web Application Developer and Web Application Architect",
+                "subtitle": "Web Application Engineer/Developer and Architect",
                 "summary": "",
-                "points": [],
+                "points": [
+                    "Develop, design and implement web applications and solutions.",
+                    "Participate in all aspects of web application development.",
+                    "Work closely with team to provide the best solutions.",
+                    "Rely on experience and judgment to plan and accomplish goals.",
+                    "Prioritize, delegate and control development work flow.",
+                    "Develop and design projects and work directly with clients and executives.",
+                    "Deliver a large degree of creativity and flexibility.",
+                    "Proven ability to deliver under tight budgets and timelines."
+                ],
                 "intro": "",
                 "tagline": ""
             }
+        }
+    },
+    "contentInterests": {
+        "id": "0",
+        "content": {
+            "title": "Interests",
+            "body": "",
+            "detail": null
         },
-        "address": {
-            "id": "0",
-            "content": {
-                "title": "Address",
+        "interests": [
+            {
+                "title": "Web Application Engineer/Developer ",
                 "body": "",
-                "detail": null
-            },
-            "address": {
-                "address": "",
-                "addressMore": "",
-                "city": "",
-                "state": "",
-                "zip": ""
-            }
-        },
-        "contact": {
-            "id": "0",
-            "content": {
-                "title": "Contact",
-                "body": "",
-                "detail": null
-            },
-            "contact": {
-                "name": "James C. Jervis",
-                "phone": "636-866-7720",
-                "email": "james@jervdesign.com",
-                "site": "james.jervdesign.com"
-            }
-        },
-        "summary": {
-            "id": "0",
-            "content": {
-                "title": "Summary",
-                "body": "I place great value in being a part of an idealistic, creative team that is pushing the envelope to bring unique concepts to life.  As a developer, I need the opportunity to utilize my application concepts and designs as well as my developer skills.  As an web application architect, my primary goals are user experience, security and extensibility.  As a leader, I understand the technologies, I get involved directly with the team to help them succeed and I am open and honest.",
                 "detail": {
-                    "subtitle": "Web Application Engineer/Developer and Architect",
+                    "subtitle": "",
                     "summary": "",
                     "points": [
-                        "Develop, design and implement web applications and solutions.",
-                        "Participate in all aspects of web application development.",
-                        "Work closely with team to provide the best solutions.",
-                        "Rely on experience and judgment to plan and accomplish goals.",
-                        "Prioritize, delegate and control development work flow.",
-                        "Develop and design projects and work directly with clients and executives.",
-                        "Deliver a large degree of creativity and flexibility.",
-                        "Proven ability to deliver under tight budgets and timelines."
+                        "PHP/Java/Node.js",
+                        "MySQL/Redis/MongoDB",
+                        "JavaScript/jQuery/AngularJS",
+                        "HTML5/CSS3 "
                     ],
                     "intro": "",
                     "tagline": ""
                 }
+            },
+            {
+                "title": "Web Application Architect/Analyst",
+                "body": "",
+                "detail": {
+                    "subtitle": "",
+                    "summary": "",
+                    "points": [],
+                    "intro": "",
+                    "tagline": ""
+                }
+            },
+            {
+                "title": "Technical Manager",
+                "body": "",
+                "detail": {
+                    "subtitle": "",
+                    "summary": "",
+                    "points": [],
+                    "intro": "",
+                    "tagline": ""
+                }
             }
+        ]
+    },
+    "contentExperience": {
+        "id": "0",
+        "content": {
+            "title": "Experience",
+            "body": "",
+            "detail": null
         },
-        "interests": {
-            "id": "0",
-            "content": {
-                "title": "Interests",
-                "body": "",
-                "detail": null
-            },
-            "interests": [
-                {
-                    "title": "Web Application Engineer/Developer ",
-                    "body": "",
-                    "detail": {
-                        "subtitle": "",
-                        "summary": "",
-                        "points": [
-                            "PHP/Java/Node.js",
-                            "MySQL/Redis/MongoDB",
-                            "JavaScript/jQuery/AngularJS",
-                            "HTML5/CSS3 "
-                        ],
-                        "intro": "",
-                        "tagline": ""
-                    }
+        "positions": [
+            {
+                "content": {
+                    "title": "Web Application Engineer/Developer",
+                    "body": "<b>some body text</b><ul><li>List</li></ul>",
+                    "detail": null
                 },
-                {
-                    "title": "Web Application Architect/Analyst",
-                    "body": "",
-                    "detail": {
-                        "subtitle": "",
-                        "summary": "",
-                        "points": [],
-                        "intro": "",
-                        "tagline": ""
-                    }
+                "dateRange": {
+                    "start": "2012-08-01T00:00:00Z",
+                    "end": ""
                 },
-                {
-                    "title": "Technical Manager",
-                    "body": "",
-                    "detail": {
-                        "subtitle": "",
-                        "summary": "",
-                        "points": [],
-                        "intro": "",
-                        "tagline": ""
-                    }
+                "company": {
+                    "name": "",
+                    "summary": "",
+                    "address": null,
+                    "contacts": []
                 }
-            ]
+            },
+            {
+                "content": {
+                    "title": "Developer and Technical Manager",
+                    "body": "",
+                    "detail": null
+                },
+                "dateRange": {
+                    "start": "2009-12-15T00:00:00Z",
+                    "end": "2009-12-15T00:00:00Z"
+                },
+                "company": {
+                    "name": "",
+                    "summary": "",
+                    "address": null,
+                    "contacts": []
+                }
+            },
+            {
+                "content": {
+                    "title": "Developer and Technical Manager",
+                    "body": "",
+                    "detail": null
+                },
+                "dateRange": {
+                    "start": "2009-12-15T00:00:00Z",
+                    "end": "2009-12-15T00:00:00Z"
+                },
+                "company": {
+                    "name": "",
+                    "summary": "",
+                    "address": null,
+                    "contacts": []
+                }
+            }
+        ]
+    },
+    "contentEducation": {
+        "id": "0",
+        "content": {
+            "title": "Education",
+            "body": "",
+            "detail": null
         },
-        "experience": {
-            "id": "0",
-            "content": {
-                "title": "Experience",
-                "body": "",
-                "detail": null
-            },
-            "positions": [
-                {
-                    "content": {
-                        "title": "Web Application Engineer/Developer",
-                        "body": "<b>some body text</b><ul><li>List</li></ul>",
-                        "detail": null
-                    },
-                    "dateRange": {
-                        "start": "2012-08-01T00:00:00Z",
-                        "end": ""
-                    },
-                    "company": {
-                        "name": "",
-                        "summary": "",
-                        "address": null,
-                        "contacts": []
-                    }
+        "schools": [
+            {
+                "content": {
+                    "title": "Multimedia and Game Design",
+                    "body": "",
+                    "detail": null
                 },
-                {
-                    "content": {
-                        "title": "Developer and Technical Manager",
-                        "body": "",
-                        "detail": null
-                    },
-                    "dateRange": {
-                        "start": "2009-12-15T00:00:00Z",
-                        "end": "2009-12-15T00:00:00Z"
-                    },
-                    "company": {
-                        "name": "",
-                        "summary": "",
-                        "address": null,
-                        "contacts": []
-                    }
+                "dateRange": {
+                    "start": "2002-12-15T00:00:00Z",
+                    "end": "2003-12-15T00:00:00Z"
                 },
-                {
-                    "content": {
-                        "title": "Developer and Technical Manager",
-                        "body": "",
-                        "detail": null
-                    },
-                    "dateRange": {
-                        "start": "2009-12-15T00:00:00Z",
-                        "end": "2009-12-15T00:00:00Z"
-                    },
-                    "company": {
-                        "name": "",
-                        "summary": "",
-                        "address": null,
-                        "contacts": []
-                    }
+                "company": {
+                    "name": "University of Advancing Technology",
+                    "summary": "",
+                    "address": null,
+                    "contacts": []
+                },
+                "degree": {
+                    "type": "Assoc. of Arts",
+                    "data": "2003-12-15T00:00:00Z"
                 }
-            ]
-        },
-        "education": {
-            "id": "0",
-            "content": {
-                "title": "Education",
-                "body": "",
-                "detail": null
-            },
-            "schools": [
-                {
-                    "content": {
-                        "title": "Multimedia and Game Design",
-                        "body": "",
-                        "detail": null
-                    },
-                    "dateRange": {
-                        "start": "2002-12-15T00:00:00Z",
-                        "end": "2003-12-15T00:00:00Z"
-                    },
-                    "company": {
-                        "name": "University of Advancing Technology",
-                        "summary": "",
-                        "address": null,
-                        "contacts": []
-                    },
-                    "degree": {
-                        "type": "Assoc. of Arts",
-                        "data": "2003-12-15T00:00:00Z"
-                    }
-                }
-            ]
-        }
+            }
+        ]
     }
 }

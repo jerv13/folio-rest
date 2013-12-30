@@ -1,5 +1,6 @@
-angular.module('service.http', [])
-    .factory('coreHttp', ['$http', function($http) {
+angular.module('jfolio.http', ['jfolio.config'])
+
+    .factory('coreHttp', ['$http', 'httpConfig', function($http, httpConfig) {
 
         var CoreHttp = function() {
 
@@ -17,6 +18,11 @@ angular.module('service.http', [])
                 }
 
                 return headers;
+            };
+
+            self.buildUrl = function(filepath){
+
+                return httpConfig.getFullUrl(filepath);
             };
 
             self.get = function(url, data, onSuccess, onFail, headers) {

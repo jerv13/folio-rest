@@ -16,8 +16,8 @@ class Resume {
         $data = $dba->read($key);
         $res = new DataResponse();
 
-        $res->code = 500;
-        $res->message = "Something failed";
+        //$res->code = 500;
+        //$res->message = "Something failed";
         $res->data = $data;
 
         Http::buildDefaultHeaders();

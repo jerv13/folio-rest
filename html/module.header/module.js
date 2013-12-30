@@ -1,6 +1,6 @@
-angular.module('module.header', ['ngRoute','core'])
+angular.module('module.header', ['ngRoute','jfolio.core'])
 
-    .directive('moduleHeaderInclude', ['$compile', function($sce) {
+    .directive('moduleHeaderInclude', [function() {
 
         return {
             restrict: 'A',
@@ -10,7 +10,7 @@ angular.module('module.header', ['ngRoute','core'])
                 data: '='
             },
             link: function(scope, element, attrs, ngModel) {
-                console.log("Recognized the directive usage");
+                console.log("Include module.header");
                 scope.editable = true;
                 scope.editing = false;
                 scope.toggleEdit = function() {

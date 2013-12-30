@@ -14,21 +14,22 @@
         <script src="../js.lib/angular/angular-1.2.6/angular-route.min.js"></script>
         <script src='../js.lib/jquery/jquery-1.10.2.min.js'></script>
 
-        <script src="../js.core/core.js"></script>
-        <script src="../js.core/service.http.js"></script>
+        <script src="../js.core/jfolio.config.js"></script>
+        <script src="../js.core/jfolio.core.js"></script>
+        <script src="../js.core/jfolio.http.js"></script>
 
         <script src="home.js"></script>
         <script src="../module.header/module.js"></script>
+        <script src="../module.res/module.js"></script>
 
     </head>
     <body ng-controller="homePageController">
         <div id="jrv_page">
             <header id="jrv_page_header">
-                <div module-header-include data="moduleHeaderData"></div>
+                <!--<div module-header-include data="moduleHeaderData"></div>-->
             </header>
 
             <nav id="jrv_page_nav">
-                ---{{resume | json}}---
                 <section class="module_nav">
                     <header>NAV Heading</header>
                     <div>
@@ -66,13 +67,11 @@
                 </div>
 
                 <div id="jrv_page_content_3">
-
+                    RESUME :
                     <section class="module_res">
-                        <header>Content Heading</header>
-                        <article>CONTENT</article>
-                        <footer>Content FOOTER</footer>
+                        <div module-res1-include></div>
                     </section>
-
+                    : RESUME
                 </div>
 
                 <div id="jrv_page_content_4">
