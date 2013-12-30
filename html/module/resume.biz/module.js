@@ -13,15 +13,18 @@ angular.module('module.resume.biz', ['ngRoute', 'jfolio.http'])
                 var success = function(data, config) {
 
                     scope.resume = data;
+                    scope.loading = false;
                 };
 
                 var fail = function(exception) {
                     console.log("@todo - real error moduleResumeBizInclude");
                     console.log(exception);
+                    scope.loading = false;
                 };
 
                 var url = coreHttp.buildUrl('resume.php');
                 console.log("URL: " + url);
+                scope.loading = true;
                 coreHttp.get(url, {key: 'resume'}, success, fail);
 
             }

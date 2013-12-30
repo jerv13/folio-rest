@@ -5,6 +5,7 @@ angular.module('jfolio.http', ['jfolio.config'])
         var CoreHttp = function() {
 
             var self = this;
+            self.loading = false;
             self.defaultHeaders = {};
             self.defaultMessage = 'An unknown error has occurred.';
             self.invalidDataMessage = 'Server data was not return in a valid format.';
@@ -26,6 +27,9 @@ angular.module('jfolio.http', ['jfolio.config'])
             };
 
             self.get = function(url, data, onSuccess, onFail, headers) {
+
+                self.loading = true;
+
                 var config = {
                     method: 'GET',
                     url: url,
@@ -50,6 +54,7 @@ angular.module('jfolio.http', ['jfolio.config'])
 
             self.execute = function(config, onSuccess, onFail) {
 
+                self.loading = true;
                 config.headers = self.buildHeaders(config.headers);
 
                 $http(config).
@@ -61,6 +66,8 @@ angular.module('jfolio.http', ['jfolio.config'])
 
                             onFail({code: 500, message: self.invalidDataMessage});
                         }
+
+                        self.loading = false;
                         return;
                     }
 
@@ -79,6 +86,8 @@ angular.module('jfolio.http', ['jfolio.config'])
                         if (typeof(onFail) === 'function') {
                             onFail({code: data.code, message: data.message});
                         }
+
+                        self.loading = false;
                         return;
                     }
 
@@ -87,6 +96,8 @@ angular.module('jfolio.http', ['jfolio.config'])
                         onSuccess(data.data, config);
 
                     }
+
+                    self.loading = false;
                     return;
                 }).
                     error(function(data, status, headers, config) {
@@ -97,6 +108,8 @@ angular.module('jfolio.http', ['jfolio.config'])
 
                         onFail({code: status, message: self.comErrorMessage});
                     }
+                    
+                    self.loading = false;
                     return;
                 });
 

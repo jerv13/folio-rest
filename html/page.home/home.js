@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('page.home',['ngRoute','jfolio.core','jfolio.http','module.header', 'module.resume.biz']);
+angular.module('page.home',['ngRoute','module.header', 'module.resume.biz']);
 
 var homePageController = function($scope){
 

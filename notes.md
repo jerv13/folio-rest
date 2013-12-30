@@ -4,8 +4,10 @@ Features
 - 2 Style
     - Business - Crisp and professional
     - Playfull - UFO Game
-- Small display friendly (mobile device)
-    - Media queries
+- Multi display friendly Media queries
+    - mobile device
+    - standard
+    
 - Content:
     - resume
     - skills
@@ -52,6 +54,19 @@ NOTES
 
 - Good schemas
     - CSS
+        theme.mediatype.xxx
+        
+        reset.css
+        
+        default/
+            global.css
+            
+            screen/
+                master.css
+            
+            screen_max45em/
+                master.css
+                
     - HTML
     - API
 

@@ -5,7 +5,7 @@ angular.module('module.header', ['ngRoute','jfolio.core'])
         return {
             restrict: 'A',
             //template : '',
-            templateUrl: '../module.header/module.tpl',
+            templateUrl: '../module/header/module.tpl',
             scope: {
                 data: '='
             },
@@ -15,7 +15,7 @@ angular.module('module.header', ['ngRoute','jfolio.core'])
                 scope.editing = false;
                 scope.toggleEdit = function() {
                     scope.editing = !scope.editing;
-                    console.log(scope.editing);
+                    console.log(scope.data);
                 };
             }
         };
