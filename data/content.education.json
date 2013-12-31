@@ -13,20 +13,56 @@
                 "detail": null
             },
             "dateRange": {
-                "start": "2002-12-15T00:00:00Z",
-                "end": "2003-12-15T00:00:00Z"
+                "start": "2002-12-01T00:00:00Z",
+                "end": "2003-12-01T00:00:00Z"
             },
             "company": {
                 "name": "University of Advancing Technology",
                 "summary": "",
-                "address": null,
+                "address": {
+                    "address": "",
+                    "addressMore": "",
+                    "city": "Tempe",
+                    "state": "AZ",
+                    "zip": ""
+                },
                 "contacts": []
             },
             "degrees": [
                 {
-                    "areaofstudy": "Multimedia and Game Design"",
+                    "areaofstudy": "Multimedia and Game Design",
                     "type": "Assoc. of Arts",
-                    "date": "2003-12-15T00:00:00Z"
+                    "date": "2003-12-01T00:00:00Z"
+                }
+            ]
+        },
+        {
+            "content": {
+                "title": "Visual Communication",
+                "body": "",
+                "detail": null
+            },
+            "dateRange": {
+                "start": "1998-12-01T00:00:00Z",
+                "end": "2000-12-01T00:00:00Z"
+            },
+            "company": {
+                "name": "Southern Illinois University",
+                "summary": "",
+                "address": {
+                    "address": "",
+                    "addressMore": "",
+                    "city": "Carbondale",
+                    "state": "IL",
+                    "zip": ""
+                },
+                "contacts": []
+            },
+            "degrees": [
+                {
+                    "areaofstudy": "Visual Communication",
+                    "type": "Bachelor of Arts",
+                    "date": "2000-12-01T00:00:00Z"
                 }
             ]
         }

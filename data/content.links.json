@@ -1,0 +1,35 @@
+{
+    "id": "0",
+    "content": {
+        "title": "Resources",
+        "body": "",
+        "detail": null
+    },
+    "links": [
+        {
+            "title": "James Creative (Space) Site",
+            "description": "",
+            "url": ""
+        },
+        {
+            "title": "James Professional Site",
+            "description": "",
+            "url": ""
+        },
+        {
+            "title": "Object Oriented Programming",
+            "description": "",
+            "url": "http://en.wikipedia.org/wiki/Object-oriented_programming"
+        },
+        {
+            "title": "SOLID (object-oriented design)",
+            "description": "",
+            "url": "http://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29"
+        },
+        {
+            "title": "Modular Design",
+            "description": "",
+            "url": "http://en.wikipedia.org/wiki/Modular_design"
+        }
+    ]
+}

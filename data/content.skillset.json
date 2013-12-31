@@ -6,11 +6,147 @@
     },
     "skills": [
         {
-            "name": "",
+            "name": "PHP",
             "details": "",
+            "level": 3,
+            "dateSince": "2006-01-01T00:00:00Z",
+            "dateLastUsed": "",
+            "relatedUsed": []
+        },
+        {
+            "name": "MySQL",
+            "details": "",
+            "level": 2,
+            "dateSince": "2008-01-01T00:00:00Z",
+            "dateLastUsed": "",
+            "relatedUsed": []
+        },
+        {
+            "name": "JavaScript",
+            "details": "AngularJs, jQuery",
+            "level": 3,
+            "dateSince": "2003-01-01T00:00:00Z",
+            "dateLastUsed": "",
+            "relatedUsed": []
+        },
+        {
+            "name": "Node.js",
+            "details": "Restify",
             "level": 1,
-            "dataSince": "",
-            "dataLastUsed": "",
+            "dateSince": "2013-01-01T00:00:00Z",
+            "dateLastUsed": "",
+            "relatedUsed": []
+        },
+        {
+            "name": "NoSQL",
+            "details": "Redis MongoDB",
+            "level": 1,
+            "dateSince": "2013-01-01T00:00:00Z",
+            "dateLastUsed": "",
+            "relatedUsed": []
+        },
+        {
+            "name": "Flash/Action Script",
+            "details": "AS2, AS3",
+            "level": 3,
+            "dateSince": "2003-01-01T00:00:00Z",
+            "dateLastUsed": "2010-01-01T00:00:00Z",
+            "relatedUsed": []
+        },
+        {
+            "name": "Java",
+            "details": "Spring Framework",
+            "level": 2,
+            "dateSince": "2012-01-01T00:00:00Z",
+            "dateLastUsed": "",
+            "relatedUsed": []
+        },
+        {
+            "name": "HTML",
+            "details": "HTML5",
+            "level": 3,
+            "dateSince": "2003-01-01T00:00:00Z",
+            "dateLastUsed": "",
+            "relatedUsed": []
+        },
+        {
+            "name": "CSS",
+            "details": "CSS3",
+            "level": 3,
+            "dateSince": "2006-01-01T00:00:00Z",
+            "dateLastUsed": "",
+            "relatedUsed": []
+        },
+        {
+            "name": "XML",
+            "details": "",
+            "level": 3,
+            "dateSince": "2006-01-01T00:00:00Z",
+            "dateLastUsed": "",
+            "relatedUsed": []
+        },
+        {
+            "name": "Web Services",
+            "details": "RESTFULL JSON, SOAP",
+            "level": 3,
+            "dateSince": "2008-01-01T00:00:00Z",
+            "dateLastUsed": "",
+            "relatedUsed": []
+        },
+        {
+            "name": "GIT Version Control",
+            "details": "",
+            "level": 2,
+            "dateSince": "2012-01-01T00:00:00Z",
+            "dateLastUsed": "",
+            "relatedUsed": []
+        },
+        {
+            "name": "SVN Version Control",
+            "details": "",
+            "level": 2,
+            "dateSince": "2008-01-01T00:00:00Z",
+            "dateLastUsed": "",
+            "relatedUsed": []
+        },
+        {
+            "name": "Adobe CS",
+            "details": "CS6",
+            "level": 3,
+            "dateSince": "2002-01-01T00:00:00Z",
+            "dateLastUsed": "",
+            "relatedUsed": []
+        },
+        {
+            "name": "3d Modeling",
+            "details": "3D Studio Max, Blender",
+            "level": 2,
+            "dateSince": "2004-01-01T00:00:00Z",
+            "dateLastUsed": "",
+            "relatedUsed": []
+        },
+        {
+            "name": "Windows",
+            "details": "",
+            "level": 4,
+            "dateSince": "1998-01-01T00:00:00Z",
+            "dateLastUsed": "",
+            "relatedUsed": []
+        },
+        {
+            "name": "Linux",
+            "details": "Ubuntu CentOS",
+            "level": 3,
+            "dateSince": "2008-01-01T00:00:00Z",
+            "dateLastUsed": "",
+            "relatedUsed": []
+        },
+        {
+            "name": "Mac OS",
+            "details": "",
+            "level": 2,
+            "dateSince": "2006-01-01T00:00:00Z",
+            "dateLastUsed": "",
             "relatedUsed": []
         }
     ]

@@ -7,12 +7,12 @@
     "experience": [
         {
             "content": {
-                "title": "Web Application Engineer/Developer",
-                "body": "<b>some body text</b><ul><li>List</li></ul>",
+                "title": "Web Application Developer and Architect",
+                "body": "Designed and developed Application Packaging Standard...",
                 "detail": null
             },
             "position": {
-                "title": "Web Application Engineer/Developer",
+                "title": "Web Application Developer and Architect",
                 "summary": "",
                 "skills": [],
                 "dateRange": {
@@ -20,9 +20,15 @@
                     "end": ""
                 },
                 "company": {
-                    "name": "",
+                    "name": "SavvisDirect",
                     "summary": "",
-                    "address": null,
+                    "address": {
+                        "address": "",
+                        "addressMore": "",
+                        "city": "St. Louis",
+                        "state": "MO",
+                        "zip": ""
+                    },
                     "contacts": []
                 }
             }
@@ -30,7 +36,7 @@
         {
             "content": {
                 "title": "Developer and Technical Manager",
-                "body": "",
+                "body": "Designed and developed Joomla extensions with PHP and MySQL based on...",
                 "detail": null
             },
             "position": {
@@ -38,25 +44,31 @@
                 "summary": "",
                 "skills": [],
                 "dateRange": {
-                    "start": "2009-12-15T00:00:00Z",
-                    "end": "2009-12-15T00:00:00Z"
+                    "start": "2011-05-01T00:00:00Z",
+                    "end": "2012-08-01T00:00:00Z"
                 },
                 "company": {
-                    "name": "",
+                    "name": "Maritz Loyalty and Motivation",
                     "summary": "",
-                    "address": null,
+                    "address": {
+                        "address": "",
+                        "addressMore": "",
+                        "city": "St. Louis",
+                        "state": "MO",
+                        "zip": ""
+                    },
                     "contacts": []
                 }
             }
         },
         {
             "content": {
-                "title": "Developer and Technical Manager",
-                "body": "",
+                "title": "Director of Development and Production",
+                "body": "Developed PHP code, classes and packages including...",
                 "detail": null
             },
             "position": {
-                "title": "Web Application Engineer/Developer",
+                "title": "Director of Development and Production",
                 "summary": "",
                 "skills": [],
                 "dateRange": {
@@ -64,9 +76,43 @@
                     "end": "2009-12-15T00:00:00Z"
                 },
                 "company": {
-                    "name": "",
+                    "name": "N-Depth Solutions",
                     "summary": "",
-                    "address": null,
+                    "address": {
+                        "address": "",
+                        "addressMore": "",
+                        "city": "St. Louis",
+                        "state": "MO",
+                        "zip": ""
+                    },
+                    "contacts": []
+                }
+            }
+        },
+        {
+            "content": {
+                "title": "Web Designer, Graphic Designer and PC Tech",
+                "body": "Met clients to gather client web and design requirements...",
+                "detail": null
+            },
+            "position": {
+                "title": "Web Designer, Graphic Designer and PC Tech",
+                "summary": "",
+                "skills": [],
+                "dateRange": {
+                    "start": "2009-12-15T00:00:00Z",
+                    "end": "2009-12-15T00:00:00Z"
+                },
+                "company": {
+                    "name": "Tech 2 It",
+                    "summary": "",
+                    "address": {
+                        "address": "",
+                        "addressMore": "",
+                        "city": "Indianapolis",
+                        "state": "IN",
+                        "zip": ""
+                    },
                     "contacts": []
                 }
             }
