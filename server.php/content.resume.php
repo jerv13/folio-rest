@@ -4,7 +4,7 @@ require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'core' . DIRECTORY_SEPARA
 require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'core' . DIRECTORY_SEPARATOR . 'Http.php');
 require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'core' . DIRECTORY_SEPARATOR . 'DataAccess.php');
 
-class Resume {
+class ContentResume {
 
     public $view = null; // object
 
@@ -46,4 +46,4 @@ class Resume {
 
 }
 
-Resume::main();
+ContentResume::main();

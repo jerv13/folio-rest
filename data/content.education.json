@@ -22,11 +22,13 @@
                 "address": null,
                 "contacts": []
             },
-            "degree": {
-                "": "",
-                "type": "Assoc. of Arts",
-                "date": "2003-12-15T00:00:00Z"
-            }
+            "degrees": [
+                {
+                    "areaofstudy": "Multimedia and Game Design"",
+                    "type": "Assoc. of Arts",
+                    "date": "2003-12-15T00:00:00Z"
+                }
+            ]
         }
     ]
 }
