@@ -13,12 +13,19 @@ class Resume {
         $key = Http::readGetVar('key');
 
         $dba = new DataAccess();
-        $data = $dba->read($key);
+        $contentResume = $dba->read('content.resume');
+        $contentResume->contentAddress = $dba->read('content.address');
+        $contentResume->contentContact = $dba->read('content.contact');
+        $contentResume->contentSummary = $dba->read('content.summary');
+        $contentResume->contentInterests = $dba->read('content.interests');
+        $contentResume->contentExperience = $dba->read('content.experience');
+        $contentResume->contentEducation = $dba->read('content.education');
+
         $res = new DataResponse();
 
         //$res->code = 500;
-        //$res->message = "Something failed";
-        $res->data = $data;
+        $res->message = "OK";
+        $res->data = $contentResume;
 
         Http::buildDefaultHeaders();
 

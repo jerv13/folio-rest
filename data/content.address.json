@@ -1,0 +1,15 @@
+{
+    "id": "0",
+    "content": {
+        "title": "Address",
+        "body": "",
+        "detail": null
+    },
+    "address": {
+        "address": "",
+        "addressMore": "",
+        "city": "",
+        "state": "",
+        "zip": ""
+    }
+}

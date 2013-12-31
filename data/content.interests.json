@@ -1,0 +1,48 @@
+{
+    "id": "0",
+    "content": {
+        "title": "Interests",
+        "body": "",
+        "detail": null
+    },
+    "interests": [
+        {
+            "title": "Web Application Engineer/Developer ",
+            "body": "",
+            "detail": {
+                "subtitle": "",
+                "summary": "",
+                "points": [
+                    "PHP/Java/Node.js",
+                    "MySQL/Redis/MongoDB",
+                    "JavaScript/jQuery/AngularJS",
+                    "HTML5/CSS3 "
+                ],
+                "intro": "",
+                "tagline": ""
+            }
+        },
+        {
+            "title": "Web Application Architect/Analyst",
+            "body": "",
+            "detail": {
+                "subtitle": "",
+                "summary": "",
+                "points": [],
+                "intro": "",
+                "tagline": ""
+            }
+        },
+        {
+            "title": "Technical Manager",
+            "body": "",
+            "detail": {
+                "subtitle": "",
+                "summary": "",
+                "points": [],
+                "intro": "",
+                "tagline": ""
+            }
+        }
+    ]
+}

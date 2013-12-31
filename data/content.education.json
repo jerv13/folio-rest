@@ -1,0 +1,32 @@
+{
+    "id": "0",
+    "content": {
+        "title": "Education",
+        "body": "",
+        "detail": null
+    },
+    "schools": [
+        {
+            "content": {
+                "title": "Multimedia and Game Design",
+                "body": "",
+                "detail": null
+            },
+            "dateRange": {
+                "start": "2002-12-15T00:00:00Z",
+                "end": "2003-12-15T00:00:00Z"
+            },
+            "company": {
+                "name": "University of Advancing Technology",
+                "summary": "",
+                "address": null,
+                "contacts": []
+            },
+            "degree": {
+                "": "",
+                "type": "Assoc. of Arts",
+                "date": "2003-12-15T00:00:00Z"
+            }
+        }
+    ]
+}

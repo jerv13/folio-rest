@@ -1,0 +1,75 @@
+{
+    "content": {
+        "title": "Experience",
+        "body": "",
+        "detail": null
+    },
+    "experience": [
+        {
+            "content": {
+                "title": "Web Application Engineer/Developer",
+                "body": "<b>some body text</b><ul><li>List</li></ul>",
+                "detail": null
+            },
+            "position": {
+                "title": "Web Application Engineer/Developer",
+                "summary": "",
+                "skills": [],
+                "dateRange": {
+                    "start": "2012-08-01T00:00:00Z",
+                    "end": ""
+                },
+                "company": {
+                    "name": "",
+                    "summary": "",
+                    "address": null,
+                    "contacts": []
+                }
+            }
+        },
+        {
+            "content": {
+                "title": "Developer and Technical Manager",
+                "body": "",
+                "detail": null
+            },
+            "position": {
+                "title": "Developer and Technical Manager",
+                "summary": "",
+                "skills": [],
+                "dateRange": {
+                    "start": "2009-12-15T00:00:00Z",
+                    "end": "2009-12-15T00:00:00Z"
+                },
+                "company": {
+                    "name": "",
+                    "summary": "",
+                    "address": null,
+                    "contacts": []
+                }
+            }
+        },
+        {
+            "content": {
+                "title": "Developer and Technical Manager",
+                "body": "",
+                "detail": null
+            },
+            "position": {
+                "title": "Web Application Engineer/Developer",
+                "summary": "",
+                "skills": [],
+                "dateRange": {
+                    "start": "2009-12-15T00:00:00Z",
+                    "end": "2009-12-15T00:00:00Z"
+                },
+                "company": {
+                    "name": "",
+                    "summary": "",
+                    "address": null,
+                    "contacts": []
+                }
+            }
+        }
+    ]
+}
