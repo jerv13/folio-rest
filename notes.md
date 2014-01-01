@@ -71,6 +71,24 @@ ToDo
 - Page Design
 - Create basic get services (PHP)
 
+Dependencies
+------------
+
+- Ruby
+
+- SASS
+    - Install:
+        gem install sass
+    - Usage
+        sass --watch ./html/_sass/styles.scss:./html/css/styles.css
+
+- SASS - bourbon
+    - Install:
+        gem install bourbon
+        cd html/_sass/lib/bourbon
+        bourbon install
+
+
 NOTES
 -----
 

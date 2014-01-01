@@ -1,4 +1,5 @@
 <div class="module">
+    DEBUG: <pre>{{resume | json}}</pre>
     <div class="loader" ng-show="loading">**LOADING***</div>
     <div class="resume">
         <header class="">
