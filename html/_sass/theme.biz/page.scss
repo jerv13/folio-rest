@@ -1,0 +1,291 @@
+.page {
+    border: .1em solid #FFF;
+    margin-left: auto;
+    margin-right: auto;
+    width: $pageWidth;
+    padding: .2em;
+    
+    .header {
+        
+        padding: 1em 5em 1em 5em;
+        position: relative;
+        width: $pageWidth - 10em;
+        .part1 {
+            display: inline-block;
+            float: left;
+            margin-right: .5em;
+        }
+        .part2 {
+            background-color: rgba($fontMainColor,0.1);
+            display: inline-block;
+            float: left;
+            width: 32.5em; height: .3em;
+        }
+        .part3 {
+            display: inline-block;
+            float: right;
+            margin-left: .5em;
+        }
+        &:after{
+            content: "."; 
+            visibility: hidden; 
+            display: block; 
+            height: 0; 
+            clear: both;
+        }
+    }
+    .main {
+        padding: 1em 5em 1em 5em;
+        position: relative;
+        width: $pageWidth - 10em;
+    }
+    
+}
+
+.module .nav {
+    li {
+        
+        display: inline-block;
+        position: relative;
+        a {
+            color: rgba($fontActiveColor,0);
+            display: block;
+            font-size: .7em;
+            i {
+                background-color: rgba($fontMainColor,.6);
+                display: block;
+                position: relative;
+                width:3em * 1.4; height: 1em * 1.4;
+            }
+            &:link, &:visited{
+                background-color: rgba($fontMainColor,.6);
+                color: rgba($fontActiveColor,0);
+            }
+            &:active, &:hover {
+                background-color: rgba($fontActiveColor,1);
+                color: $fontActiveColor;
+            }
+            div {
+                padding-bottom: .3em;
+                position: absolute; top: -1.3em; left: 0em;
+                width: 20em;
+            }
+        }
+        
+    }
+}
+
+.module .contact {
+    .link {
+        display: inline-block;
+        position: relative;
+        a {
+            color: rgba($fontActiveColor,0);
+            display: block;
+            font-size: .7em;
+            
+            i {
+                color: $fontActiveColor;
+                font-size: 1.5em;
+            }
+            &:link, &:visited{
+                color: rgba($fontActiveColor,0);
+            }
+            &:active, &:hover {
+                color: $fontActiveColor;
+                cursor: pointer;
+            }
+            div {
+                padding-bottom: .3em;
+                position: absolute; top: -1em; left: 0em;
+                width: 20em;
+            }
+        }
+        
+    }
+}
+
+.module .overview {
+    padding-top: 4em;
+    width: $pageWidth - 10em;
+    
+    .part1 {
+        display: block; 
+        float: left;
+        width: ($pageWidth - 12em) * .6;
+    }
+    .part2 {
+        display: block; 
+        float: right;
+        padding-top: 3.8em;
+        padding-left: 2em;
+        width: ($pageWidth - 12em) * .4;
+    }
+    .title {
+        border-bottom: .1em solid $highlight1Color;
+        display: block; 
+        font-size: 4em;
+        text-align: right;
+    }
+    .subtitle {
+        
+        display: block; 
+        font-size: 1.1em;
+        padding-top: .5em;
+        text-align: right;
+    }
+    .summary {}
+    &:after{
+        content: "."; 
+        visibility: hidden; 
+        display: block; 
+        height: 0; 
+        clear: both;
+    }
+}
+
+.module .resume {
+    padding-top: 4em;
+    width: $pageWidth - 10em;
+    li {
+        list-style-type: square;
+        margin-left: 2em;
+    }
+    header {
+        
+        padding-bottom: 4em;
+        .part1 {
+            display: block; 
+            float: left;
+            width: ($pageWidth - 13em) * .6;
+        }
+        .part2 {
+            display: block; 
+            float: right;
+            padding-top: 1em;
+            text-align: right;
+            width: ($pageWidth - 13em) * .4;
+        }
+        .title {
+            border-bottom: .1em solid $highlight1Color;
+            display: block; 
+            font-size: 4em;
+            text-align: right;
+        }
+        .subtitle {
+            
+            display: block; 
+            font-size: 1.1em;
+            padding-top: .5em;
+            text-align: right;
+        }
+        .address {
+            padding-bottom: .2em;
+            div {
+                display: inline-block;
+                padding-bottom: .2em;
+            }
+            zip {
+                padding-left: .5em;
+            }
+        }
+        .contact {
+            div {
+                padding-bottom: .2em;
+            }
+            .protocol {
+                font-size: .9em;
+            }
+        }
+        &:after{
+            content: "."; 
+            visibility: hidden; 
+            display: block; 
+            height: 0; 
+            clear: both;
+        }
+    }
+    section {
+        padding-bottom: 2em;
+        .part1 {
+            display: block; 
+            float: left;
+            font-weight: bold;
+            text-transform: uppercase;
+            width: ($pageWidth - 13em) * .15;
+        }
+        .part2 {
+            display: block; 
+            float: right;
+            padding-left: 2em;
+            width: ($pageWidth - 13em) * .85;
+        }
+        
+        &.summary {
+            .subtitle {
+                font-weight: bold;
+                padding-bottom: 1.5em;
+            }
+        }
+        
+        &.experience {
+            .title {
+                font-weight: bold;
+                display: inline-block;
+                float: left;
+                padding-bottom: 1.5em;
+            }
+            .datarange {
+                display: inline-block;
+                float: right;
+                div {
+                    display: inline-block;             
+                }
+                .start:after {
+                    content: " - "; 
+                }
+            }
+            &:after{
+                content: "."; 
+                visibility: hidden; 
+                display: block; 
+                height: 0; 
+                clear: both;
+            }
+        }
+        
+        &:after{
+            content: "."; 
+            visibility: hidden; 
+            display: block; 
+            height: 0; 
+            clear: both;
+        }
+    }
+    footer {
+        text-align: right;
+        .link {
+            display: inline-block;
+            padding-left: 2em;
+            i{
+                display: inline-block;
+            }
+            div {
+                display: inline-block;
+                padding-left: .7em;
+            }
+        }
+    }
+    &:after{
+        content: "."; 
+        visibility: hidden; 
+        display: block; 
+        height: 0; 
+        clear: both;
+    }
+}
+
+.module .skills {
+    padding-top: 4em;
+    width: $pageWidth - 10em;
+}

@@ -1,0 +1,29 @@
+$fontMainColor: #EEEEEE;
+$fontActiveColor: #FFFFFF;
+$mainColor: #324583;
+$mainLightColor: #9ba3bb;
+$mainLighterColor: #475890;
+$highlight1Color: #ffa302;
+$highlight2Color: #ffff00;
+
+$pageWidth: 67em;
+
+body {
+    background-color: $mainColor;
+    color: $fontMainColor;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    a, a:link {
+        color: $fontMainColor;
+    }
+    a:visited {
+        color: $fontMainColor;
+    }
+    a:active {
+        color: $fontActiveColor;
+    }
+    a:hover {
+        color: $fontActiveColor;
+        cursor: pointer;
+    }
+}

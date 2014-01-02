@@ -88,6 +88,9 @@ Dependencies
         cd html/_sass/lib/bourbon
         bourbon install
 
+- AngularJS
+
+
 
 NOTES
 -----

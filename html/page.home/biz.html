@@ -11,7 +11,7 @@
 
         <script src="../js.lib/angular/angular-1.2.6/angular.min.js"></script>
         <script src="../js.lib/angular/angular-1.2.6/angular-route.min.js"></script>
-        <script src='../js.lib/jquery/jquery-1.10.2.min.js'></script>
+        <script src="../js.lib/jquery/jquery-1.10.2.min.js"></script>
 
         <!-- server based configurations -->
         <script src="../../server.php/server.config.php?returntype=javascript&varname=jfolioServerConfig"></script>
@@ -26,79 +26,182 @@
 
     </head>
     <body ng-controller="homePageController">
-        <div id="jrv_page">
-            <header id="jrv_page_header">
-                <div module-header-include data="moduleHeaderData"></div>
+        <div id="jfolio_page_biz" class="page">
+
+            <header class="header">
+                <div class="part1">
+                    <div class="module">
+                        <nav class="nav">
+                            <div>
+                                <ul>
+                                    <li><a><i></i><div>One Nav Item</div></a></li>
+                                    <li><a><i></i><div>One Nav Item</div></a></li>
+                                    <li><a><i></i><div>One Nav Item</div></a></li>
+                                    <li><a><i></i><div>One Nav Item</div></a></li>
+                                    <li><a><i></i><div>One Nav Item</div></a></li>
+                                    <li><a><i></i><div>One Nav Item</div></a></li>
+                                    <li><a><i></i><div>One Nav Item</div></a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <div class="prev" ng-hide="1"><a>prev</a></div>
+                        <div class="next" ng-hide="1"><a>next</a></div>
+                    </div>
+                </div>
+                <div class="part2"></div>
+                <div class="part3">
+                    <div class="module">
+                        <div class="contact">
+                            <div class="link"><a><i class="fa fa-envelope-o" title="Contact"></i><div>Contact</div></a></div>
+                            <div class="form" ng-hide="1">
+                                <form>
+                                    <div><label>Contact</label><input type="text" /></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </header>
 
-            <nav id="jrv_page_nav">
-                <section class="module_nav">
-                    <header>NAV Heading</header>
-                    <div>
-                        <ul>
-                            <li><div>One</div></li>
-                            <li><div>Two</div></li>
-                            <li>
-                                <div>Three(sub)</div>
-                                <ul>
-                                    <li><div>four</div></li>
-                                    <li><div>five</div></li>
-                                </ul>
-                            </li>
-                        </ul>
+            <section class="main">
+                <div class="module">
+                    <div class="overview">
+                        <div class="part1">
+                            <div class="title">James C. Jervis</div>
+                            <div class="subtitle">Web Application Engineer, Developer and Architect</div>
+                        </div>
+                        <div class="part2">
+                            <div class="summary">I place great value in being a part of an idealistic, creative team that is pushing the envelope to bring unique concepts to life.  As a developer, I need the opportunity to utilize my application concepts and designs as well as my developer skills.  As an web application architect, my primary goals are user experience, security and extensibility.  As a leader, I understand the technologies, I get involved directly with the team to help them succeed and I am open and honest.</div>
+                        </div>
                     </div>
-                    <footer>NAV FOOTER</footer>
-                </section>
-
-            </nav>
-
-            <div id="jrv_page_content">
-
-                <div id="jrv_page_content_1">
-
                 </div>
 
-                <div id="jrv_page_content_2">
+                <div class="module">
+                    <div class="resume">
+                        <header>
+                            <div class="part1">
+                                <div class="title">James Jervis</div>
+                                <div class="subtitle">Web Application Engineer, Developer and Architect</div>
+                            </div>
+                            <div class="part2">
+                                <div class="address">
+                                    <div class="city">O&acute;Fallon</div>
+                                    <div class="state">,MO</div>
+                                    <div class="zip">63368</div>
+                                </div>
+                                <div class="contact">
+                                    <div class="phone">636-866-7720</div>
+                                    <div class="email">james@jervdesign.com</div>
+                                    <div class="website"><a href="http://james.jervdesign.com" target="_blank"><span class="protocol">http://</span>james.jervdesign.com</a></div>
+                                </div>
+                            </div>
+                        </header>
 
-                    <section class="module_contact">
-                        <header>Contact Heading</header>
-                        <div>{{test}}</div>
-                        <footer>Contact FOOTER</footer>
-                    </section>
+                        <section class="summary">
+                            <div class="part1">
+                                <div class="title">Summary</div>
+                            </div>
+                            <div class="part2">
+                                <div class="subtitle">Web Developer and Web Application Architect</div>
+                                <div class="points">
+                                    <ul>
+                                        <li>Develop, design and implement web applications and solutions.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
 
-                </div>
+                        <section class="interests">
+                            <div class="part1">
+                                <div class="title">Interests</div>
+                            </div>
+                            <div class="part2">
+                                <div class="interest">
+                                    <div class="title">Web Application Engineer/Developer</div>
+                                    <ul>
+                                        <li>Develop, design and implement web applications and solutions.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
 
-                <div id="jrv_page_content_3">
-                    RESUME :<div XXXmodule-resume-biz-include></div>
-                </div>
+                        <section class="experience">
+                            <div class="part1">
+                                <div class="title">Experience</div>
+                            </div>
+                            <div class="part2">
+                                <div class="position">
+                                    <div class="title">Web Application Developer and Architect</div>
+                                    <div class="datarange">
+                                        <div class="start">2012-08</div>
+                                        <div class="end">present</div>
+                                    </div>
+                                    <div class="company">
+                                        <div class="name">Savvis</div>
+                                        <div class="address">
+                                            <div class="city">St. Louis</div>
+                                            <div class="state">,MO</div>
+                                            <div class="zip"></div>
+                                        </div>
+                                    </div>
+                                    <div class="body">Designed and developed Application Packaging Standard...</div>
+                                </div>
+                            </div>
+                        </section>
 
-                <div id="jrv_page_content_4">
-                    <aside class="module_aside"></aside>
-                </div>
-
-                <div id="jrv_page_content_5"></div>
-            </div>
-
-            <footer id="jrv_page_footer">
-
-                <section class="module_footer">
-                    <div class="header">footer Heading</div>
-                    <div class="content">
-                        <ul>
-                            <li><div>One</div></li>
-                            <li><div>Two</div></li>
-                            <li>
-                                <div>Three(sub)</div>
-                                <ul>
-                                    <li><div>four</div></li>
-                                    <li><div>five</div></li>
-                                </ul>
-                            </li>
-                        </ul>
+                        <section class="education">
+                            <div class="part1">
+                                <div class="title">Education</div>
+                            </div>
+                            <div class="part2">
+                                <div class="schools">
+                                    <div class="title">Multimedia and Game Design</div>
+                                    <div class="degree">
+                                        <div class="areaofstudy">Multimedia and Game Design</div>
+                                        <div class="type">Assoc. of Arts</div>
+                                        <div class="date">2003</div>
+                                    </div>
+                                    <div class="company">
+                                        <div class="name">University of Advancing Technology</div>
+                                        <div class="address">
+                                            <div class="city">Tempe</div>
+                                            <div class="state">,AZ</div>
+                                            <div class="zip"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <footer>
+                            <div class="link"><a><i class="fa fa-file-text-o" title="Download PDF"></i><div>Download PDF</div></a></div>
+                            <div class="link"><a><i class="fa fa-file-text-o" title="Download Word"></i><div>Download Word</div></a></div>
+                        </footer>
                     </div>
-                    <div class="footer">footer FOOTER</div>
-                </section>
+                </div>
 
+
+                <div class="module">
+                    <div class="skills">
+                        <div class="title">Skills</div>
+                        <div class="school">
+                            <div class="name">PHP</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="module">
+                    <div class="about">
+
+                    </div>
+                </div>
+                <div class="module">
+                    <div class="resources">
+
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <div class="copyright">Copyright (C) 2014 JervDesign.</div>
             </footer>
         </div>
     </body>
