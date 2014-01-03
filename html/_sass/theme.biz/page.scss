@@ -1,12 +1,14 @@
 .page {
-    border: .1em solid #FFF;
+    border-right: .1em solid rgba($fontMainColor,.4);
+    border-bottom: .1em solid rgba($fontMainColor,.4);
+    border-left: .1em solid rgba($fontMainColor,.4);
+
     margin-left: auto;
     margin-right: auto;
-    width: $pageWidth;
     padding: .2em;
-    
-    .header {
-        
+    position: relative;
+    width: $pageWidth; min-height: $pageMinHeight;
+    .mainheader {
         padding: 1em 5em 1em 5em;
         position: relative;
         width: $pageWidth - 10em;
@@ -19,7 +21,7 @@
             background-color: rgba($fontMainColor,0.1);
             display: inline-block;
             float: left;
-            width: 32.5em; height: .3em;
+            width: 37.5em; height: .3em;
         }
         .part3 {
             display: inline-block;
@@ -27,26 +29,30 @@
             margin-left: .5em;
         }
         &:after{
-            content: "."; 
-            visibility: hidden; 
-            display: block; 
-            height: 0; 
-            clear: both;
+            @include clearFix();
         }
     }
-    .main {
+    .mainbody {
         padding: 1em 5em 1em 5em;
         position: relative;
         width: $pageWidth - 10em;
+        min-height: $pageMinHeight;
     }
-    
+    .mainfooter {
+        background-color: rgba($fontMainColor,0.1);
+        font-size: .7em;
+        margin-top: 1.5em;
+        padding: .4em 2em .3em 2em;
+        text-align: right;
+    }
 }
 
-.module .nav {
+.module .jfoilioModuleBizNav {
     li {
-        
+
         display: inline-block;
         position: relative;
+        padding-right: .3em;
         a {
             color: rgba($fontActiveColor,0);
             display: block;
@@ -57,13 +63,17 @@
                 position: relative;
                 width:3em * 1.4; height: 1em * 1.4;
             }
-            &:link, &:visited{
+            &.active, &:link.active, &:visited.active, &:active.active, &:hover.active {
+                background-color: rgba($highlight1Color,1);
+                color: rgba($highlight1Color,1);
+            }
+            &, &:link, &:visited{
                 background-color: rgba($fontMainColor,.6);
                 color: rgba($fontActiveColor,0);
             }
             &:active, &:hover {
                 background-color: rgba($fontActiveColor,1);
-                color: $fontActiveColor;
+                color: rgba($fontMainColor,1);
             }
             div {
                 padding-bottom: .3em;
@@ -71,11 +81,10 @@
                 width: 20em;
             }
         }
-        
     }
 }
 
-.module .contact {
+.module .jfoilioModuleContact {
     .link {
         display: inline-block;
         position: relative;
@@ -83,7 +92,7 @@
             color: rgba($fontActiveColor,0);
             display: block;
             font-size: .7em;
-            
+
             i {
                 color: $fontActiveColor;
                 font-size: 1.5em;
@@ -101,21 +110,21 @@
                 width: 20em;
             }
         }
-        
+
     }
 }
 
-.module .overview {
+.module .jfoilioModuleOverview {
     padding-top: 4em;
     width: $pageWidth - 10em;
-    
+
     .part1 {
-        display: block; 
+        display: block;
         float: left;
         width: ($pageWidth - 12em) * .6;
     }
     .part2 {
-        display: block; 
+        display: block;
         float: right;
         padding-top: 3.8em;
         padding-left: 2em;
@@ -123,44 +132,44 @@
     }
     .title {
         border-bottom: .1em solid $highlight1Color;
-        display: block; 
+        display: block;
         font-size: 4em;
         text-align: right;
     }
     .subtitle {
-        
-        display: block; 
-        font-size: 1.1em;
+
+        display: block;
+        font-size: 1.2em;
         padding-top: .5em;
         text-align: right;
     }
-    .summary {}
+    .summary {
+        line-height: 1.2em;
+    }
     &:after{
-        content: "."; 
-        visibility: hidden; 
-        display: block; 
-        height: 0; 
-        clear: both;
+        @include clearFix();
     }
 }
 
-.module .resume {
+.module .jfoilioModuleResume {
     padding-top: 4em;
     width: $pageWidth - 10em;
     li {
         list-style-type: square;
         margin-left: 2em;
+        padding-bottom: .3em;
     }
+
     header {
-        
+
         padding-bottom: 4em;
         .part1 {
-            display: block; 
+            display: block;
             float: left;
             width: ($pageWidth - 13em) * .6;
         }
         .part2 {
-            display: block; 
+            display: block;
             float: right;
             padding-top: 1em;
             text-align: right;
@@ -168,13 +177,13 @@
         }
         .title {
             border-bottom: .1em solid $highlight1Color;
-            display: block; 
+            display: block;
             font-size: 4em;
             text-align: right;
         }
         .subtitle {
-            
-            display: block; 
+
+            display: block;
             font-size: 1.1em;
             padding-top: .5em;
             text-align: right;
@@ -198,71 +207,165 @@
             }
         }
         &:after{
-            content: "."; 
-            visibility: hidden; 
-            display: block; 
-            height: 0; 
-            clear: both;
+            @include clearFix();
         }
     }
-    section {
-        padding-bottom: 2em;
-        .part1 {
-            display: block; 
+    .resumebody {
+        padding-bottom: 1em;
+        section {
             float: left;
-            font-weight: bold;
-            text-transform: uppercase;
-            width: ($pageWidth - 13em) * .15;
+            padding-bottom: 2em;
+            position: relative;
+            .part1 {
+
+                display: block;
+                float: left;
+                width: ($pageWidth - 13em) * .15;
+                .title {
+                    border-bottom: .1em solid $highlight1Color;
+                    font-weight: bold;
+                    text-align: right;
+                    text-transform: uppercase;
+                }
+            }
+            .part2 {
+                display: block;
+                float: right;
+                padding-left: 2em;
+                width: ($pageWidth - 13em) * .85;
+            }
         }
-        .part2 {
-            display: block; 
-            float: right;
-            padding-left: 2em;
-            width: ($pageWidth - 13em) * .85;
-        }
-        
-        &.summary {
+
+        .summary {
             .subtitle {
                 font-weight: bold;
                 padding-bottom: 1.5em;
             }
         }
-        
-        &.experience {
+
+        .interest {
             .title {
                 font-weight: bold;
-                display: inline-block;
-                float: left;
                 padding-bottom: 1.5em;
             }
-            .datarange {
-                display: inline-block;
-                float: right;
-                div {
-                    display: inline-block;             
-                }
-                .start:after {
-                    content: " - "; 
-                }
-            }
-            &:after{
-                content: "."; 
-                visibility: hidden; 
-                display: block; 
-                height: 0; 
-                clear: both;
+            .points {
+                padding-bottom: 1.5em;
             }
         }
-        
+
+        .experience {
+            .position {
+                padding-bottom: 3em;
+                .overview {
+                    margin-bottom: .3em;
+                    .title {
+                        font-weight: bold;
+                        display: inline-block;
+                        float: left;
+                    }
+                    .datarange {
+                        display: inline-block;
+                        float: right;
+                        div {
+                            display: inline-block;
+                        }
+                        .start:after {
+                            content: " - ";
+                        }
+
+                    }
+                    &:after{
+                        @include clearFix();
+                    }
+                }
+
+                .company {
+                    padding-bottom: 1em;
+                    .name {
+                        display: inline-block;
+                        float: left;
+                    }
+
+                    .address {
+                        display: inline-block;
+                        float: right;
+                        padding-bottom: .2em;
+                        div {
+                            display: inline-block;
+                            padding-bottom: .2em;
+                        }
+                        zip {
+                            padding-left: .5em;
+                        }
+                    }
+
+                    &:after{
+                        @include clearFix();
+                    }
+                }
+                .body {
+                    padding-left: 1em;
+                }
+            }
+
+        }
+
+        .education {
+            .school {
+                padding-bottom: 1.5em;
+                .degree {
+                    margin-bottom: .3em;
+                    .title {
+                        font-weight: bold;
+                        display: inline-block;
+                        float: left;
+                        width: 26em;
+                    }
+                    .type {
+                        display: inline-block;
+                        float: left;
+                    }
+                    .date {
+                        display: inline-block;
+                        float: right;
+                    }
+                    &:after{
+                        @include clearFix();
+                    }
+                }
+                .company {
+                    .name {
+                        display: inline-block;
+                        float: left;
+                    }
+
+                    .address {
+                        display: inline-block;
+                        float: right;
+                        padding-bottom: .2em;
+                        div {
+                            display: inline-block;
+                            padding-bottom: .2em;
+                        }
+                        zip {
+                            padding-left: .5em;
+                        }
+                    }
+                    &:after{
+                        @include clearFix();
+                    }
+                }
+            }
+        }
+
         &:after{
-            content: "."; 
-            visibility: hidden; 
-            display: block; 
-            height: 0; 
-            clear: both;
+            @include clearFix();
         }
     }
+
     footer {
+        border-top: .1em solid $fontMainColor;
+        padding-top: .3em;
         text-align: right;
         .link {
             display: inline-block;
@@ -277,15 +380,204 @@
         }
     }
     &:after{
-        content: "."; 
-        visibility: hidden; 
-        display: block; 
-        height: 0; 
-        clear: both;
+        @include clearFix();
     }
 }
 
-.module .skills {
+.module .jfoilioModuleSkills {
     padding-top: 4em;
     width: $pageWidth - 10em;
+
+    .skillsheader {
+        padding-bottom: 4em;
+        .part1 {
+            display: block;
+            float: left;
+            width: ($pageWidth - 12em) * .4;
+        }
+        .part2 {
+            display: block;
+            float: right;
+            padding-top: 1.8em;
+            padding-left: 2em;
+            width: ($pageWidth - 12em) * .6;
+        }
+        .title {
+            border-bottom: .1em solid $highlight1Color;
+            display: block;
+            font-size: 2em;
+            font-weight: bold;
+            text-align: right;
+        }
+        .subtitle {
+            display: block;
+            font-size: 1.1em;
+            padding-top: .5em;
+            text-align: right;
+        }
+        &:after{
+            @include clearFix();
+        }
+    }
+    &:after{
+        @include clearFix();
+    }
+    .skills {
+        .overview {
+            border-top: .1em solid $fontMainColor;
+            font-weight: bold;
+            padding-top: .3em;
+            padding-bottom: 1.5em;
+            .info {
+                display: block;
+                float: left;
+                width: 18em;
+            }
+            .level {
+                display: block;
+                float: left;
+                padding-left: 2em;
+                width: 12em;
+            }
+            .yearsexperience {
+                display: block;
+                float: left;
+                padding-left: 2em;
+                width: 12em;
+            }
+            .lastused {
+                display: block;
+                float: left;
+                width: 5em;
+            }
+            &:after{
+                @include clearFix();
+            }
+        }
+        .skill {
+            &:hover {
+                background-color: rgba($fontMainColor,0.1);
+            }
+            .info {
+                display: block;
+                float: left;
+                width: 18em;
+                .name {
+                    font-size: 1.2em;
+                }
+
+                .details {
+                    font-size: .7em;
+                    padding-top: .2em;
+                }
+            }
+            .level {
+                display: block;
+                float: left;
+                padding-left: 2em;
+                width: 12em;
+            }
+            .yearsexperience {
+                display: block;
+                float: left;
+                padding-left: 2em;
+                width: 12em;
+            }
+            .lastused {
+                display: block;
+                float: left;
+                width: 5em;
+            }
+            &:after{
+                @include clearFix();
+            }
+        }
+    }
+}
+
+.module .jfoilioModuleAbout {
+    padding-top: 4em;
+    width: $pageWidth - 10em;
+
+    .part1 {
+        display: block;
+        float: left;
+        width: ($pageWidth - 12em) * .4;
+    }
+    .part2 {
+        display: block;
+        float: right;
+        padding-top: 1.8em;
+        padding-left: 2em;
+        width: ($pageWidth - 12em) * .6;
+    }
+    .title {
+        border-bottom: .1em solid $highlight1Color;
+        display: block;
+        font-size: 2em;
+        font-weight: bold;
+        text-align: right;
+    }
+    .subtitle {
+        display: block;
+        font-size: 1.1em;
+        padding-top: .5em;
+        text-align: right;
+    }
+    .summary {}
+    &:after{
+        @include clearFix();
+    }
+}
+
+
+.module .jfoilioModuleResources {
+    padding-top: 4em;
+    width: $pageWidth - 10em;
+
+    .part1 {
+        display: block;
+        float: left;
+        width: ($pageWidth - 12em) * .4;
+    }
+    .part2 {
+        display: block;
+        float: right;
+        padding-top: 1.8em;
+        padding-left: 2em;
+        width: ($pageWidth - 12em) * .6;
+    }
+    .title {
+        border-bottom: .1em solid $highlight1Color;
+        display: block;
+        font-size: 2em;
+        font-weight: bold;
+        text-align: right;
+    }
+    .subtitle {
+        display: block;
+        font-size: 1.1em;
+        padding-top: .5em;
+        text-align: right;
+    }
+    .summary {
+        padding-bottom: 1em;
+    }
+    .link {
+        display: block;
+        position: relative;
+        padding-bottom: .5em;
+        .label {
+            display: inline-block;
+            padding-left: .7em;
+        }
+        .description {
+            font-size: .7em;
+            padding: .2em 0em .2em 2.5em;
+        }
+    }
+
+    &:after{
+        @include clearFix();
+    }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html id="ng-app"ng-app="page.home">
+<html id="ng-app"ng-app="page.biz">
     <head>
         <title>Home</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -20,38 +20,24 @@
         <script src="../js.core/jfolio.core.js"></script>
         <script src="../js.core/jfolio.http.js"></script>
 
-        <script src="home.js"></script>
+        <script src="biz.js"></script>
         <script src="../module/header/module.js"></script>
-        <script src="../module/resume.biz/module.js"></script>
-
+        <script src="../module/biz.resume/module.js"></script>
+        <script src="../module/biz.nav/module.js"></script>
     </head>
-    <body ng-controller="homePageController">
+    <body ng-controller="bizPageController">
         <div id="jfolio_page_biz" class="page">
 
-            <header class="header">
+            <header class="mainheader">
                 <div class="part1">
                     <div class="module">
-                        <nav class="nav">
-                            <div>
-                                <ul>
-                                    <li><a><i></i><div>One Nav Item</div></a></li>
-                                    <li><a><i></i><div>One Nav Item</div></a></li>
-                                    <li><a><i></i><div>One Nav Item</div></a></li>
-                                    <li><a><i></i><div>One Nav Item</div></a></li>
-                                    <li><a><i></i><div>One Nav Item</div></a></li>
-                                    <li><a><i></i><div>One Nav Item</div></a></li>
-                                    <li><a><i></i><div>One Nav Item</div></a></li>
-                                </ul>
-                            </div>
-                        </nav>
-                        <div class="prev" ng-hide="1"><a>prev</a></div>
-                        <div class="next" ng-hide="1"><a>next</a></div>
+                        <div module-biz-nav-include navitems="navitems" activenavsection="activenavsection">{{activenavsection}}</div>
                     </div>
                 </div>
                 <div class="part2"></div>
                 <div class="part3">
                     <div class="module">
-                        <div class="contact">
+                        <div class="jfoilioModuleContact">
                             <div class="link"><a><i class="fa fa-envelope-o" title="Contact"></i><div>Contact</div></a></div>
                             <div class="form" ng-hide="1">
                                 <form>
@@ -63,9 +49,9 @@
                 </div>
             </header>
 
-            <section class="main">
-                <div class="module">
-                    <div class="overview">
+            <section class="mainbody">
+                <div class="module" ng-show="activenavsection == 0">
+                    <div class="jfoilioModuleOverview">
                         <div class="part1">
                             <div class="title">James C. Jervis</div>
                             <div class="subtitle">Web Application Engineer, Developer and Architect</div>
@@ -76,132 +62,83 @@
                     </div>
                 </div>
 
-                <div class="module">
-                    <div class="resume">
-                        <header>
-                            <div class="part1">
-                                <div class="title">James Jervis</div>
-                                <div class="subtitle">Web Application Engineer, Developer and Architect</div>
-                            </div>
-                            <div class="part2">
-                                <div class="address">
-                                    <div class="city">O&acute;Fallon</div>
-                                    <div class="state">,MO</div>
-                                    <div class="zip">63368</div>
-                                </div>
-                                <div class="contact">
-                                    <div class="phone">636-866-7720</div>
-                                    <div class="email">james@jervdesign.com</div>
-                                    <div class="website"><a href="http://james.jervdesign.com" target="_blank"><span class="protocol">http://</span>james.jervdesign.com</a></div>
-                                </div>
-                            </div>
-                        </header>
-
-                        <section class="summary">
-                            <div class="part1">
-                                <div class="title">Summary</div>
-                            </div>
-                            <div class="part2">
-                                <div class="subtitle">Web Developer and Web Application Architect</div>
-                                <div class="points">
-                                    <ul>
-                                        <li>Develop, design and implement web applications and solutions.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </section>
-
-                        <section class="interests">
-                            <div class="part1">
-                                <div class="title">Interests</div>
-                            </div>
-                            <div class="part2">
-                                <div class="interest">
-                                    <div class="title">Web Application Engineer/Developer</div>
-                                    <ul>
-                                        <li>Develop, design and implement web applications and solutions.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </section>
-
-                        <section class="experience">
-                            <div class="part1">
-                                <div class="title">Experience</div>
-                            </div>
-                            <div class="part2">
-                                <div class="position">
-                                    <div class="title">Web Application Developer and Architect</div>
-                                    <div class="datarange">
-                                        <div class="start">2012-08</div>
-                                        <div class="end">present</div>
-                                    </div>
-                                    <div class="company">
-                                        <div class="name">Savvis</div>
-                                        <div class="address">
-                                            <div class="city">St. Louis</div>
-                                            <div class="state">,MO</div>
-                                            <div class="zip"></div>
-                                        </div>
-                                    </div>
-                                    <div class="body">Designed and developed Application Packaging Standard...</div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <section class="education">
-                            <div class="part1">
-                                <div class="title">Education</div>
-                            </div>
-                            <div class="part2">
-                                <div class="schools">
-                                    <div class="title">Multimedia and Game Design</div>
-                                    <div class="degree">
-                                        <div class="areaofstudy">Multimedia and Game Design</div>
-                                        <div class="type">Assoc. of Arts</div>
-                                        <div class="date">2003</div>
-                                    </div>
-                                    <div class="company">
-                                        <div class="name">University of Advancing Technology</div>
-                                        <div class="address">
-                                            <div class="city">Tempe</div>
-                                            <div class="state">,AZ</div>
-                                            <div class="zip"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        <footer>
-                            <div class="link"><a><i class="fa fa-file-text-o" title="Download PDF"></i><div>Download PDF</div></a></div>
-                            <div class="link"><a><i class="fa fa-file-text-o" title="Download Word"></i><div>Download Word</div></a></div>
-                        </footer>
-                    </div>
+                <div class="module" ng-show="activenavsection == 1">
+                    <div module-biz-resume-include >XXX</div>
                 </div>
 
 
-                <div class="module">
-                    <div class="skills">
-                        <div class="title">Skills</div>
-                        <div class="school">
-                            <div class="name">PHP</div>
+                <div class="module" ng-show="activenavsection == 2">
+                    <div class="jfoilioModuleSkills">
+                        <div class="skillsheader">
+                            <div class="part1">
+                                <div class="title">Technical Skills</div>
+                                <div class="subtitle">Skills Developed</div>
+                            </div>
+                            <div class="part2">
+                            </div>
+                        </div>
+
+                        <div class="skills">
+                            <div class="overview">
+                                <div class="info">Skill</div>
+                                <div class="level">Level</div>
+                                <div class="yearsexperience">Experience</div>
+                                <div class="lastused">Last Used</div>
+                            </div>
+                            <div class="skill">
+                                <div class="info">
+                                    <div class="name">JavaScript</div>
+                                    <div class="details">AngularJs, jQuery</div>
+                                </div>
+                                <div class="level">Advanced</div>
+                                <div class="yearsexperience">5</div>
+                                <div class="lastused">5</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="module">
-                    <div class="about">
 
+                <div class="module" ng-show="activenavsection == 3">
+                    <div class="jfoilioModuleAbout">
+                        <div class="part1">
+                            <div class="title">About me</div>
+                            <div class="subtitle">Life Learner and Musician</div>
+                        </div>
+                        <div class="part2">
+                            <div class="summary">Da Da Da</div>
+                            <div class="points"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="module">
-                    <div class="resources">
 
+                <div class="module" ng-show="activenavsection == 4">
+                    <div class="jfoilioModuleResources">
+                        <div class="part1">
+                            <div class="title">Resources</div>
+                            <div class="subtitle">Links to Good Information</div>
+                        </div>
+                        <div class="part2">
+                            <div class="summary">Da Da Da</div>
+
+                            <div class="link">
+                                <a><i class="fa fa-external-link-square" title="Contact"></i><div class="label">Contact</div></a>
+                                <div class="description">description</div>
+                            </div>
+                            <div class="link">
+                                <a><i class="fa fa-external-link-square" title="Contact"></i><div class="label">Contact</div></a>
+                                <div class="description">description</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <footer>
-                <div class="copyright">Copyright (C) 2014 JervDesign.</div>
+            <footer class="mainfooter">
+                <div class="module">
+                    <div class="jfoilioModuleFooter">
+                        <div class="copyright">Copyright (C) 2014 JervDesign.</div>
+                    </div>
+                </div>
             </footer>
         </div>
     </body>

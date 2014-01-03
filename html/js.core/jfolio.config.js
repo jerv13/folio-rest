@@ -36,6 +36,8 @@ angular.module('jfolio.config', [])
         if(jfolioServerConfig && jfolioServerConfig.httpConfig && jfolioServerConfig.httpConfig.url){
 
             httpConfig.setUrl(jfolioServerConfig.httpConfig.url);
+        } else {
+            console.log("Server config not available, using default");
         }
 
         return httpConfig;

@@ -3,7 +3,7 @@
 class DataAccess {
 
     public static $dataLocation = 'data';
-    public static $keyCharsBlacklist = array('/','\\','.');
+    public static $keyCharsBlacklist = array('/','\\','..');
 
     protected function getData($key){
 

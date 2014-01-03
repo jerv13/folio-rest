@@ -1,11 +1,11 @@
-angular.module('module.resume.biz', ['ngRoute', 'jfolio.http'])
+angular.module('jfolio.module.biz.resume', ['jfolio.http'])
 
-    .directive('moduleResumeBizInclude', ['coreHttp', function(coreHttp) {
+    .directive('moduleBizResumeInclude', ['coreHttp', function(coreHttp) {
 
         return {
             restrict: 'A',
             //template : '',
-            templateUrl: '../module/resume.biz/module.tpl',
+            templateUrl: '../module/biz.resume/module.tpl',
 
             link: function(scope, element, attrs, ngModel) {
 
@@ -22,7 +22,7 @@ angular.module('module.resume.biz', ['ngRoute', 'jfolio.http'])
                     scope.loading = false;
                 };
 
-                var url = coreHttp.buildUrl('resume.php');
+                var url = coreHttp.buildUrl('content.resume.php');
                 console.log("URL: " + url);
                 scope.loading = true;
                 coreHttp.get(url, {key: 'resume'}, success, fail);

@@ -1,8 +1,14 @@
 {
     "content": {
-        "title": "Skill Set",
+        "title": "Technical Skills",
         "body": "",
-        "detail": null
+        "detail": {
+            "subtitle": "TODO",
+            "summary": "TODO",
+            "points": [],
+            "intro": "",
+            "tagline": ""
+        }
     },
     "skills": [
         {

@@ -3,7 +3,13 @@
     "content": {
         "title": "Resources",
         "body": "",
-        "detail": null
+        "detail": {
+            "subtitle": "TODO",
+            "summary": "TODO",
+            "points": [],
+            "intro": "",
+            "tagline": ""
+        }
     },
     "links": [
         {

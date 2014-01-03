@@ -108,21 +108,14 @@ NOTES
 
 - Good schemas
     - CSS
-        theme.mediatype.xxx
-
-        reset.css
-
-        default/
-            global.css
-
-            screen/
-                master.css
-
-            screen_max45em/
-                master.css
+        jfolio.theme.{name}
 
     - HTML
     - API
+    - JS - Angular
+        jfoilio
+            /module
+            /page
 
 - Layout save
     - Cookie or local storage
