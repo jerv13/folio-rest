@@ -1,7 +1,7 @@
 Features
 --------
 
-- 2 Style
+HTML:
     - Biz
         Concept: Crisp, professional, fresh.  Simple clean design with a visual identity that is memorable
         Colors: 
@@ -35,30 +35,20 @@ Features
         Inspiration:
 
 
-- Multi display friendly Media queries
-    - mobile device
-    - standard
+    - Multi display friendly Media queries
+        - mobile device
+        - standard
 
-- Content:
-    - resume
-    - skills
-    - about
-    - contact
-    - Resources - Links - content related
-    -? Small game
-
-- Pages
-    - home (single page for now)
-- Modules
-    - Header
-    - Contact
-    - footer
-    - nav
-    - content
-        - res
-        - about
+    - Content:
+        - resume
         - skills
-    - Game
+        - about
+        - contact
+        - Resources - Links - content related
+        -? Small game
+
+    - Pages
+        - home (single page for now)
 
 Nice to haves:
 --------------
@@ -68,8 +58,14 @@ Nice to haves:
 
 ToDo
 ----
-- Page Design
-- Create basic get services (PHP)
+- biz: Create 'on-demand' data loading (only load what is requested)
+- biz: Create loader animations/indicators
+- biz: Create error collection/displays
+- biz: Create css for small displays
+
+- ufo: begin layout and modeling  
+
+- 
 
 Dependencies
 ------------
