@@ -7,7 +7,7 @@ Features
 
 Concept: Crisp, professional, fresh.  Simple clean design with a visual identity that is memorable
 
-Colors: 
+Colors
     Blue #0042ff, #0084ff #023bce, 0232af
     Orange highlight
     White text #EEEEEE
@@ -84,56 +84,56 @@ Dependencies
 
 ### SASS (DEV) ###
 
-    Install:
-        `
-        gem install sass
-        `
-    
-    Usage:
-        `
-        sass --watch ./html/_sass/styles.scss:./html/css/styles.css
-        `   
-    
-    Resources:
+Install:
+    `
+    gem install sass
+    `
+
+Usage:
+    `
+    sass --watch ./html/_sass/styles.scss:./html/css/styles.css
+    `   
+
+Resources:
 
 ### SASS - bourbon (DEV) ###
 
-    Install:
-        `
-        gem install bourbon
-        cd html/_sass/lib/bourbon
-        bourbon install
-        `
-        
-    Resources:
+Install:
+    `
+    gem install bourbon
+    cd html/_sass/lib/bourbon
+    bourbon install
+    `
+    
+Resources:
 
 ### AngularJS (DEV, QA, PROD) ###
 
 ### Node.js (DEV, QA, PROD) ###
 
-    Install: requires npm
-        `
-        sudo apt-get update
-        sudo apt-get install -y python-software-properties python g++ make
-        sudo add-apt-repository -y ppa:chris-lea/node.js
-        sudo apt-get update
-        sudo apt-get install nodejs
-        `
-        
-    Resources:
+Install: requires npm
+    `
+    sudo apt-get update
+    sudo apt-get install -y python-software-properties python g++ make
+    sudo add-apt-repository -y ppa:chris-lea/node.js
+    sudo apt-get update
+    sudo apt-get install nodejs
+    `
     
-        https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager#ubuntu-mint
+Resources:
+
+    https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager#ubuntu-mint
 
 ### Redis (DEV, QA, PROD) ### 
 
-    Install: 
-        `
-        apt-get install redis-server
-        `
-        
-    Resources:
+Install: 
+    `
+    apt-get install redis-server
+    `
     
-        https://library.linode.com/databases/redis/ubuntu-12.04-precise-pangolin
+Resources:
+
+    https://library.linode.com/databases/redis/ubuntu-12.04-precise-pangolin
 
 NOTES
 -----
