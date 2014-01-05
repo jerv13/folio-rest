@@ -1,3 +1,59 @@
+Requirements
+------------
+
+### HTML Application ###
+
+- Must be display in standard modern browsers
+- Must be display well in hand-held devices
+- Should be modular design
+- May be single page design
+- Should use client side MVC (AngularJS)
+- Should access server REST API for data
+- Content
+    - Should have 2 distinct visual identities
+        - Business/professional (biz) layout
+        - Fun/Game oriented (ufo) layout
+    - Should contain pages:
+        - resume
+        - skills
+        - about
+        - contact
+        - Resources - Links - content related
+        - 
+        -? Small game
+        
+- May utilize i16n multi-language support
+
+### Server ###
+- Server
+    - Must have Node.js based server
+    - May have PHP server too
+    - Servers (PHP and NODE) should expose the same APIs
+    - Should be modular design
+    - Should be configurable and easy to maintain
+    - Must use REST with JSON payload
+    - Must be restful
+    - Must use standard return object
+        -Return object includes
+            - data - actual data payload.
+            - code - error code, may use http status codes
+            - message - A message used to provide error details or addition info.
+    - May include OAuth style authentication
+    - May include users and user role management
+    - May 
+
+- Database:
+    - Must utilize data from DB
+    - Should use Redis DB
+    - Must have good security for write
+    - Must not expose DB directly to web
+
+Nice to haves:
+--------------
+
+- oAuth to google or facebook
+- i16n
+
 Features
 --------
 
@@ -48,32 +104,9 @@ Site Map:
 
 -? UFO Game - Unity/blender
 
-Requirements
-------------
-
-- Multi display friendly Media queries
-    - mobile device
-    - standard
-
-- Content:
-    - resume
-    - skills
-    - about
-    - contact
-    - Resources - Links - content related
-    -? Small game
-
-- Pages
-    - home (single page for now)
-
-Nice to haves:
---------------
-
-- oAuth to google or facebook
-- i16n
-
 ToDo
 ----
+
 - biz: Create 'on-demand' data loading (only load what is requested)
 - biz: Create loader animations/indicators
 - biz: Create error collection/displays
