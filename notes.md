@@ -19,7 +19,6 @@ Requirements
         - about
         - contact
         - Resources, Links, content related
-        - 
         -? Small game
         
 - May utilize i16n multi-language support
