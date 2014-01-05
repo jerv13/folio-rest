@@ -7,7 +7,8 @@ Features
 
 Concept: Crisp, professional, fresh.  Simple clean design with a visual identity that is memorable
 
-Colors
+Colors:
+
     Blue #0042ff, #0084ff #023bce, 0232af
     Orange highlight
     White text #EEEEEE
