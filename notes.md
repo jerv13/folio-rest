@@ -70,23 +70,60 @@ ToDo
 Dependencies
 ------------
 
-- Ruby
+### Ruby (DEV) ###
 
-- SASS
-    - Install:
+### SASS (DEV) ###
+
+    Install:
+        `
         gem install sass
-    - Usage
+        `
+    
+    Usage:
+        `
         sass --watch ./html/_sass/styles.scss:./html/css/styles.css
+        `   
+    
+    Resources:
 
-- SASS - bourbon
-    - Install:
+### SASS - bourbon (DEV) ###
+
+    Install:
+        `
         gem install bourbon
         cd html/_sass/lib/bourbon
         bourbon install
+        `
+        
+    Resources:
 
-- AngularJS
+### AngularJS (DEV, QA, PROD) ###
 
+### Node.js (DEV, QA, PROD) ###
 
+    Install: requires npm
+        `
+        sudo apt-get update
+        sudo apt-get install -y python-software-properties python g++ make
+        sudo add-apt-repository -y ppa:chris-lea/node.js
+        sudo apt-get update
+        sudo apt-get install nodejs
+        `
+        
+    Resources:
+    
+        https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager#ubuntu-mint
+
+### Redis (DEV, QA, PROD) ### 
+
+    Install: 
+        `
+        apt-get install redis-server
+        `
+        
+    Resources:
+    
+        https://library.linode.com/databases/redis/ubuntu-12.04-precise-pangolin
 
 NOTES
 -----
