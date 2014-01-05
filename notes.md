@@ -18,7 +18,7 @@ Requirements
         - skills
         - about
         - contact
-        - Resources - Links - content related
+        - Resources, Links, content related
         - 
         -? Small game
         
