@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('page.biz', ['jfolio.module.biz.nav', 'jfolio.module.biz.resume']);
+angular.module('biz.index', ['biz.nav', 'biz.resume']);
 
 var bizPageController = function($scope, resumeDataService) {
 

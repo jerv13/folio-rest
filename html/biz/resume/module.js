@@ -1,4 +1,4 @@
-angular.module('jfolio.module.biz.resume', ['ngSanitize', 'jfolio.http'])
+angular.module('biz.resume', ['ngSanitize', 'jfolio.http'])
 
     .factory('resumeDataService', ['CoreHttpService', function(CoreHttpService) {
 
@@ -12,7 +12,7 @@ angular.module('jfolio.module.biz.resume', ['ngSanitize', 'jfolio.http'])
         return {
             restrict: 'A',
             //template : '',
-            templateUrl: '../module/biz.resume/module.tpl',
+            templateUrl: 'resume/module.tpl',
             link: function(scope, element, attrs, ngModel) {
 
                 console.log("Include module.res1");

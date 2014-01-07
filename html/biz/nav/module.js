@@ -1,11 +1,11 @@
-angular.module('jfolio.module.biz.nav', [])
+angular.module('biz.nav', [])
 
     .directive('moduleBizNavInclude', [function() {
 
         return {
             restrict: 'A',
             //template : '',
-            templateUrl: '../module/biz.nav/module.tpl',
+            templateUrl: 'nav/module.tpl',
             scope: {
                 navitems: '=',
                 activenavsection: '=',

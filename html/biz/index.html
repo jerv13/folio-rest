@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html id="ng-app"ng-app="page.biz">
+<html id="ng-app"ng-app="biz.index">
     <head>
         <title>Home</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -7,24 +7,23 @@
         <meta http-equiv="Content-Language" content="en" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-        <link rel="stylesheet" href="../css/styles.css" />
+        <link rel="stylesheet" href="css/styles.css" />
 
-        <script src="../js.lib/angular/angular-1.2.6/angular.min.js"></script>
-        <script src="../js.lib/angular/angular-1.2.6/angular-route.min.js"></script>
-        <script src="../js.lib/angular/angular-1.2.6/angular-sanitize.min.js"></script>
-        <script src="../js.lib/jquery/jquery-1.10.2.min.js"></script>
+        <script src="../js/lib/angular/angular-1.2.6/angular.min.js"></script>
+        <script src="../js/lib/angular/angular-1.2.6/angular-route.min.js"></script>
+        <script src="../js/lib/angular/angular-1.2.6/angular-sanitize.min.js"></script>
+        <script src="../js/lib/jquery/jquery-1.10.2.min.js"></script>
 
         <!-- server based configurations -->
         <script src="../../server.php/server.config.php?returntype=javascript&varname=jfolioServerConfig"></script>
 
-        <script src="../js.core/jfolio.config.js"></script>
-        <script src="../js.core/jfolio.core.js"></script>
-        <script src="../js.core/jfolio.http.js"></script>
+        <script src="../js/jfolio/config.js"></script>
+        <script src="../js/jfolio/core.js"></script>
+        <script src="../js/jfolio/http.js"></script>
 
-        <script src="biz.js"></script>
-        <script src="../module/header/module.js"></script>
-        <script src="../module/biz.resume/module.js"></script>
-        <script src="../module/biz.nav/module.js"></script>
+        <script src="index.js"></script>
+        <script src="resume/module.js"></script>
+        <script src="nav/module.js"></script>
     </head>
     <body ng-controller="bizPageController">
         <div id="jfolio_page_biz" class="page">
