@@ -30,4 +30,52 @@ body {
     p {
         margin-bottom: 1em;
     }
+
+    .alerts {
+        .alert{
+            background-color: rgba(white, .9);
+            border: .1em solid $mainLighterColor;
+            @include border-top-radius(.5em);
+            @include border-bottom-radius(.5em);
+            @include border-left-radius(.5em);
+            @include border-right-radius(.5em);
+            color: $mainColor;
+            margin: .5em;
+            padding: .5em;
+            .icon {
+                display: inline-block;
+                padding-right: 1em;
+            }
+            .code {
+                display: none;
+            }
+            .message {
+                display: inline-block;
+                font-weight: bold;
+            }
+            &.info {}
+            &.notice {
+                background-color: rgba(#FFFFCC, .9);
+                border: .1em solid yellow;
+                color: #333300;
+            }
+            &.warning {
+                background-color: rgba(#FFE0B2, .9);
+                border: .1em solid orange;
+                color: #4C2E00;
+            }
+            &.error {
+                background-color: rgba(#FFCCCC, .9);
+                border: .1em solid red;
+                color: #4C0000;
+                .code {
+                    display: inline-block;
+                }
+                .message {
+                    padding-left: 1em;
+                }
+            }
+        }
+
+    }
 }

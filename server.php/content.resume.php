@@ -33,17 +33,17 @@ class ContentResume {
 
         $resJson = json_encode($res);
 
-        if ($resJson) {
+        //if ($resJson) {
 
-            echo $resJson;
-        } else {
+        //    echo $resJson;
+        //} else {
 
             $errRes = new BasicResponse();
             $errRes->code = 500;
             $errRes->message = "An error occured.";
 
             echo json_encode($errRes);
-        }
+        //}
     }
 
 }

@@ -1,7 +1,7 @@
 <div class="bizResume">
     <div class="loading" ng-show="resumeDataService.loading">Loading</div>
-    <div class="loading" ng-show="resumeDataService.exception">{{exception | json}}</div>
-    <div ng-hide="resumeDataService.loading">
+    <div class="alerts" ng-show="bizResumeAlerts.thrown"><div ng-repeat="alert in bizResumeAlerts.thrown"><div class="alert {{alert.type}} number_{{alert.code}}"><div class="icon"><i class="fa fa-exclamation-triangle fa-2x"></i></div><div class="code">{{alert.code}}: </div><div class="message">{{alert.message}}</div><div></div></div></div></div>
+    <div ng-hide="resumeDataService.loading || error">
         <header class="resumeheader">
             <div class="part1">
                 <div class="title">{{resumeDataService.data.content.title}}</div>

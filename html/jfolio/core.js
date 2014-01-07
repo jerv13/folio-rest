@@ -26,7 +26,7 @@ angular.module('jfolio.core', [])
     };
 })
 
-.filter('unsafe', function($sce) {
+    .filter('unsafe', function($sce) {
     return function(val) {
         return $sce.trustAsHtml(val);
     };

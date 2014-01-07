@@ -7,6 +7,20 @@
     padding: .2em;
     position: relative;
     width: $pageWidth; min-height: $pageMinHeight;
+    .loading {
+        background-image: url('../images/loading-animation.gif');
+        background-size:2em 2em;
+        background-repeat: no-repeat;
+        //background-attachment: fixed;
+        //background-position: left;
+        //background-color: red;
+        color: rgba(255,255,255,0);
+        content: none;
+        display: block;
+        margin: auto auto;
+        overflow: hidden;
+        width: 2em; height: 2em;
+    }
     .mainheader {
         padding: 1em 5em 1em 5em;
         position: relative;

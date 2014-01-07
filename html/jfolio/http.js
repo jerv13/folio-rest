@@ -60,7 +60,7 @@ angular.module('jfolio.http', ['jfolio.config'])
                 $http(config).
                     success(function(data, status, headers, config) {
 
-                    if (typeof(data) !== 'object' || typeof(data.code) === 'undefined' || typeof(data.message) === 'undefined' || typeof(data.data) === 'undefined') {
+                    if (typeof(data) !== 'object' || typeof(data.code) === 'undefined' || typeof(data.message) === 'undefined') {
 
                         if (typeof(onFail) === 'function') {
 
@@ -137,33 +137,37 @@ angular.module('jfolio.http', ['jfolio.config'])
 
                 self.url = coreHttp.buildUrl(url);
                 self.reqData = reqData;
-                self.success = function(data, config) {
-
-                    console.log('CoreHttpService.success');
-                    if ((typeof(success) === 'function')) {
-
-                        success(data, config);
-                    }
-                    self.data = data;
-                    self.loading = false;
-                };
-
-                self.fail = function(exception) {
-
-                    console.log('CoreHttpService.fail');
-                    if ((typeof(fail) === 'function')) {
-
-                        fail(exception);
-                    }
-                    self.exception = exception;
-                    self.loading = false;
-                };
+                self.success = success;
+                self.fail = fail;
             };
 
             self.execute = function() {
                 console.log('CoreHttpService.execute');
                 self.loading = true;
-                coreHttp.get(self.url, self.reqData, self.success, self.fail);
+
+                var success = function(data, config) {
+
+                    console.log('CoreHttpService.success');
+                    if ((typeof(self.success) === 'function')) {
+
+                        self.success(data, config);
+                    }
+                    self.data = data;
+                    self.loading = false;
+                };
+
+                var fail = function(exception) {
+
+                    console.log('CoreHttpService.fail');
+                    if ((typeof(self.fail) === 'function')) {
+
+                        self.fail(exception);
+                    }
+                    self.exception = exception;
+                    self.loading = false;
+                };
+
+                coreHttp.get(self.url, self.reqData, success, fail);
             };
 
             self.init(url, reqData, success, fail);

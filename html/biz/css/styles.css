@@ -1396,6 +1396,44 @@ body {
     cursor: pointer; }
   body p {
     margin-bottom: 1em; }
+  body .alerts .alert {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 0.1em solid #475890;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    color: #324583;
+    margin: .5em;
+    padding: .5em; }
+    body .alerts .alert .icon {
+      display: inline-block;
+      padding-right: 1em; }
+    body .alerts .alert .code {
+      display: none; }
+    body .alerts .alert .message {
+      display: inline-block;
+      font-weight: bold; }
+    body .alerts .alert.notice {
+      background-color: rgba(255, 255, 204, 0.9);
+      border: .1em solid yellow;
+      color: #333300; }
+    body .alerts .alert.warning {
+      background-color: rgba(255, 224, 178, 0.9);
+      border: .1em solid orange;
+      color: #4C2E00; }
+    body .alerts .alert.error {
+      background-color: rgba(255, 204, 204, 0.9);
+      border: .1em solid red;
+      color: #4C0000; }
+      body .alerts .alert.error .code {
+        display: inline-block; }
+      body .alerts .alert.error .message {
+        padding-left: 1em; }
 
 .page {
   border-right: 0.1em solid rgba(238, 238, 238, 0.4);
@@ -1407,6 +1445,17 @@ body {
   position: relative;
   width: 67em;
   min-height: 40em; }
+  .page .loading {
+    background-image: url("../images/loading-animation.gif");
+    background-size: 2em 2em;
+    background-repeat: no-repeat;
+    color: rgba(255, 255, 255, 0);
+    content: none;
+    display: block;
+    margin: auto auto;
+    overflow: hidden;
+    width: 2em;
+    height: 2em; }
   .page .mainheader {
     padding: 1em 5em 1em 5em;
     position: relative;

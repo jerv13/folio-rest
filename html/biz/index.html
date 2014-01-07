@@ -18,16 +18,21 @@
         <script src="../../server.php/server.config.php?returntype=javascript&varname=jfolioServerConfig"></script>
 
         <script src="../jfolio/config.js"></script>
+        <script src="../jfolio/exception.js"></script>
+
         <script src="../jfolio/core.js"></script>
         <script src="../jfolio/http.js"></script>
+        <script src="../jfolio/exception.js"></script>
+        <script src="../jfolio/alerts.js"></script>
 
         <script src="index.js"></script>
         <script src="resume/module.js"></script>
         <script src="nav/module.js"></script>
     </head>
     <body ng-controller="bizPageController">
-        <div id="biz" class="page">
 
+        <div alerts-include alerts="alerts"></div>
+        <div id="biz" class="page">
             <header class="mainheader">
                 <div class="part1">
                     <div class="module">

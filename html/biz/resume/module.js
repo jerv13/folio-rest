@@ -1,4 +1,4 @@
-angular.module('biz.resume', ['ngSanitize', 'jfolio.http'])
+angular.module('biz.resume', ['ngSanitize', 'jfolio.alert', 'jfolio.http'])
 
     .factory('resumeDataService', ['CoreHttpService', function(CoreHttpService) {
 
@@ -7,7 +7,7 @@ angular.module('biz.resume', ['ngSanitize', 'jfolio.http'])
         return resumeDataService;
     }])
 
-    .directive('bizResumeInclude', ['resumeDataService', function(resumeDataService) {
+    .directive('bizResumeInclude', ['Alerts', 'resumeDataService', function(Alerts, resumeDataService) {
 
         return {
             restrict: 'A',
@@ -16,6 +16,12 @@ angular.module('biz.resume', ['ngSanitize', 'jfolio.http'])
             link: function(scope, element, attrs, ngModel) {
 
                 console.log("Include module.res1");
+                resumeDataService.fail = function(exception) {
+                    scope.bizResumeAlerts = new Alerts(scope);
+                    scope.bizResumeAlerts.displayTime = 0;
+                    scope.bizResumeAlerts.thrwNew(exception, 'error');
+                    scope.error = true;
+                };
                 scope.resumeDataService = resumeDataService;
             }
         };
