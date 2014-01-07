@@ -2,7 +2,6 @@
     border-right: .1em solid rgba($fontMainColor,.4);
     border-bottom: .1em solid rgba($fontMainColor,.4);
     border-left: .1em solid rgba($fontMainColor,.4);
-
     margin-left: auto;
     margin-right: auto;
     padding: .2em;
@@ -47,7 +46,7 @@
     }
 }
 
-.module .jfoilioModuleBizNav {
+.module .bizNav {
     li {
 
         display: inline-block;
@@ -84,7 +83,7 @@
     }
 }
 
-.module .jfoilioModuleContact {
+.module .bizContact {
     .link {
         display: inline-block;
         position: relative;
@@ -114,7 +113,7 @@
     }
 }
 
-.module .jfoilioModuleOverview {
+.module .bizOverview {
     padding-top: 4em;
     width: $pageWidth - 10em;
 
@@ -151,7 +150,7 @@
     }
 }
 
-.module .jfoilioModuleResume {
+.module .bizResume {
     padding-top: 4em;
     width: $pageWidth - 10em;
     li {
@@ -384,7 +383,7 @@
     }
 }
 
-.module .jfoilioModuleSkills {
+.module .bizSkills {
     padding-top: 4em;
     width: $pageWidth - 10em;
 
@@ -495,7 +494,7 @@
     }
 }
 
-.module .jfoilioModuleAbout {
+.module .bizAbout {
     padding-top: 4em;
     width: $pageWidth - 10em;
 
@@ -531,7 +530,7 @@
 }
 
 
-.module .jfoilioModuleResources {
+.module .bizResources {
     padding-top: 4em;
     width: $pageWidth - 10em;
 

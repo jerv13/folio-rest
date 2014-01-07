@@ -1,4 +1,4 @@
-<nav class="jfoilioModuleBizNav">
+<nav class="bizNav">
     <div>
         <ul>
             <li ng-repeat="navitem in navitems"><a ng-class="{active: activenavsection == $index}" ng-click="nav($index)"><i></i><div>{{navitem}}</div></a></li>

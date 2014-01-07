@@ -1,4 +1,4 @@
-<div class="jfoilioModuleResume">
+<div class="bizResume">
     <div class="loading" ng-show="resumeDataService.loading">Loading</div>
     <div class="loading" ng-show="resumeDataService.exception">{{exception | json}}</div>
     <div ng-hide="resumeDataService.loading">

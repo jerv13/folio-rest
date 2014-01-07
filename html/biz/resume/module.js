@@ -7,7 +7,7 @@ angular.module('biz.resume', ['ngSanitize', 'jfolio.http'])
         return resumeDataService;
     }])
 
-    .directive('moduleBizResumeInclude', ['resumeDataService', function(resumeDataService) {
+    .directive('bizResumeInclude', ['resumeDataService', function(resumeDataService) {
 
         return {
             restrict: 'A',

@@ -1381,60 +1381,6 @@ table {
   border-spacing: 0; }
 
 /* - RESET */
-/* + RESET */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; }
-
-body {
-  line-height: 1; }
-
-ol, ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
-
-:focus {
-  outline: none; }
-
-ins {
-  text-decoration: none; }
-
-del {
-  text-decoration: line-through; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-/* - RESET */
 body {
   background-color: #324583;
   color: #eeeeee;
@@ -1497,438 +1443,438 @@ body {
     padding: .4em 2em .3em 2em;
     text-align: right; }
 
-.module .jfoilioModuleBizNav li {
+.module .bizNav li {
   display: inline-block;
   position: relative;
   padding-right: .3em; }
-  .module .jfoilioModuleBizNav li a {
+  .module .bizNav li a {
     color: rgba(255, 255, 255, 0);
     display: block;
     font-size: .7em; }
-    .module .jfoilioModuleBizNav li a i {
+    .module .bizNav li a i {
       background-color: rgba(238, 238, 238, 0.6);
       display: block;
       position: relative;
       width: 4.2em;
       height: 1.4em; }
-    .module .jfoilioModuleBizNav li a.active, .module .jfoilioModuleBizNav li a:link.active, .module .jfoilioModuleBizNav li a:visited.active, .module .jfoilioModuleBizNav li a:active.active, .module .jfoilioModuleBizNav li a:hover.active {
+    .module .bizNav li a.active, .module .bizNav li a:link.active, .module .bizNav li a:visited.active, .module .bizNav li a:active.active, .module .bizNav li a:hover.active {
       background-color: #ffa302;
       color: #ffa302; }
-    .module .jfoilioModuleBizNav li a, .module .jfoilioModuleBizNav li a:link, .module .jfoilioModuleBizNav li a:visited {
+    .module .bizNav li a, .module .bizNav li a:link, .module .bizNav li a:visited {
       background-color: rgba(238, 238, 238, 0.6);
       color: rgba(255, 255, 255, 0); }
-    .module .jfoilioModuleBizNav li a:active, .module .jfoilioModuleBizNav li a:hover {
+    .module .bizNav li a:active, .module .bizNav li a:hover {
       background-color: white;
       color: #eeeeee; }
-    .module .jfoilioModuleBizNav li a div {
+    .module .bizNav li a div {
       padding-bottom: .3em;
       position: absolute;
       top: -1.3em;
       left: 0em;
       width: 20em; }
 
-.module .jfoilioModuleContact .link {
+.module .bizContact .link {
   display: inline-block;
   position: relative; }
-  .module .jfoilioModuleContact .link a {
+  .module .bizContact .link a {
     color: rgba(255, 255, 255, 0);
     display: block;
     font-size: .7em; }
-    .module .jfoilioModuleContact .link a i {
+    .module .bizContact .link a i {
       color: white;
       font-size: 1.5em; }
-    .module .jfoilioModuleContact .link a:link, .module .jfoilioModuleContact .link a:visited {
+    .module .bizContact .link a:link, .module .bizContact .link a:visited {
       color: rgba(255, 255, 255, 0); }
-    .module .jfoilioModuleContact .link a:active, .module .jfoilioModuleContact .link a:hover {
+    .module .bizContact .link a:active, .module .bizContact .link a:hover {
       color: white;
       cursor: pointer; }
-    .module .jfoilioModuleContact .link a div {
+    .module .bizContact .link a div {
       padding-bottom: .3em;
       position: absolute;
       top: -1em;
       left: 0em;
       width: 20em; }
 
-.module .jfoilioModuleOverview {
+.module .bizOverview {
   padding-top: 4em;
   width: 57em; }
-  .module .jfoilioModuleOverview .part1 {
+  .module .bizOverview .part1 {
     display: block;
     float: left;
     width: 33em; }
-  .module .jfoilioModuleOverview .part2 {
+  .module .bizOverview .part2 {
     display: block;
     float: right;
     padding-top: 3.8em;
     padding-left: 2em;
     width: 22em; }
-  .module .jfoilioModuleOverview .title {
+  .module .bizOverview .title {
     border-bottom: 0.1em solid #ffa302;
     display: block;
     font-size: 4em;
     text-align: right; }
-  .module .jfoilioModuleOverview .subtitle {
+  .module .bizOverview .subtitle {
     display: block;
     font-size: 1.2em;
     padding-top: .5em;
     text-align: right; }
-  .module .jfoilioModuleOverview .summary {
+  .module .bizOverview .summary {
     line-height: 1.2em; }
-  .module .jfoilioModuleOverview:after {
+  .module .bizOverview:after {
     content: ".";
     visibility: hidden;
     display: block;
     height: 0;
     clear: both; }
 
-.module .jfoilioModuleResume {
+.module .bizResume {
   padding-top: 4em;
   width: 57em; }
-  .module .jfoilioModuleResume li {
+  .module .bizResume li {
     list-style-type: square;
     margin-left: 2em;
     padding-bottom: .3em; }
-  .module .jfoilioModuleResume header {
+  .module .bizResume header {
     padding-bottom: 4em; }
-    .module .jfoilioModuleResume header .part1 {
+    .module .bizResume header .part1 {
       display: block;
       float: left;
       width: 32.4em; }
-    .module .jfoilioModuleResume header .part2 {
+    .module .bizResume header .part2 {
       display: block;
       float: right;
       padding-top: 1em;
       text-align: right;
       width: 21.6em; }
-    .module .jfoilioModuleResume header .title {
+    .module .bizResume header .title {
       border-bottom: 0.1em solid #ffa302;
       display: block;
       font-size: 4em;
       text-align: right; }
-    .module .jfoilioModuleResume header .subtitle {
+    .module .bizResume header .subtitle {
       display: block;
       font-size: 1.1em;
       padding-top: .5em;
       text-align: right; }
-    .module .jfoilioModuleResume header .address {
+    .module .bizResume header .address {
       padding-bottom: .2em; }
-      .module .jfoilioModuleResume header .address div {
+      .module .bizResume header .address div {
         display: inline-block;
         padding-bottom: .2em; }
-      .module .jfoilioModuleResume header .address zip {
+      .module .bizResume header .address zip {
         padding-left: .5em; }
-    .module .jfoilioModuleResume header .contact div {
+    .module .bizResume header .contact div {
       padding-bottom: .2em; }
-    .module .jfoilioModuleResume header .contact .protocol {
+    .module .bizResume header .contact .protocol {
       font-size: .9em; }
-    .module .jfoilioModuleResume header:after {
+    .module .bizResume header:after {
       content: ".";
       visibility: hidden;
       display: block;
       height: 0;
       clear: both; }
-  .module .jfoilioModuleResume .resumebody {
+  .module .bizResume .resumebody {
     padding-bottom: 1em; }
-    .module .jfoilioModuleResume .resumebody section {
+    .module .bizResume .resumebody section {
       float: left;
       padding-bottom: 2em;
       position: relative; }
-      .module .jfoilioModuleResume .resumebody section .part1 {
+      .module .bizResume .resumebody section .part1 {
         display: block;
         float: left;
         width: 8.1em; }
-        .module .jfoilioModuleResume .resumebody section .part1 .title {
+        .module .bizResume .resumebody section .part1 .title {
           border-bottom: 0.1em solid #ffa302;
           font-weight: bold;
           text-align: right;
           text-transform: uppercase; }
-      .module .jfoilioModuleResume .resumebody section .part2 {
+      .module .bizResume .resumebody section .part2 {
         display: block;
         float: right;
         padding-left: 2em;
         width: 45.9em; }
-    .module .jfoilioModuleResume .resumebody .summary .subtitle {
+    .module .bizResume .resumebody .summary .subtitle {
       font-weight: bold;
       padding-bottom: 1.5em; }
-    .module .jfoilioModuleResume .resumebody .interest .title {
+    .module .bizResume .resumebody .interest .title {
       font-weight: bold;
       padding-bottom: 1.5em; }
-    .module .jfoilioModuleResume .resumebody .interest .points {
+    .module .bizResume .resumebody .interest .points {
       padding-bottom: 1.5em; }
-    .module .jfoilioModuleResume .resumebody .experience .position {
+    .module .bizResume .resumebody .experience .position {
       padding-bottom: 3em; }
-      .module .jfoilioModuleResume .resumebody .experience .position .overview {
+      .module .bizResume .resumebody .experience .position .overview {
         margin-bottom: .3em; }
-        .module .jfoilioModuleResume .resumebody .experience .position .overview .title {
+        .module .bizResume .resumebody .experience .position .overview .title {
           font-weight: bold;
           display: inline-block;
           float: left; }
-        .module .jfoilioModuleResume .resumebody .experience .position .overview .datarange {
+        .module .bizResume .resumebody .experience .position .overview .datarange {
           display: inline-block;
           float: right; }
-          .module .jfoilioModuleResume .resumebody .experience .position .overview .datarange div {
+          .module .bizResume .resumebody .experience .position .overview .datarange div {
             display: inline-block; }
-          .module .jfoilioModuleResume .resumebody .experience .position .overview .datarange .start:after {
+          .module .bizResume .resumebody .experience .position .overview .datarange .start:after {
             content: " - "; }
-        .module .jfoilioModuleResume .resumebody .experience .position .overview:after {
+        .module .bizResume .resumebody .experience .position .overview:after {
           content: ".";
           visibility: hidden;
           display: block;
           height: 0;
           clear: both; }
-      .module .jfoilioModuleResume .resumebody .experience .position .company {
+      .module .bizResume .resumebody .experience .position .company {
         padding-bottom: 1em; }
-        .module .jfoilioModuleResume .resumebody .experience .position .company .name {
+        .module .bizResume .resumebody .experience .position .company .name {
           display: inline-block;
           float: left; }
-        .module .jfoilioModuleResume .resumebody .experience .position .company .address {
+        .module .bizResume .resumebody .experience .position .company .address {
           display: inline-block;
           float: right;
           padding-bottom: .2em; }
-          .module .jfoilioModuleResume .resumebody .experience .position .company .address div {
+          .module .bizResume .resumebody .experience .position .company .address div {
             display: inline-block;
             padding-bottom: .2em; }
-          .module .jfoilioModuleResume .resumebody .experience .position .company .address zip {
+          .module .bizResume .resumebody .experience .position .company .address zip {
             padding-left: .5em; }
-        .module .jfoilioModuleResume .resumebody .experience .position .company:after {
+        .module .bizResume .resumebody .experience .position .company:after {
           content: ".";
           visibility: hidden;
           display: block;
           height: 0;
           clear: both; }
-      .module .jfoilioModuleResume .resumebody .experience .position .body {
+      .module .bizResume .resumebody .experience .position .body {
         padding-left: 1em; }
-    .module .jfoilioModuleResume .resumebody .education .school {
+    .module .bizResume .resumebody .education .school {
       padding-bottom: 1.5em; }
-      .module .jfoilioModuleResume .resumebody .education .school .degree {
+      .module .bizResume .resumebody .education .school .degree {
         margin-bottom: .3em; }
-        .module .jfoilioModuleResume .resumebody .education .school .degree .title {
+        .module .bizResume .resumebody .education .school .degree .title {
           font-weight: bold;
           display: inline-block;
           float: left;
           width: 26em; }
-        .module .jfoilioModuleResume .resumebody .education .school .degree .type {
+        .module .bizResume .resumebody .education .school .degree .type {
           display: inline-block;
           float: left; }
-        .module .jfoilioModuleResume .resumebody .education .school .degree .date {
+        .module .bizResume .resumebody .education .school .degree .date {
           display: inline-block;
           float: right; }
-        .module .jfoilioModuleResume .resumebody .education .school .degree:after {
+        .module .bizResume .resumebody .education .school .degree:after {
           content: ".";
           visibility: hidden;
           display: block;
           height: 0;
           clear: both; }
-      .module .jfoilioModuleResume .resumebody .education .school .company .name {
+      .module .bizResume .resumebody .education .school .company .name {
         display: inline-block;
         float: left; }
-      .module .jfoilioModuleResume .resumebody .education .school .company .address {
+      .module .bizResume .resumebody .education .school .company .address {
         display: inline-block;
         float: right;
         padding-bottom: .2em; }
-        .module .jfoilioModuleResume .resumebody .education .school .company .address div {
+        .module .bizResume .resumebody .education .school .company .address div {
           display: inline-block;
           padding-bottom: .2em; }
-        .module .jfoilioModuleResume .resumebody .education .school .company .address zip {
+        .module .bizResume .resumebody .education .school .company .address zip {
           padding-left: .5em; }
-      .module .jfoilioModuleResume .resumebody .education .school .company:after {
+      .module .bizResume .resumebody .education .school .company:after {
         content: ".";
         visibility: hidden;
         display: block;
         height: 0;
         clear: both; }
-    .module .jfoilioModuleResume .resumebody:after {
+    .module .bizResume .resumebody:after {
       content: ".";
       visibility: hidden;
       display: block;
       height: 0;
       clear: both; }
-  .module .jfoilioModuleResume footer {
+  .module .bizResume footer {
     border-top: 0.1em solid #eeeeee;
     padding-top: .3em;
     text-align: right; }
-    .module .jfoilioModuleResume footer .link {
+    .module .bizResume footer .link {
       display: inline-block;
       padding-left: 2em; }
-      .module .jfoilioModuleResume footer .link i {
+      .module .bizResume footer .link i {
         display: inline-block; }
-      .module .jfoilioModuleResume footer .link div {
+      .module .bizResume footer .link div {
         display: inline-block;
         padding-left: .7em; }
-  .module .jfoilioModuleResume:after {
+  .module .bizResume:after {
     content: ".";
     visibility: hidden;
     display: block;
     height: 0;
     clear: both; }
 
-.module .jfoilioModuleSkills {
+.module .bizSkills {
   padding-top: 4em;
   width: 57em; }
-  .module .jfoilioModuleSkills .skillsheader {
+  .module .bizSkills .skillsheader {
     padding-bottom: 4em; }
-    .module .jfoilioModuleSkills .skillsheader .part1 {
+    .module .bizSkills .skillsheader .part1 {
       display: block;
       float: left;
       width: 22em; }
-    .module .jfoilioModuleSkills .skillsheader .part2 {
+    .module .bizSkills .skillsheader .part2 {
       display: block;
       float: right;
       padding-top: 1.8em;
       padding-left: 2em;
       width: 33em; }
-    .module .jfoilioModuleSkills .skillsheader .title {
+    .module .bizSkills .skillsheader .title {
       border-bottom: 0.1em solid #ffa302;
       display: block;
       font-size: 2em;
       font-weight: bold;
       text-align: right; }
-    .module .jfoilioModuleSkills .skillsheader .subtitle {
+    .module .bizSkills .skillsheader .subtitle {
       display: block;
       font-size: 1.1em;
       padding-top: .5em;
       text-align: right; }
-    .module .jfoilioModuleSkills .skillsheader:after {
+    .module .bizSkills .skillsheader:after {
       content: ".";
       visibility: hidden;
       display: block;
       height: 0;
       clear: both; }
-  .module .jfoilioModuleSkills:after {
+  .module .bizSkills:after {
     content: ".";
     visibility: hidden;
     display: block;
     height: 0;
     clear: both; }
-  .module .jfoilioModuleSkills .skills .overview {
+  .module .bizSkills .skills .overview {
     border-top: 0.1em solid #eeeeee;
     font-weight: bold;
     padding-top: .3em;
     padding-bottom: 1.5em; }
-    .module .jfoilioModuleSkills .skills .overview .info {
+    .module .bizSkills .skills .overview .info {
       display: block;
       float: left;
       width: 18em; }
-    .module .jfoilioModuleSkills .skills .overview .level {
+    .module .bizSkills .skills .overview .level {
       display: block;
       float: left;
       padding-left: 2em;
       width: 12em; }
-    .module .jfoilioModuleSkills .skills .overview .yearsexperience {
+    .module .bizSkills .skills .overview .yearsexperience {
       display: block;
       float: left;
       padding-left: 2em;
       width: 12em; }
-    .module .jfoilioModuleSkills .skills .overview .lastused {
+    .module .bizSkills .skills .overview .lastused {
       display: block;
       float: left;
       width: 5em; }
-    .module .jfoilioModuleSkills .skills .overview:after {
+    .module .bizSkills .skills .overview:after {
       content: ".";
       visibility: hidden;
       display: block;
       height: 0;
       clear: both; }
-  .module .jfoilioModuleSkills .skills .skill:hover {
+  .module .bizSkills .skills .skill:hover {
     background-color: rgba(238, 238, 238, 0.1); }
-  .module .jfoilioModuleSkills .skills .skill .info {
+  .module .bizSkills .skills .skill .info {
     display: block;
     float: left;
     width: 18em; }
-    .module .jfoilioModuleSkills .skills .skill .info .name {
+    .module .bizSkills .skills .skill .info .name {
       font-size: 1.2em; }
-    .module .jfoilioModuleSkills .skills .skill .info .details {
+    .module .bizSkills .skills .skill .info .details {
       font-size: .7em;
       padding-top: .2em; }
-  .module .jfoilioModuleSkills .skills .skill .level {
+  .module .bizSkills .skills .skill .level {
     display: block;
     float: left;
     padding-left: 2em;
     width: 12em; }
-  .module .jfoilioModuleSkills .skills .skill .yearsexperience {
+  .module .bizSkills .skills .skill .yearsexperience {
     display: block;
     float: left;
     padding-left: 2em;
     width: 12em; }
-  .module .jfoilioModuleSkills .skills .skill .lastused {
+  .module .bizSkills .skills .skill .lastused {
     display: block;
     float: left;
     width: 5em; }
-  .module .jfoilioModuleSkills .skills .skill:after {
+  .module .bizSkills .skills .skill:after {
     content: ".";
     visibility: hidden;
     display: block;
     height: 0;
     clear: both; }
 
-.module .jfoilioModuleAbout {
+.module .bizAbout {
   padding-top: 4em;
   width: 57em; }
-  .module .jfoilioModuleAbout .part1 {
+  .module .bizAbout .part1 {
     display: block;
     float: left;
     width: 22em; }
-  .module .jfoilioModuleAbout .part2 {
+  .module .bizAbout .part2 {
     display: block;
     float: right;
     padding-top: 1.8em;
     padding-left: 2em;
     width: 33em; }
-  .module .jfoilioModuleAbout .title {
+  .module .bizAbout .title {
     border-bottom: 0.1em solid #ffa302;
     display: block;
     font-size: 2em;
     font-weight: bold;
     text-align: right; }
-  .module .jfoilioModuleAbout .subtitle {
+  .module .bizAbout .subtitle {
     display: block;
     font-size: 1.1em;
     padding-top: .5em;
     text-align: right; }
-  .module .jfoilioModuleAbout:after {
+  .module .bizAbout:after {
     content: ".";
     visibility: hidden;
     display: block;
     height: 0;
     clear: both; }
 
-.module .jfoilioModuleResources {
+.module .bizResources {
   padding-top: 4em;
   width: 57em; }
-  .module .jfoilioModuleResources .part1 {
+  .module .bizResources .part1 {
     display: block;
     float: left;
     width: 22em; }
-  .module .jfoilioModuleResources .part2 {
+  .module .bizResources .part2 {
     display: block;
     float: right;
     padding-top: 1.8em;
     padding-left: 2em;
     width: 33em; }
-  .module .jfoilioModuleResources .title {
+  .module .bizResources .title {
     border-bottom: 0.1em solid #ffa302;
     display: block;
     font-size: 2em;
     font-weight: bold;
     text-align: right; }
-  .module .jfoilioModuleResources .subtitle {
+  .module .bizResources .subtitle {
     display: block;
     font-size: 1.1em;
     padding-top: .5em;
     text-align: right; }
-  .module .jfoilioModuleResources .summary {
+  .module .bizResources .summary {
     padding-bottom: 1em; }
-  .module .jfoilioModuleResources .link {
+  .module .bizResources .link {
     display: block;
     position: relative;
     padding-bottom: .5em; }
-    .module .jfoilioModuleResources .link .label {
+    .module .bizResources .link .label {
       display: inline-block;
       padding-left: .7em; }
-    .module .jfoilioModuleResources .link .description {
+    .module .bizResources .link .description {
       font-size: .7em;
       padding: .2em 0em .2em 2.5em; }
-  .module .jfoilioModuleResources:after {
+  .module .bizResources:after {
     content: ".";
     visibility: hidden;
     display: block;

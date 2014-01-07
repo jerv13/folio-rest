@@ -9,35 +9,35 @@
 
         <link rel="stylesheet" href="css/styles.css" />
 
-        <script src="../js/lib/angular/angular-1.2.6/angular.min.js"></script>
-        <script src="../js/lib/angular/angular-1.2.6/angular-route.min.js"></script>
-        <script src="../js/lib/angular/angular-1.2.6/angular-sanitize.min.js"></script>
-        <script src="../js/lib/jquery/jquery-1.10.2.min.js"></script>
+        <script src="../jfolio/js.lib/angular/angular-1.2.6/angular.min.js"></script>
+        <script src="../jfolio/js.lib/angular/angular-1.2.6/angular-route.min.js"></script>
+        <script src="../jfolio/js.lib/angular/angular-1.2.6/angular-sanitize.min.js"></script>
+        <script src="../jfolio/js.lib/jquery/jquery-1.10.2.min.js"></script>
 
         <!-- server based configurations -->
         <script src="../../server.php/server.config.php?returntype=javascript&varname=jfolioServerConfig"></script>
 
-        <script src="../js/jfolio/config.js"></script>
-        <script src="../js/jfolio/core.js"></script>
-        <script src="../js/jfolio/http.js"></script>
+        <script src="../jfolio/config.js"></script>
+        <script src="../jfolio/core.js"></script>
+        <script src="../jfolio/http.js"></script>
 
         <script src="index.js"></script>
         <script src="resume/module.js"></script>
         <script src="nav/module.js"></script>
     </head>
     <body ng-controller="bizPageController">
-        <div id="jfolio_page_biz" class="page">
+        <div id="biz" class="page">
 
             <header class="mainheader">
                 <div class="part1">
                     <div class="module">
-                        <div module-biz-nav-include navitems="navitems" activenavsection="activenavsection" onnav="onnav">{{activenavsection}}</div>
+                        <div biz-nav-include navitems="navitems" activenavsection="activenavsection" onnav="onnav">{{activenavsection}}</div>
                     </div>
                 </div>
                 <div class="part2"></div>
                 <div class="part3">
                     <div class="module">
-                        <div class="jfoilioModuleContact">
+                        <div class="bizContact">
                             <div class="link"><a><i class="fa fa-envelope-o" title="Contact"></i><div>Contact</div></a></div>
                             <div class="form" ng-hide="1">
                                 <form>
@@ -51,7 +51,7 @@
 
             <section class="mainbody">
                 <div class="module" ng-show="activenavsection == 0">
-                    <div class="jfoilioModuleOverview">
+                    <div class="bizOverview">
                         <div class="part1">
                             <div class="title">James C. Jervis</div>
                             <div class="subtitle">Web Application Engineer, Developer and Architect</div>
@@ -63,12 +63,12 @@
                 </div>
 
                 <div class="module" ng-show="activenavsection == 1">
-                    <div module-biz-resume-include>XXX</div>
+                    <div biz-resume-include>XXX</div>
                 </div>
 
 
                 <div class="module" ng-show="activenavsection == 2">
-                    <div class="jfoilioModuleSkills">
+                    <div class="bizSkills">
                         <div class="skillsheader">
                             <div class="part1">
                                 <div class="title">Technical Skills</div>
@@ -99,7 +99,7 @@
                 </div>
 
                 <div class="module" ng-show="activenavsection == 3">
-                    <div class="jfoilioModuleAbout">
+                    <div class="bizAbout">
                         <div class="part1">
                             <div class="title">About me</div>
                             <div class="subtitle">Life Learner and Musician</div>
@@ -112,7 +112,7 @@
                 </div>
 
                 <div class="module" ng-show="activenavsection == 4">
-                    <div class="jfoilioModuleResources">
+                    <div class="bizResources">
                         <div class="part1">
                             <div class="title">Resources</div>
                             <div class="subtitle">Links to Good Information</div>
@@ -135,7 +135,7 @@
 
             <footer class="mainfooter">
                 <div class="module">
-                    <div class="jfoilioModuleFooter">
+                    <div class="bizFooter">
                         <div class="copyright">Copyright (C) 2014 JervDesign.</div>
                     </div>
                 </div>

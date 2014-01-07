@@ -122,6 +122,10 @@ Install:
 Usage:
 
     `
+    Biz:
+    sass --watch ./html/_sass/theme.biz/styles.scss:./html/biz/css/styles.css
+    
+    ALL
     sass --watch ./html/_sass/styles.scss:./html/css/styles.css
     `
 

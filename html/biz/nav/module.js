@@ -1,6 +1,6 @@
 angular.module('biz.nav', [])
 
-    .directive('moduleBizNavInclude', [function() {
+    .directive('bizNavInclude', [function() {
 
         return {
             restrict: 'A',
