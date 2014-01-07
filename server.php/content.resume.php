@@ -10,8 +10,8 @@ class ContentResume {
 
     public static function main() {
 
-        sleep(5);
-        
+        sleep(1); // just to mimic load time
+
         $key = Http::readGetVar('key');
 
         $dba = new DataAccess();

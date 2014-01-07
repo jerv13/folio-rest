@@ -123,10 +123,10 @@ Usage:
 
     `
     Biz:
-    sass --watch ./html/_sass/theme.biz/styles.scss:./html/biz/css/styles.css
+    sass --watch ./html/biz/css/_sass/styles.scss:./html/biz/css/styles.css
     
-    ALL
-    sass --watch ./html/_sass/styles.scss:./html/css/styles.css
+    CORE (jfolio)
+    sass --watch ./html/jfolio/_sass/styles.scss:./html/jfolio/css/styles.css
     `
 
 Resources:
