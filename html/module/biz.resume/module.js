@@ -1,4 +1,4 @@
-angular.module('jfolio.module.biz.resume', ['jfolio.http'])
+angular.module('jfolio.module.biz.resume', ['ngSanitize','jfolio.http'])
 
     .directive('moduleBizResumeInclude', ['coreHttp', function(coreHttp) {
 

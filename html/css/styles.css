@@ -1448,6 +1448,8 @@ body {
   body a:hover {
     color: white;
     cursor: pointer; }
+  body p {
+    margin-bottom: 1em; }
 
 .page {
   border-right: 0.1em solid rgba(238, 238, 238, 0.4);

@@ -6,7 +6,7 @@
             "scheme": "http",
             "hostname": "localhost",
             "port": "",
-            "basepath": "@folioREST/folioREST/server.php"
+            "basepath": "folioREST/server.php"
         }
     }
 }

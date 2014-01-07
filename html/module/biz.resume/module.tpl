@@ -1,4 +1,5 @@
 <div class="jfoilioModuleResume">
+    <div class="loading">Loading</div>
     <header class="resumeheader">
         <div class="part1">
             <div class="title">{{resume.content.title}}</div>
@@ -71,7 +72,7 @@
                             <div class="zip">{{experience.position.company.address.zip}}</div>
                         </div>
                     </div>
-                    <div class="body">{{experience.content.body}}</div>
+                    <div class="body" ng-bind-html="experience.content.body"></div>
                 </div>
             </div>
         </section>
