@@ -123,7 +123,7 @@ Usage:
 
     `
     Biz:
-    sass --watch ./html/biz/css/_sass/styles.scss:./html/biz/css/styles.css
+    sass --watch ./html/biz/_sass/styles.scss:./html/biz/css/styles.css
     
     CORE (jfolio)
     sass --watch ./html/jfolio/_sass/styles.scss:./html/jfolio/css/styles.css
