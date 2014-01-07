@@ -21,7 +21,7 @@ angular.module('jfolio.http', ['jfolio.config'])
                 return headers;
             };
 
-            self.buildUrl = function(filepath){
+            self.buildUrl = function(filepath) {
 
                 return httpConfig.getFullUrl(filepath);
             };
@@ -108,7 +108,7 @@ angular.module('jfolio.http', ['jfolio.config'])
 
                         onFail({code: status, message: self.comErrorMessage});
                     }
-                    
+
                     self.loading = false;
                     return;
                 });
@@ -117,4 +117,59 @@ angular.module('jfolio.http', ['jfolio.config'])
         };
 
         return new CoreHttp();
-    }]);
+    }])
+
+    .factory('CoreHttpService', ['coreHttp', function(coreHttp) {
+
+        var CoreHttpService = function(url, reqData, success, fail) {
+
+            var self = this;
+            self.url = null;
+            self.reqData = null;
+            self.success = null;
+            self.fail = null;
+
+            self.loading = true;
+            self.data = null;
+            self.exception = null;
+
+            self.init = function(url, reqData, success, fail) {
+
+                self.url = coreHttp.buildUrl(url);
+                self.reqData = reqData;
+                self.success = function(data, config) {
+
+                    console.log('CoreHttpService.success');
+                    if ((typeof(success) === 'function')) {
+
+                        success(data, config);
+                    }
+                    self.data = data;
+                    self.loading = false;
+                };
+
+                self.fail = function(exception) {
+
+                    console.log('CoreHttpService.fail');
+                    if ((typeof(fail) === 'function')) {
+
+                        fail(exception);
+                    }
+                    self.exception = exception;
+                    self.loading = false;
+                };
+            };
+
+            self.execute = function() {
+                console.log('CoreHttpService.execute');
+                self.loading = true;
+                coreHttp.get(self.url, self.reqData, self.success, self.fail);
+            };
+
+            self.init(url, reqData, success, fail);
+
+        };
+
+        return CoreHttpService;
+    }
+]);

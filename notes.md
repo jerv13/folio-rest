@@ -20,7 +20,7 @@ Requirements
         - contact
         - Resources, Links, content related
         -? Small game
-        
+
 - May utilize i16n multi-language support
 
 ### Server ###
@@ -39,7 +39,9 @@ Requirements
             - message - A message used to provide error details or addition info.
     - May include OAuth style authentication
     - May include users and user role management
-    - May 
+    - May allow user registration
+    - May allow for comments system
+        - Utilize pagination
 
 - Database:
     - Must utilize data from DB
@@ -50,8 +52,9 @@ Requirements
 Nice to haves:
 --------------
 
-- oAuth to google or facebook
+- oAuth to google, facebook, linkedin
 - i16n
+- info calls for API documentation
 
 Features
 --------
@@ -67,7 +70,7 @@ Colors:
     Blue #0042ff, #0084ff #023bce, 0232af
     Orange highlight
     White text #EEEEEE
-    
+
 Identity: Jerv logo (subtle).  Clear logo set (font-awesome?)
 
 Site Map:
@@ -79,7 +82,7 @@ Site Map:
     About (page) - Wish list - Things I enjoy - links to related
     Contact (pop-up)- Details plus submit message (email)
     Resources (page)
-    
+
 Inspiration:
 
     http://joanfernandez.es/
@@ -90,7 +93,7 @@ Concept: Fun, 3D style UFO/Alien/Space station.
 
     The user is an Alien moving his why thru a small virtual world.
     Each area on the work open a piece of text content.
-    
+
 Colors: Gray, Bright Green (glowing), Multi-color accents
 
 Identity: Each piece of content will have a visual interface that will create the identity of that content.
@@ -102,18 +105,6 @@ Site Map:
     Skills - Skills listed on a circuit board back ground
 
 -? UFO Game - Unity/blender
-
-ToDo
-----
-
-- biz: Create 'on-demand' data loading (only load what is requested)
-- biz: Create loader animations/indicators
-- biz: Create error collection/displays
-- biz: Create css for small displays
-
-- ufo: begin layout and modeling  
-
-- 
 
 Dependencies
 ------------
@@ -132,7 +123,7 @@ Usage:
 
     `
     sass --watch ./html/_sass/styles.scss:./html/css/styles.css
-    `   
+    `
 
 Resources:
 
@@ -145,7 +136,7 @@ Install:
     cd html/_sass/lib/bourbon
     bourbon install
     `
-    
+
 Resources:
 
 ### AngularJS (DEV, QA, PROD) ###
@@ -161,19 +152,19 @@ Install: requires npm
     sudo apt-get update
     sudo apt-get install nodejs
     `
-    
+
 Resources:
 
     https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager#ubuntu-mint
 
-### Redis (DEV, QA, PROD) ### 
+### Redis (DEV, QA, PROD) ###
 
-Install: 
+Install:
 
     `
     apt-get install redis-server
     `
-    
+
 Resources:
 
     https://library.linode.com/databases/redis/ubuntu-12.04-precise-pangolin
@@ -210,7 +201,7 @@ NOTES
 - Good core directive for including templates?
 
 - Skill Levels
-    1 = Beginner 
+    1 = Beginner
     2 = Intermediate
     3 = Advanced
     4 = Expert

@@ -10,6 +10,8 @@ class ContentResume {
 
     public static function main() {
 
+        sleep(5);
+        
         $key = Http::readGetVar('key');
 
         $dba = new DataAccess();
