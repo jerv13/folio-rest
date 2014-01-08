@@ -1,6 +1,6 @@
 <div class="bizResume">
     <div class="loading" ng-show="resumeDataService.loading">Loading</div>
-    <div class="alerts" ng-show="bizResumeAlerts.thrown"><div ng-repeat="alert in bizResumeAlerts.thrown"><div class="alert {{alert.type}} number_{{alert.code}}"><div class="icon"><i class="fa fa-exclamation-triangle fa-2x"></i></div><div class="code">{{alert.code}}: </div><div class="message">{{alert.message}}</div><div></div></div></div></div>
+    <div class="alerts" ng-show="bizResumeAlerts.thrown.length > 0"><div ng-repeat="alert in bizResumeAlerts.thrown"><div class="alert {{alert.type}} number_{{alert.code}}"><div class="icon"><i class="fa fa-exclamation-triangle fa-2x"></i></div><div class="code">{{alert.code}}: </div><div class="message">{{alert.message}}</div><div></div></div></div></div>
     <div ng-hide="resumeDataService.loading || error">
         <header class="resumeheader">
             <div class="part1">
@@ -9,14 +9,14 @@
             </div>
             <div class="part2">
                 <div class="address">
-                    <div class="city">{{resumeDataService.data.contentAddress.address.city}}</div>
-                    <div class="state">,{{resumeDataService.data.contentAddress.address.state}}</div>
-                    <div class="zip">{{resumeDataService.data.contentAddress.address.zip}}</div>
+                    <div class="city">{{resumeDataService.data.contentContact.contact.address.city}}</div>
+                    <div class="state">,{{resumeDataService.data.contentContact.contact.address.state}}</div>
+                    <div class="zip">{{resumeDataService.data.contentContact.contact.address.zip}}</div>
                 </div>
                 <div class="contact">
                     <div class="phone">{{resumeDataService.data.contentContact.contact.phone}}</div>
                     <div class="email">{{resumeDataService.data.contentContact.contact.email}}</div>
-                    <div class="website"><a href="{{resumeDataService.data.contentContact.contact.site}}" target="_blank"><span class="protocol">XXX://</span>{{resumeDataService.data.contentContact.contact.site}}</a></div>
+                    <div class="website"><a href="{{resumeDataService.data.contentContact.contact.site}}" target="_blank"><span class="protocol"></span>{{resumeDataService.data.contentContact.contact.site}}</a></div>
                 </div>
             </div>
         </header>

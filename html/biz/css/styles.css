@@ -1396,44 +1396,64 @@ body {
     cursor: pointer; }
   body p {
     margin-bottom: 1em; }
-  body .alerts .alert {
-    background-color: rgba(255, 255, 255, 0.9);
-    border: 0.1em solid #475890;
-    border-top-left-radius: 0.5em;
-    border-top-right-radius: 0.5em;
-    border-bottom-left-radius: 0.5em;
-    border-bottom-right-radius: 0.5em;
-    border-top-left-radius: 0.5em;
-    border-bottom-left-radius: 0.5em;
-    border-top-right-radius: 0.5em;
-    border-bottom-right-radius: 0.5em;
-    color: #324583;
-    margin: .5em;
-    padding: .5em; }
-    body .alerts .alert .icon {
-      display: inline-block;
-      padding-right: 1em; }
-    body .alerts .alert .code {
-      display: none; }
-    body .alerts .alert .message {
-      display: inline-block;
-      font-weight: bold; }
-    body .alerts .alert.notice {
-      background-color: rgba(255, 255, 204, 0.9);
-      border: .1em solid yellow;
-      color: #333300; }
-    body .alerts .alert.warning {
-      background-color: rgba(255, 224, 178, 0.9);
-      border: .1em solid orange;
-      color: #4C2E00; }
-    body .alerts .alert.error {
-      background-color: rgba(255, 204, 204, 0.9);
-      border: .1em solid red;
-      color: #4C0000; }
-      body .alerts .alert.error .code {
-        display: inline-block; }
-      body .alerts .alert.error .message {
-        padding-left: 1em; }
+  body .alerts {
+    position: relative;
+    width: 36; }
+    body .alerts .alert {
+      background-color: rgba(255, 255, 255, 0.9);
+      border: 0.1em solid #475890;
+      border-top-left-radius: 0.5em;
+      border-top-right-radius: 0.5em;
+      border-bottom-left-radius: 0.5em;
+      border-bottom-right-radius: 0.5em;
+      border-top-left-radius: 0.5em;
+      border-bottom-left-radius: 0.5em;
+      border-top-right-radius: 0.5em;
+      border-bottom-right-radius: 0.5em;
+      color: #324583;
+      margin: .5em auto;
+      padding: .5em;
+      vertical-align: text-top;
+      width: 33.9em; }
+      body .alerts .alert .icon {
+        display: inline-block;
+        padding-right: 1em;
+        vertical-align: text-top;
+        width: 2em; }
+      body .alerts .alert .code {
+        display: none;
+        padding-top: .5em;
+        vertical-align: text-top; }
+      body .alerts .alert .message {
+        display: inline-block;
+        font-weight: bold;
+        padding-top: .5em;
+        vertical-align: text-top;
+        width: 30em; }
+      body .alerts .alert.notice {
+        background-color: rgba(255, 255, 204, 0.9);
+        border: .1em solid yellow;
+        color: #333333; }
+      body .alerts .alert.warning {
+        background-color: rgba(255, 224, 178, 0.9);
+        border: .1em solid orange;
+        color: #4C2E00; }
+      body .alerts .alert.error {
+        background-color: rgba(255, 204, 204, 0.9);
+        border: .1em solid red;
+        color: #4C0000; }
+        body .alerts .alert.error .code {
+          display: inline-block;
+          padding-right: .5em;
+          width: 3em; }
+        body .alerts .alert.error .message {
+          width: 26em; }
+      body .alerts .alert:after {
+        content: ".";
+        visibility: hidden;
+        display: block;
+        height: 0;
+        clear: both; }
 
 .page {
   border-right: 0.1em solid rgba(238, 238, 238, 0.4);

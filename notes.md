@@ -20,7 +20,7 @@ Requirements
         - contact
         - Resources, Links, content related
         -? Small game
-
+- Should have good documentation
 - May utilize i16n multi-language support
 
 ### Server ###
@@ -42,12 +42,16 @@ Requirements
     - May allow user registration
     - May allow for comments system
         - Utilize pagination
-
+    - Must expose cofiguration required by client as API and and JS file
+    - Must expose available end-point to client as key value object ({ "key": "api_path", ...})
+    - Should have good documentation
+    
 - Database:
     - Must utilize data from DB
     - Should use Redis DB
     - Must have good security for write
     - Must not expose DB directly to web
+    - Should have good documentation
 
 Nice to haves:
 --------------

@@ -32,6 +32,8 @@ body {
     }
 
     .alerts {
+        position: relative;
+        width: 36;
         .alert{
             background-color: rgba(white, .9);
             border: .1em solid $mainLighterColor;
@@ -40,24 +42,33 @@ body {
             @include border-left-radius(.5em);
             @include border-right-radius(.5em);
             color: $mainColor;
-            margin: .5em;
+            margin: .5em auto;
             padding: .5em;
+            vertical-align: text-top;
+            width: 33.9em;
             .icon {
                 display: inline-block;
                 padding-right: 1em;
+                vertical-align: text-top;
+                width: 2em;
             }
             .code {
                 display: none;
+                padding-top: .5em;
+                vertical-align: text-top;
             }
             .message {
                 display: inline-block;
                 font-weight: bold;
+                padding-top: .5em;
+                vertical-align: text-top;
+                width: 30em;
             }
             &.info {}
             &.notice {
                 background-color: rgba(#FFFFCC, .9);
                 border: .1em solid yellow;
-                color: #333300;
+                color: #333333;
             }
             &.warning {
                 background-color: rgba(#FFE0B2, .9);
@@ -70,10 +81,15 @@ body {
                 color: #4C0000;
                 .code {
                     display: inline-block;
+                    padding-right: .5em;
+                    width: 3em;
                 }
                 .message {
-                    padding-left: 1em;
+                    width: 26em;
                 }
+            }
+            &:after{
+                @include clearFix();
             }
         }
 

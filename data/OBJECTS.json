@@ -12,7 +12,6 @@
         "intro": "",
         "tagline": ""
     },
-
     "published": {
         "idUserAuthor": "",
         "published": true,
@@ -31,7 +30,7 @@
         "start": "2009-12-15T00:00:00Z",
         "end": "2009-12-15T00:00:00Z"
     },
-    
+
     "address": {
         "address": "",
         "addressMore": "",

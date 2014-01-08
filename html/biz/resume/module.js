@@ -16,12 +16,29 @@ angular.module('biz.resume', ['ngSanitize', 'jfolio.alert', 'jfolio.http'])
             link: function(scope, element, attrs, ngModel) {
 
                 console.log("Include module.res1");
-                resumeDataService.fail = function(exception) {
-                    scope.bizResumeAlerts = new Alerts(scope);
-                    scope.bizResumeAlerts.displayTime = 0;
+                scope.bizResumeAlerts = new Alerts(scope);
+                scope.bizResumeAlerts.displayTime = 0;
+                scope.error = false;
+
+                resumeDataService.onExecuteStart = function() {
+
+                    scope.bizResumeAlerts.clearAll();
+                    scope.error = false;
+                };
+
+                resumeDataService.onSuccess = function() {
+
+                    scope.bizResumeAlerts.clearAll();
+                    scope.error = false;
+                };
+
+                resumeDataService.onFail = function(exception) {
+
+                    console.log('resumeDataService.onFail');
                     scope.bizResumeAlerts.thrwNew(exception, 'error');
                     scope.error = true;
                 };
+
                 scope.resumeDataService = resumeDataService;
             }
         };

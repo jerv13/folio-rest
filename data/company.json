@@ -1,13 +1,12 @@
 {
-    "name": ",
-    "phone": "",
-    "email": "",
-    "site": "",
-    {
+    "name": "",
+    "summary": "",
+    "address": {
         "address": "",
         "addressMore": "",
         "city": "",
         "state": "",
         "zip": ""
-    }
+    },
+    "contacts": []
 }

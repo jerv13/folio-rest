@@ -2,7 +2,7 @@ angular.module('jfolio.alert', ['jfolio.exception'])
 
     .factory('Alerts', ['Exception', function(Exception) {
 
-        var Alerts = function($scope) {
+        var Alerts = function(scope) {
 
             var self = this;
             self.displayTime = 4000;
@@ -36,6 +36,7 @@ angular.module('jfolio.alert', ['jfolio.exception'])
             };
 
             self.thrw = function() {
+
                 self.thrown = self.alerts;
                 self.setThrownTimout(self.clearAlerts);
             };
@@ -48,8 +49,8 @@ angular.module('jfolio.alert', ['jfolio.exception'])
                     }
                     self.timeout = window.setTimeout(function() {
 
-                        $scope.$apply(function() {
-                            self.clearThown();
+                        scope.$apply(function() {
+                            self.clearThrown();
                             if (typeof(onClear) === 'function') {
                                 onClear();
                             }
@@ -58,9 +59,9 @@ angular.module('jfolio.alert', ['jfolio.exception'])
                 }
             };
 
-            self.clearThown = function() {
+            self.clearThrown = function() {
 
-                console.log('clearThown');
+                console.log('clearThrown');
                 self.thrown = [];
             };
 
@@ -68,6 +69,16 @@ angular.module('jfolio.alert', ['jfolio.exception'])
 
                 console.log('clearAlerts');
                 self.alerts = [];
+            };
+
+            self.clearAll = function() {
+
+                console.log('clearAll');
+                if (self.timeout) {
+                    clearTimeout(self.timeout);
+                }
+                self.clearThrown();
+                self.clearAlerts();
             };
         };
 
@@ -78,7 +89,7 @@ angular.module('jfolio.alert', ['jfolio.exception'])
 
         return {
             restrict: 'A',
-            template: '<div class="alerts" ng-show="alerts.thrown"><div ng-repeat="alert in alerts.thrown"><div class="alert {{alert.type}} number_{{alert.code}}"><div class="icon"><i class="fa fa-exclamation-triangle fa-2x"></i></div><div class="code">{{alert.code}}: </div><div class="message">{{alert.message}}</div><div></div></div></div></div>',
+            template: '<div class="alerts" ng-show="alerts.thrown.length > 0"><div ng-repeat="alert in alerts.thrown"><div class="alert {{alert.type}} number_{{alert.code}}"><div class="icon"><i class="fa fa-exclamation-triangle fa-2x"></i></div><div class="code">{{alert.code}}: </div><div class="message">{{alert.message}}</div><div></div></div></div></div>',
             scope: {
                 alerts: '='
             },

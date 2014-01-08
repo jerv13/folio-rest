@@ -1,0 +1,324 @@
+{
+    "title": "Web Application Engineer, Developer and Architect",
+    "summary": "I place great value in being a part of an idealistic, creative team that is pushing the envelope to bring unique concepts to life.  As a developer, I need the opportunity to utilize my application concepts and designs as well as my developer skills.  As an web application architect, my primary goals are user experience, security and extensibility.  As a leader, I understand the technologies, I get involved directly with the team to help them succeed and I am open and honest.",
+    "outline": [
+            "Develop, design and implement web applications and solutions.",
+            "Participate in all aspects of web application development.",
+            "Work closely with team to provide the best solutions.",
+            "Rely on experience and judgment to plan and accomplish goals.",
+            "Prioritize, delegate and control development work flow.",
+            "Develop and design projects and work directly with clients and executives.",
+            "Deliver a large degree of creativity and flexibility.",
+            "Proven ability to deliver under tight budgets and timelines."
+    ],
+    "contact": {
+        "name": "James C. Jervis",
+        "phone": "636-866-7720",
+        "email": "james@jervdesign.com",
+        "site": "james.jervdesign.com",
+        "address" : {
+            "address": "",
+            "addressMore": "",
+            "city": "O'Fallon",
+            "state": "MO",
+            "zip": "63368"
+        }
+    },
+    "experience": [
+        {
+            "title": "Web Application Developer and Architect",
+            "body": "<p>Designed and developed Application Packaging Standard (APS) plug-ins for Parallels (enterprise solution/platform for hosting providers). Utilized proprietary API to provision, enable, disable and destroy internal Cloud Services (IAAS) using APS adapter. Retrieved and prepared usage details returned from API using APS standards to provide billable usage to Parallels.</p><p>Architected and created PHP OO proprietary framework for APS to support APS error, setting and resource data. Created logging interface to support multiple logging methods including Syslog and flat file. Coded classes for proprietary API requests. Created APS testing tools for unit testing APS packages before installing to Parallels development environment.</p><p>Designed and created basic report parsing, data warehousing and report delivery VIA email system. Implemented support for multiple data sources and data destinations including: MySQL databases, PgSQL databases, CVS file types, API sources, API destinations, proprietary file types as well as others.</p><p>Utilized technologies such as SVN, GIT for version control. Created and/or utilized multiple API techniques including SOAP, REST with JSON.</p><p>Created internal tool utilizing Java Spring framework and AngularJS to facilitate customer account creation and synchronization. Developed secure API proxy and multiple authentication methods related to systems involved.</p><p>Worked on an Agile team to build web based customer control panel using internal APIs, PHP and AngularJS.</p>",
+            "position": {
+                "title": "Web Application Developer and Architect",
+                "summary": "",
+                "skills": [],
+                "dateRange": {
+                    "start": "2012-08-01T00:00:00Z",
+                    "end": ""
+                },
+                "company": {
+                    "name": "SavvisDirect",
+                    "summary": "",
+                    "address": {
+                        "address": "",
+                        "addressMore": "",
+                        "city": "St. Louis",
+                        "state": "MO",
+                        "zip": ""
+                    },
+                    "contacts": []
+                }
+            }
+        },
+        {
+            "title": "Developer and Technical Manager",
+            "body": "<p>Designed and developed Joomla extensions with PHP and MySQL based on Maritz�s Fortune 500 client needs. Designed and developed primary look and feel template in cooperation with multi-media team. Developed multiple modules including animated menu module driven by jQuery. Designed and helped develop a user management component that allowed customer support extended user management options and added addition data checks specific to the client. Designed, developed and/or managed the creation of multiple additional extensions.</p><p>Identified, managed and coded solutions for data security projects based on client�s ISO/IEC 27001 security requirements. Identified issues in code related to SQL injections, cross site scripting and data exposure in existing custom developments. Developed and implemented security patches for Maritz custom extensions and Joomla based code.</p><p>Created requirements and designs for both internal and off-shore development teams. Trained developers in Joomla development techniques including proper extension development practices and usage.</p><p>Designed standards, processes and procedures for developers. Implemented proper SVN (Apache Subversion) usage procedures and controls. Created controls around Joomla core to protect it from unneeded changes. Presented multiple solutions for security, release management and project work-flow.</p>",
+            "position": {
+                "title": "Developer and Technical Manager",
+                "summary": "",
+                "skills": [],
+                "dateRange": {
+                    "start": "2011-05-01T00:00:00Z",
+                    "end": "2012-08-01T00:00:00Z"
+                },
+                "company": {
+                    "name": "Maritz Loyalty and Motivation",
+                    "summary": "",
+                    "address": {
+                        "address": "",
+                        "addressMore": "",
+                        "city": "St. Louis",
+                        "state": "MO",
+                        "zip": ""
+                    },
+                    "contacts": []
+                }
+            }
+        },
+        {
+            "title": "Director of Development and Production",
+            "body": "<p>Developed PHP code, classes and packages including: Course Demo Portal, File Security, Basic PHP Template Engine, Course Certificate Verification and many others. Designed user interfaces for development projects including: basic wireframes and/or mock-ups, graphics, Cascading Style Sheets (CSS), HTML templates and JavaScript for templates.</p><p>Implemented and managed PHP/MySQL (LAMP stack) Development Team of three programmers to create and maintain web based e-learning applications, learning management systems (LMS) and tools based on open-source packages (Moodle, Joomla and more).</p><p>Tracked and assisted in testing of developed packages. Performed basic code reviews and verifications before final release. Managed releases and server deployments following a multi layered (DEV, CERT, PROD) deployment approach.</p><p>Gathered requirements in cooperation with CEO and Managers for web based business initiatives resulting in PHP based applications and modules (Client Reporting Pieces, Advertisement Sales, Course Catalog, Course Demo, File Security Layers, Themes and Theme enhancements, Flash Course Certificates and Course Certificate Verification, QuickBase Integration and numerous others).</p><p>Created technical requirements and designs (requirement documents, UML diagrams, HTML layouts and templates as well as others). Lead development team meetings in project estimation, system design, status tracking, work verification, and developer training.</p><p>Used Rational Unified Process (RUP) software development process in conjunction with some features of the Agile software development methodology to fit the development and company management styles. Release iterations were designed to be 30 days or less.</p><p>In charge of content and systems of multiple websites. Developed strategies for supporting business models of each site. Researched and procured open-source solutions and modules for each site. Implemented all web applications, modules and solutions for each site. Developed visual design templates (look and feel) for all sites. Executed content changes as needed for all sites.</p><p>Managed course Production Team of up to four Web Designers, Graphic Designers and Flash Developers for creation of courses, training and interactive materials for clients including: Fannie Mae, CitiMortage, Wells Fargo (PAS), American Home, OneWest Bank (IndyMac), AssetLink as well as general training courses for real estate professionals. Successfully delivered online training to over 16,000 trainees worth over $6,000,000 in gross revenue. Utilized the standard ADDIE model of instructional design and included UAT testing, client approval and change management processes.</p><p>Implemented solutions to increase efficiency and tracking of course production projects including: researching and procuring software solutions (Captivate, Adobe CS, Final Cut, Poser, Camtasia as well as other solutions), researching, implementing and customizing project management tools (QuickBase and Project.net), creating time saving templates (MS Word instructional design templates, MS Excel UAT tracking templates, video script templates, Adobe Flash publishing templates, Captivate design libraries, release forms and various other templates), designed and/or created tools for course development (custom AS3 framework, Adobe Flash design libraries, AS2 reusable interactive activities as well as other tools).</p>",
+            "position": {
+                "title": "Director of Development and Production",
+                "summary": "",
+                "skills": [],
+                "dateRange": {
+                    "start": "2009-12-15T00:00:00Z",
+                    "end": "2009-12-15T00:00:00Z"
+                },
+                "company": {
+                    "name": "N-Depth Solutions",
+                    "summary": "",
+                    "address": {
+                        "address": "",
+                        "addressMore": "",
+                        "city": "St. Louis",
+                        "state": "MO",
+                        "zip": ""
+                    },
+                    "contacts": []
+                }
+            }
+        },
+        {
+            "title": "Web Designer, Graphic Designer and PC Tech",
+            "body": "<p>Met clients to gather client web and design requirements.  Created website designs and layouts for clients and their businesses.  Developed and implemented client websites.  Managed all web design client relationships.  Supported and maintained published websites.  Repaired technical issues for clients including: software issues, network issues and hardware issues related to PCs and servers.</p>",
+            "position": {
+                "title": "Web Designer, Graphic Designer and PC Tech",
+                "summary": "",
+                "skills": [],
+                "dateRange": {
+                    "start": "2009-12-15T00:00:00Z",
+                    "end": "2009-12-15T00:00:00Z"
+                },
+                "company": {
+                    "name": "Tech 2 It",
+                    "summary": "",
+                    "address": {
+                        "address": "",
+                        "addressMore": "",
+                        "city": "Indianapolis",
+                        "state": "IN",
+                        "zip": ""
+                    },
+                    "contacts": []
+                }
+            }
+        }
+    ],
+    "links": [
+        {
+            "title": "James Creative (Space) Site",
+            "description": "",
+            "url": ""
+        },
+        {
+            "title": "James Professional Site",
+            "description": "",
+            "url": ""
+        },
+        {
+            "title": "Object Oriented Programming",
+            "description": "",
+            "url": "http://en.wikipedia.org/wiki/Object-oriented_programming"
+        },
+        {
+            "title": "SOLID (object-oriented design)",
+            "description": "",
+            "url": "http://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29"
+        },
+        {
+            "title": "Modular Design",
+            "description": "",
+            "url": "http://en.wikipedia.org/wiki/Modular_design"
+        }
+    ],
+    "interests": [
+        {
+            "title": "Web Application Engineer/Developer ",
+            "summary": "",
+            "outline": [
+                "PHP/Java/Node.js",
+                "MySQL/Redis/MongoDB",
+                "JavaScript/jQuery/AngularJS",
+                "HTML5/CSS3 "
+            ]
+        },
+        {
+            "title": "Web Application Architect/Analyst",
+            "summary": "",
+            "outline": []
+        },
+        {
+            "title": "Technical Manager",
+            "summary": "",
+            "outline": []
+        }
+    ],
+    "skills": [
+        {
+            "name": "PHP",
+            "details": "",
+            "level": 3,
+            "dateSince": "2006-01-01T00:00:00Z",
+            "dateLastUsed": "",
+            "relatedUsed": []
+        },
+        {
+            "name": "MySQL",
+            "details": "",
+            "level": 2,
+            "dateSince": "2008-01-01T00:00:00Z",
+            "dateLastUsed": "",
+            "relatedUsed": []
+        },
+        {
+            "name": "JavaScript",
+            "details": "AngularJs, jQuery",
+            "level": 3,
+            "dateSince": "2003-01-01T00:00:00Z",
+            "dateLastUsed": "",
+            "relatedUsed": []
+        },
+        {
+            "name": "Node.js",
+            "details": "Restify",
+            "level": 1,
+            "dateSince": "2013-01-01T00:00:00Z",
+            "dateLastUsed": "",
+            "relatedUsed": []
+        },
+        {
+            "name": "NoSQL",
+            "details": "Redis MongoDB",
+            "level": 1,
+            "dateSince": "2013-01-01T00:00:00Z",
+            "dateLastUsed": "",
+            "relatedUsed": []
+        },
+        {
+            "name": "Flash/Action Script",
+            "details": "AS2, AS3",
+            "level": 3,
+            "dateSince": "2003-01-01T00:00:00Z",
+            "dateLastUsed": "2010-01-01T00:00:00Z",
+            "relatedUsed": []
+        },
+        {
+            "name": "Java",
+            "details": "Spring Framework",
+            "level": 2,
+            "dateSince": "2012-01-01T00:00:00Z",
+            "dateLastUsed": "",
+            "relatedUsed": []
+        },
+        {
+            "name": "HTML",
+            "details": "HTML5",
+            "level": 3,
+            "dateSince": "2003-01-01T00:00:00Z",
+            "dateLastUsed": "",
+            "relatedUsed": []
+        },
+        {
+            "name": "CSS",
+            "details": "CSS3",
+            "level": 3,
+            "dateSince": "2006-01-01T00:00:00Z",
+            "dateLastUsed": "",
+            "relatedUsed": []
+        },
+        {
+            "name": "XML",
+            "details": "",
+            "level": 3,
+            "dateSince": "2006-01-01T00:00:00Z",
+            "dateLastUsed": "",
+            "relatedUsed": []
+        },
+        {
+            "name": "Web Services",
+            "details": "RESTFULL JSON, SOAP",
+            "level": 3,
+            "dateSince": "2008-01-01T00:00:00Z",
+            "dateLastUsed": "",
+            "relatedUsed": []
+        },
+        {
+            "name": "GIT Version Control",
+            "details": "",
+            "level": 2,
+            "dateSince": "2012-01-01T00:00:00Z",
+            "dateLastUsed": "",
+            "relatedUsed": []
+        },
+        {
+            "name": "SVN Version Control",
+            "details": "",
+            "level": 2,
+            "dateSince": "2008-01-01T00:00:00Z",
+            "dateLastUsed": "",
+            "relatedUsed": []
+        },
+        {
+            "name": "Adobe CS",
+            "details": "CS6",
+            "level": 3,
+            "dateSince": "2002-01-01T00:00:00Z",
+            "dateLastUsed": "",
+            "relatedUsed": []
+        },
+        {
+            "name": "3d Modeling",
+            "details": "3D Studio Max, Blender",
+            "level": 2,
+            "dateSince": "2004-01-01T00:00:00Z",
+            "dateLastUsed": "",
+            "relatedUsed": []
+        },
+        {
+            "name": "Windows",
+            "details": "",
+            "level": 4,
+            "dateSince": "1998-01-01T00:00:00Z",
+            "dateLastUsed": "",
+            "relatedUsed": []
+        },
+        {
+            "name": "Linux",
+            "details": "Ubuntu CentOS",
+            "level": 3,
+            "dateSince": "2008-01-01T00:00:00Z",
+            "dateLastUsed": "",
+            "relatedUsed": []
+        },
+        {
+            "name": "Mac OS",
+            "details": "",
+            "level": 2,
+            "dateSince": "2006-01-01T00:00:00Z",
+            "dateLastUsed": "",
+            "relatedUsed": []
+        }
+    ]
+}

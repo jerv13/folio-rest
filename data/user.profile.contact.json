@@ -1,0 +1,13 @@
+{
+    "name": "James C. Jervis",
+    "phone": "636-866-7720",
+    "email": "james@jervdesign.com",
+    "site": "james.jervdesign.com",
+    "address" : {
+        "address": "",
+        "addressMore": "",
+        "city": "O'Fallon",
+        "state": "MO",
+        "zip": "63368"
+    }
+}

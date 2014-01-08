@@ -4,7 +4,7 @@ require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'core' . DIRECTORY_SEPARA
 require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'core' . DIRECTORY_SEPARATOR . 'Http.php');
 require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'core' . DIRECTORY_SEPARATOR . 'DataAccess.php');
 
-class ContentResume {
+class ContentSummary {
 
     public $view = null; // object
 
@@ -15,18 +15,13 @@ class ContentResume {
         $key = Http::readGetVar('key');
 
         $dba = new DataAccess();
-        $contentResume = $dba->read('content.resume');
-        $contentResume->contentContact = $dba->read('content.contact');
-        $contentResume->contentSummary = $dba->read('content.summary');
-        $contentResume->contentInterests = $dba->read('content.interests');
-        $contentResume->contentExperience = $dba->read('content.experience');
-        $contentResume->contentEducation = $dba->read('content.education');
+        $content = $dba->read('content.summary');
 
         $res = new DataResponse();
 
         //$res->code = 500;
         $res->message = "OK";
-        $res->data = $contentResume;
+        $res->data = $content;
 
         Http::buildDefaultHeaders();
 
@@ -47,4 +42,4 @@ class ContentResume {
 
 }
 
-ContentResume::main();
+ContentSummary::main();

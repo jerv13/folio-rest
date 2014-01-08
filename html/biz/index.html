@@ -26,8 +26,9 @@
         <script src="../jfolio/alerts.js"></script>
 
         <script src="index.js"></script>
-        <script src="resume/module.js"></script>
         <script src="nav/module.js"></script>
+        <script src="resume/module.js"></script>
+        <script src="overview/module.js"></script>
     </head>
     <body ng-controller="bizPageController">
 
@@ -56,15 +57,7 @@
 
             <section class="mainbody">
                 <div class="module" ng-show="activenavsection == 0">
-                    <div class="bizOverview">
-                        <div class="part1">
-                            <div class="title">James C. Jervis</div>
-                            <div class="subtitle">Web Application Engineer, Developer and Architect</div>
-                        </div>
-                        <div class="part2">
-                            <div class="summary">I place great value in being a part of an idealistic, creative team that is pushing the envelope to bring unique concepts to life.  As a developer, I need the opportunity to utilize my application concepts and designs as well as my developer skills.  As an web application architect, my primary goals are user experience, security and extensibility.  As a leader, I understand the technologies, I get involved directly with the team to help them succeed and I am open and honest.</div>
-                        </div>
-                    </div>
+                    <div biz-overview-include>XXX</div>
                 </div>
 
                 <div class="module" ng-show="activenavsection == 1">

@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('biz.index', ['jfolio.exception','jfolio.alert','biz.nav', 'biz.resume']);
+angular.module('biz.index', ['jfolio.exception','jfolio.alert','biz.nav', 'biz.resume', 'biz.overview']);
 
-var bizPageController = function($scope, Exception, Alerts, resumeDataService) {
+var bizPageController = function($scope, Exception, Alerts, overviewDataService, resumeDataService) {
 
     $scope.navitems = [
         "Overview",
@@ -13,33 +13,50 @@ var bizPageController = function($scope, Exception, Alerts, resumeDataService) {
     ];
 
     $scope.activenavsection = 0;
-
+    console.log('INIT overviewDataService.execute');
+    overviewDataService.execute();
+                
     $scope.onnav = function(section) {
         console.log('onnav: ' + section);
+
+        if (section === 0) {
+
+            if (!overviewDataService.data) {
+
+                console.log('overviewDataService.execute');
+                overviewDataService.execute();
+            }
+        }
+
         if (section === 1) {
 
-            //if (!resumeDataService.data) {
+            if (!resumeDataService.data) {
 
                 console.log('resumeDataService.execute');
                 resumeDataService.execute();
-            //}
+            }
         }
     };
 
-    ///* @debug test alerts
+    /* @debug test alerts
     $scope.alerts = new Alerts($scope);
     $scope.alerts.displayTime = 0;
+    var msss = "Some really long message. Some really long message. Some really long message. Some really long message. Some really long message. Some really long message. Some really long message. Some really long message. Some really long message. Some really long message. Some really long message. Some really long message. ";
     var ex = new Exception();
     var exx = new Exception();
     var exxx = new Exception();
     var exxxx = new Exception();
+    ex.message = msss;
+    //exx.message = msss;
+    exxx.message = msss;
+    exxxx.message = msss;
     $scope.alerts.add(ex,'info');
     $scope.alerts.add(exx,'notice');
     $scope.alerts.add(exxx,'warning');
     $scope.alerts.add(exxxx,'error');
     $scope.alerts.thrw();
     //$scope.alerts.thrwNew(ex,'info');
-    //*/
+    */
 };
 
-bizPageController.$inject = ['$scope', 'Exception', 'Alerts', 'resumeDataService'];
+bizPageController.$inject = ['$scope', 'Exception', 'Alerts', 'overviewDataService', 'resumeDataService'];

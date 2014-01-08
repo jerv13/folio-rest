@@ -121,56 +121,69 @@ angular.module('jfolio.http', ['jfolio.config'])
 
     .factory('CoreHttpService', ['coreHttp', function(coreHttp) {
 
-        var CoreHttpService = function(url, reqData, success, fail) {
+        var CoreHttpService = function(url, reqData, onSuccess, onFail) {
 
             var self = this;
             self.url = null;
             self.reqData = null;
-            self.success = null;
-            self.fail = null;
+
+            self.onInitComplete = null;
+            self.onExecuteStart = null;
+            self.onSuccess = null;
+            self.onFail = null;
 
             self.loading = true;
             self.data = null;
             self.exception = null;
 
-            self.init = function(url, reqData, success, fail) {
+            self.init = function(url, reqData, onSuccess, onFail) {
 
                 self.url = coreHttp.buildUrl(url);
                 self.reqData = reqData;
-                self.success = success;
-                self.fail = fail;
+                self.onSuccess = onSuccess;
+                self.onFail = onFail;
+                if ((typeof(self.onInitComplete) === 'function')) {
+
+                    self.onInitComplete(self);
+                }
             };
 
             self.execute = function() {
                 console.log('CoreHttpService.execute');
+
+                if ((typeof(self.onExecuteStart) === 'function')) {
+
+                    self.onExecuteStart(self);
+                }
+                
                 self.loading = true;
 
-                var success = function(data, config) {
+                var onSuccess = function(data, config) {
 
-                    console.log('CoreHttpService.success');
-                    if ((typeof(self.success) === 'function')) {
+                    console.log('CoreHttpService.onSuccess');
+                    if ((typeof(self.onSuccess) === 'function')) {
 
-                        self.success(data, config);
+                        self.onSuccess(data, config);
                     }
                     self.data = data;
                     self.loading = false;
                 };
 
-                var fail = function(exception) {
+                var onFail = function(exception) {
 
-                    console.log('CoreHttpService.fail');
-                    if ((typeof(self.fail) === 'function')) {
+                    console.log('CoreHttpService.onFail');
+                    if ((typeof(self.onFail) === 'function')) {
 
-                        self.fail(exception);
+                        self.onFail(exception);
                     }
                     self.exception = exception;
                     self.loading = false;
                 };
 
-                coreHttp.get(self.url, self.reqData, success, fail);
+                coreHttp.get(self.url, self.reqData, onSuccess, onFail);
             };
 
-            self.init(url, reqData, success, fail);
+            self.init(url, reqData, onSuccess, onFail);
 
         };
 
