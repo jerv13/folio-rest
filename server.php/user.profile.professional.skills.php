@@ -4,7 +4,7 @@ require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'core' . DIRECTORY_SEPARA
 require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'core' . DIRECTORY_SEPARATOR . 'Http.php');
 require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'core' . DIRECTORY_SEPARATOR . 'DataAccess.php');
 
-class UserProfileProfessional {
+class UserProfileProfessionalSkills {
 
     public $view = null; // object
 
@@ -12,16 +12,24 @@ class UserProfileProfessional {
 
         sleep(1); // just to mimic load time
 
-        $key = Http::readGetVar('key');
-
         $dba = new DataAccess();
-        $content = $dba->read('user.profile.professional');
+        $pro = $dba->read('user.profile.professional');
+
+        if (empty($pro)) {
+
+            $errRes = new BasicResponse();
+            $errRes->code = 404;
+            $errRes->message = "Profile data was not found.";
+
+            echo json_encode($errRes);
+            return;
+        }
 
         $res = new DataResponse();
 
         //$res->code = 500;
         $res->message = "OK";
-        $res->data = $content;
+        $res->data = $pro->skills;
 
         Http::buildDefaultHeaders();
 
@@ -41,4 +49,4 @@ class UserProfileProfessional {
     }
 }
 
-UserProfileProfessional::main();
+UserProfileProfessionalSkills::main();

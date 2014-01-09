@@ -4,7 +4,7 @@ require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'core' . DIRECTORY_SEPARA
 require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'core' . DIRECTORY_SEPARATOR . 'Http.php');
 require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'core' . DIRECTORY_SEPARATOR . 'DataAccess.php');
 
-class UserProfileProfessionalOverview {
+class UserProfileResume {
 
     public $view = null; // object
 
@@ -13,29 +13,37 @@ class UserProfileProfessionalOverview {
         sleep(1); // just to mimic load time
 
         $dba = new DataAccess();
-        $profile = $dba->read('user.profile.professional');
+        $pro = $dba->read('user.profile.professional');
 
-        if (empty($profile)) {
+        if (empty($pro)) {
 
             $errRes = new BasicResponse();
             $errRes->code = 404;
-            $errRes->message = "Data was not found.";
+            $errRes->message = "Profile data was not found.";
 
             echo json_encode($errRes);
             return;
         }
 
-        $content = new stdClass();
-        $content->title = $profile->title;
-        $content->summary = $profile->summary;
-        $content->outline = $profile->outline;
-        $content->name = $profile->contact->name;
+        $edu = $dba->read('user.profile.education');
+
+        if (empty($edu)) {
+
+            $errRes = new BasicResponse();
+            $errRes->code = 404;
+            $errRes->message = "Profile data was not found.";
+
+            echo json_encode($errRes);
+            return;
+        }
+
+        $pro->education = $edu->schools;
 
         $res = new DataResponse();
 
         //$res->code = 500;
         $res->message = "OK";
-        $res->data = $content;
+        $res->data = $pro;
 
         Http::buildDefaultHeaders();
 
@@ -55,4 +63,4 @@ class UserProfileProfessionalOverview {
     }
 }
 
-UserProfileProfessionalOverview::main();
+UserProfileResume::main();

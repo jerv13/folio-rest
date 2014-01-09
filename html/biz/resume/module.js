@@ -2,7 +2,7 @@ angular.module('biz.resume', ['ngSanitize', 'jfolio.alert', 'jfolio.http'])
 
     .factory('resumeDataService', ['CoreHttpService', function(CoreHttpService) {
 
-        var resumeDataService = new CoreHttpService('content.resume.php');
+        var resumeDataService = new CoreHttpService('user.profile.resume.php');
 
         return resumeDataService;
     }])

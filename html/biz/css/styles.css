@@ -1819,7 +1819,8 @@ body {
     border-top: 0.1em solid #eeeeee;
     font-weight: bold;
     padding-top: .3em;
-    padding-bottom: 1.5em; }
+    padding-bottom: 1.5em;
+    padding-left: .7em; }
     .module .bizSkills .skills .overview .info {
       display: block;
       float: left;
@@ -1844,37 +1845,43 @@ body {
       display: block;
       height: 0;
       clear: both; }
-  .module .bizSkills .skills .skill:hover {
-    background-color: rgba(238, 238, 238, 0.1); }
-  .module .bizSkills .skills .skill .info {
-    display: block;
-    float: left;
-    width: 18em; }
-    .module .bizSkills .skills .skill .info .name {
-      font-size: 1.2em; }
-    .module .bizSkills .skills .skill .info .details {
-      font-size: .7em;
-      padding-top: .2em; }
-  .module .bizSkills .skills .skill .level {
-    display: block;
-    float: left;
-    padding-left: 2em;
-    width: 12em; }
-  .module .bizSkills .skills .skill .yearsexperience {
-    display: block;
-    float: left;
-    padding-left: 2em;
-    width: 12em; }
-  .module .bizSkills .skills .skill .lastused {
-    display: block;
-    float: left;
-    width: 5em; }
-  .module .bizSkills .skills .skill:after {
-    content: ".";
-    visibility: hidden;
-    display: block;
-    height: 0;
-    clear: both; }
+  .module .bizSkills .skills .skill {
+    border-top: 0.1em solid rgba(238, 238, 238, 0.5);
+    border-left: 0.2em solid rgba(238, 238, 238, 0.5);
+    margin-bottom: .7em;
+    padding: .3em; }
+    .module .bizSkills .skills .skill:hover {
+      background-color: rgba(238, 238, 238, 0.1); }
+    .module .bizSkills .skills .skill .info {
+      display: block;
+      float: left;
+      width: 18em; }
+      .module .bizSkills .skills .skill .info .name {
+        border-bottom: 0.1em solid rgba(238, 238, 238, 0.5);
+        font-size: 1.2em; }
+      .module .bizSkills .skills .skill .info .details {
+        font-size: .7em;
+        padding-top: .2em; }
+    .module .bizSkills .skills .skill .level {
+      display: block;
+      float: left;
+      padding-left: 2em;
+      width: 12em; }
+    .module .bizSkills .skills .skill .yearsexperience {
+      display: block;
+      float: left;
+      padding-left: 2em;
+      width: 12em; }
+    .module .bizSkills .skills .skill .lastused {
+      display: block;
+      float: left;
+      width: 5em; }
+    .module .bizSkills .skills .skill:after {
+      content: ".";
+      visibility: hidden;
+      display: block;
+      height: 0;
+      clear: both; }
 
 .module .bizAbout {
   padding-top: 4em;

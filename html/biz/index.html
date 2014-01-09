@@ -29,6 +29,7 @@
         <script src="nav/module.js"></script>
         <script src="resume/module.js"></script>
         <script src="overview/module.js"></script>
+        <script src="skills/module.js"></script>
     </head>
     <body ng-controller="bizPageController">
 
@@ -57,43 +58,15 @@
 
             <section class="mainbody">
                 <div class="module" ng-show="activenavsection == 0">
-                    <div biz-overview-include>XXX</div>
+                    <div biz-overview-include>---</div>
                 </div>
 
                 <div class="module" ng-show="activenavsection == 1">
-                    <div biz-resume-include>XXX</div>
+                    <div biz-resume-include>---</div>
                 </div>
 
-
                 <div class="module" ng-show="activenavsection == 2">
-                    <div class="bizSkills">
-                        <div class="skillsheader">
-                            <div class="part1">
-                                <div class="title">Technical Skills</div>
-                                <div class="subtitle">Skills Developed</div>
-                            </div>
-                            <div class="part2">
-                            </div>
-                        </div>
-
-                        <div class="skills">
-                            <div class="overview">
-                                <div class="info">Skill</div>
-                                <div class="level">Level</div>
-                                <div class="yearsexperience">Experience</div>
-                                <div class="lastused">Last Used</div>
-                            </div>
-                            <div class="skill">
-                                <div class="info">
-                                    <div class="name">JavaScript</div>
-                                    <div class="details">AngularJs, jQuery</div>
-                                </div>
-                                <div class="level">Advanced</div>
-                                <div class="yearsexperience">5</div>
-                                <div class="lastused">5</div>
-                            </div>
-                        </div>
-                    </div>
+                    <div biz-skills-include>---</div>
                 </div>
 
                 <div class="module" ng-show="activenavsection == 3">

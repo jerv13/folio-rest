@@ -440,6 +440,7 @@
             font-weight: bold;
             padding-top: .3em;
             padding-bottom: 1.5em;
+            padding-left: .7em;
             .info {
                 display: block;
                 float: left;
@@ -467,6 +468,10 @@
             }
         }
         .skill {
+            border-top: .1em solid rgba($fontMainColor,0.5);
+            border-left: .2em solid rgba($fontMainColor,0.5);
+            margin-bottom: .7em;
+            padding: .3em;
             &:hover {
                 background-color: rgba($fontMainColor,0.1);
             }
@@ -475,6 +480,7 @@
                 float: left;
                 width: 18em;
                 .name {
+                    border-bottom: .1em solid rgba($fontMainColor,0.5);
                     font-size: 1.2em;
                 }
 
