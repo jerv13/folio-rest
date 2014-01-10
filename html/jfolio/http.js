@@ -59,7 +59,7 @@ angular.module('jfolio.http', ['jfolio.config'])
 
                 $http(config).
                     success(function(data, status, headers, config) {
-
+                    console.log('CoreHttp.success');
                     if (typeof(data) !== 'object' || typeof(data.code) === 'undefined' || typeof(data.message) === 'undefined') {
 
                         if (typeof(onFail) === 'function') {
@@ -101,7 +101,7 @@ angular.module('jfolio.http', ['jfolio.config'])
                     return;
                 }).
                     error(function(data, status, headers, config) {
-
+                    console.log('CoreHttp.error');
                     console.log(data);
                     console.log(status);
                     if (typeof(onFail) === 'function') {
@@ -155,7 +155,7 @@ angular.module('jfolio.http', ['jfolio.config'])
 
                     self.onExecuteStart(self);
                 }
-                
+
                 self.loading = true;
 
                 var onSuccess = function(data, config) {

@@ -30,9 +30,11 @@
         <script src="resume/module.js"></script>
         <script src="overview/module.js"></script>
         <script src="skills/module.js"></script>
+        <script src="about/module.js"></script>
+        <script src="resources/module.js"></script>
     </head>
-    <body ng-controller="bizPageController">
 
+    <body ng-controller="bizPageController">
         <div alerts-include alerts="alerts"></div>
         <div id="biz" class="page">
             <header class="mainheader">
@@ -70,37 +72,11 @@
                 </div>
 
                 <div class="module" ng-show="activenavsection == 3">
-                    <div class="bizAbout">
-                        <div class="part1">
-                            <div class="title">About me</div>
-                            <div class="subtitle">Life Learner and Musician</div>
-                        </div>
-                        <div class="part2">
-                            <div class="summary">Da Da Da</div>
-                            <div class="points"></div>
-                        </div>
-                    </div>
+                    <div biz-about-include>---</div>
                 </div>
 
                 <div class="module" ng-show="activenavsection == 4">
-                    <div class="bizResources">
-                        <div class="part1">
-                            <div class="title">Resources</div>
-                            <div class="subtitle">Links to Good Information</div>
-                        </div>
-                        <div class="part2">
-                            <div class="summary">Da Da Da</div>
-
-                            <div class="link">
-                                <a><i class="fa fa-external-link-square" title="Contact"></i><div class="label">Contact</div></a>
-                                <div class="description">description</div>
-                            </div>
-                            <div class="link">
-                                <a><i class="fa fa-external-link-square" title="Contact"></i><div class="label">Contact</div></a>
-                                <div class="description">description</div>
-                            </div>
-                        </div>
-                    </div>
+                    <div biz-resources-include>---</div>
                 </div>
             </section>
 

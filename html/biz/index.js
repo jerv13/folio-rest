@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('biz.index', ['jfolio.exception','jfolio.alert','biz.nav', 'biz.resume', 'biz.overview', 'biz.skills']);
+angular.module('biz.index', ['jfolio.exception', 'jfolio.alert', 'biz.nav', 'biz.resume', 'biz.overview', 'biz.skills', 'biz.about', 'biz.resources']);
 
-var bizPageController = function($scope, Exception, Alerts, overviewDataService, resumeDataService, skillsDataService) {
+var bizPageController = function($scope, Exception, Alerts, overviewDataService, resumeDataService, skillsDataService, aboutDataService, resourcesDataService) {
 
     $scope.navitems = [
         "Overview",
@@ -49,28 +49,46 @@ var bizPageController = function($scope, Exception, Alerts, overviewDataService,
             return;
         }
 
+        if (section === 3) {
 
+            if (!aboutDataService.data) {
+
+                console.log('aboutDataService.execute');
+                aboutDataService.execute();
+            }
+            return;
+        }
+
+        if (section === 4) {
+
+            if (!resourcesDataService.data) {
+
+                console.log('resourcesDataService.execute');
+                resourcesDataService.execute();
+            }
+            return;
+        }
     };
 
     /* @debug test alerts
-    $scope.alerts = new Alerts($scope);
-    $scope.alerts.displayTime = 0;
-    var msss = "Some really long message. Some really long message. Some really long message. Some really long message. Some really long message. Some really long message. Some really long message. Some really long message. Some really long message. Some really long message. Some really long message. Some really long message. ";
-    var ex = new Exception();
-    var exx = new Exception();
-    var exxx = new Exception();
-    var exxxx = new Exception();
-    ex.message = msss;
-    //exx.message = msss;
-    exxx.message = msss;
-    exxxx.message = msss;
-    $scope.alerts.add(ex,'info');
-    $scope.alerts.add(exx,'notice');
-    $scope.alerts.add(exxx,'warning');
-    $scope.alerts.add(exxxx,'error');
-    $scope.alerts.thrw();
-    //$scope.alerts.thrwNew(ex,'info');
-    */
+     $scope.alerts = new Alerts($scope);
+     $scope.alerts.displayTime = 0;
+     var msss = "Some really long message. Some really long message. Some really long message. Some really long message. Some really long message. Some really long message. Some really long message. Some really long message. Some really long message. Some really long message. Some really long message. Some really long message. ";
+     var ex = new Exception();
+     var exx = new Exception();
+     var exxx = new Exception();
+     var exxxx = new Exception();
+     ex.message = msss;
+     //exx.message = msss;
+     exxx.message = msss;
+     exxxx.message = msss;
+     $scope.alerts.add(ex,'info');
+     $scope.alerts.add(exx,'notice');
+     $scope.alerts.add(exxx,'warning');
+     $scope.alerts.add(exxxx,'error');
+     $scope.alerts.thrw();
+     //$scope.alerts.thrwNew(ex,'info');
+     */
 };
 
-bizPageController.$inject = ['$scope', 'Exception', 'Alerts', 'overviewDataService', 'resumeDataService', 'skillsDataService'];
+bizPageController.$inject = ['$scope', 'Exception', 'Alerts', 'overviewDataService', 'resumeDataService', 'skillsDataService', 'aboutDataService', 'resourcesDataService'];
