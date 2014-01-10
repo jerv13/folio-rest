@@ -1,6 +1,7 @@
 $fontMainColor: #EEEEEE;
 $fontActiveColor: #FFFFFF;
 $mainColor: #324583;
+$mainDarkColor: #23305c;
 $mainLightColor: #9ba3bb;
 $mainLighterColor: #475890;
 $highlight1Color: #ffa302;
@@ -33,7 +34,7 @@ body {
 
     .alerts {
         position: relative;
-        width: 36;
+        width: 30;
         .alert{
             background-color: rgba(white, .9);
             border: .1em solid $mainLighterColor;
@@ -42,15 +43,17 @@ body {
             @include border-left-radius(.5em);
             @include border-right-radius(.5em);
             color: $mainColor;
+            font-size: .8em;
             margin: .5em auto;
             padding: .5em;
             vertical-align: text-top;
-            width: 33.9em;
+            width: 27.9em;
             .icon {
                 display: inline-block;
+                margin: 0 0 0 0;
                 padding-right: 1em;
                 vertical-align: text-top;
-                width: 2em;
+                width: 1.5em; height: 100%;
             }
             .code {
                 display: none;
@@ -60,9 +63,10 @@ body {
             .message {
                 display: inline-block;
                 font-weight: bold;
+                margin: auto auto;
                 padding-top: .5em;
                 vertical-align: text-top;
-                width: 30em;
+                width: 24em;
             }
             &.info {}
             &.notice {
@@ -85,7 +89,7 @@ body {
                     width: 3em;
                 }
                 .message {
-                    width: 26em;
+                    width: 20em;
                 }
             }
             &:after{

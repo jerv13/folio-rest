@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('biz.index', ['jfolio.exception', 'jfolio.alert', 'biz.nav', 'biz.resume', 'biz.overview', 'biz.skills', 'biz.about', 'biz.resources']);
+angular.module('biz.index', ['jfolio.exception', 'jfolio.alert', 'biz.nav', 'biz.contact', 'biz.resume', 'biz.overview', 'biz.skills', 'biz.about', 'biz.resources']);
 
 var bizPageController = function($scope, Exception, Alerts, overviewDataService, resumeDataService, skillsDataService, aboutDataService, resourcesDataService) {
 
@@ -70,7 +70,7 @@ var bizPageController = function($scope, Exception, Alerts, overviewDataService,
         }
     };
 
-    /* @debug test alerts
+    /* @debug test alerts *
      $scope.alerts = new Alerts($scope);
      $scope.alerts.displayTime = 0;
      var msss = "Some really long message. Some really long message. Some really long message. Some really long message. Some really long message. Some really long message. Some really long message. Some really long message. Some really long message. Some really long message. Some really long message. Some really long message. ";

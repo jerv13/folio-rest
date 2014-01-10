@@ -27,6 +27,7 @@
 
         <script src="index.js"></script>
         <script src="nav/module.js"></script>
+        <script src="contact/module.js"></script>
         <script src="resume/module.js"></script>
         <script src="overview/module.js"></script>
         <script src="skills/module.js"></script>
@@ -35,7 +36,6 @@
     </head>
 
     <body ng-controller="bizPageController">
-        <div alerts-include alerts="alerts"></div>
         <div id="biz" class="page">
             <header class="mainheader">
                 <div class="part1">
@@ -46,18 +46,11 @@
                 <div class="part2"></div>
                 <div class="part3">
                     <div class="module">
-                        <div class="bizContact">
-                            <div class="link"><a><i class="fa fa-envelope-o" title="Contact"></i><div>Contact</div></a></div>
-                            <div class="form" ng-hide="1">
-                                <form>
-                                    <div><label>Contact</label><input type="text" /></div>
-                                </form>
-                            </div>
-                        </div>
+                        <div biz-contact-include>---</div>
                     </div>
                 </div>
             </header>
-
+            <div alerts-include alerts="alerts"></div>
             <section class="mainbody">
                 <div class="module" ng-show="activenavsection == 0">
                     <div biz-overview-include>---</div>

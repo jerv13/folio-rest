@@ -1,5 +1,7 @@
 ToDo
 ----
+- html.biz: Contact form
+    - implement captcha
 - html.biz: Create css for small displays
 - html.biz: implement real time filter for skills:
     - sort

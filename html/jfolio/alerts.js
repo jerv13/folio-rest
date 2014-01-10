@@ -25,7 +25,8 @@ angular.module('jfolio.alert', ['jfolio.exception'])
             };
 
             self.thrwNew = function(exception, type) {
-
+                
+                self.clearThrown();
                 self.thrown.push(self.buildException(exception, type));
                 self.setThrownTimout();
             };

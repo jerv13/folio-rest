@@ -104,7 +104,7 @@
             color: rgba($fontActiveColor,0);
             display: block;
             font-size: .7em;
-
+            
             i {
                 color: $fontActiveColor;
                 font-size: 1.5em;
@@ -122,14 +122,55 @@
                 width: 20em;
             }
         }
-
+        
+    }
+    .body {
+        background-color: $mainLightColor;
+        border: .1em solid rgba($mainColor, 1);
+        color: $mainDarkColor;
+        @include box-shadow(.2em, .2em, 1em, rgba(#000, .5));
+        padding: 1.5em;
+        position: absolute; top: 3em; right:5em;
+        width: 30em;
+        z-index: 500;
+        .loading {
+            margin: auto auto;
+            position: absolute; top:.5em; left: 1em; 
+        }
+        .info {
+            padding-bottom: .7em;
+            .title {
+                border-bottom: .2em solid $highlight1Color;
+                display: block;
+                font-size: 1.2em;
+                margin-bottom: .5em;
+                padding-bottom: .1em;
+                text-align: right;
+            }
+        }
+        .form {
+            div {
+                padding: .2em;
+                vertical-align: text-top;
+            }
+            label {
+                display: block;
+                font-size: .8em;
+            }
+            .input {
+                display: block;
+            }
+            .message label {
+                display: block;
+            }
+        }
     }
 }
 
 .module .bizOverview {
     padding-top: 4em;
     width: $pageWidth - 10em;
-
+    
     .part1 {
         display: block;
         float: left;
@@ -149,7 +190,7 @@
         text-align: right;
     }
     .subtitle {
-
+        
         display: block;
         font-size: 1.2em;
         padding-top: .5em;
@@ -171,9 +212,9 @@
         margin-left: 2em;
         padding-bottom: .3em;
     }
-
+    
     header {
-
+        
         padding-bottom: 4em;
         .part1 {
             display: block;
@@ -194,7 +235,7 @@
             text-align: right;
         }
         .subtitle {
-
+            
             display: block;
             font-size: 1.1em;
             padding-top: .5em;
@@ -229,7 +270,7 @@
             padding-bottom: 2em;
             position: relative;
             .part1 {
-
+                
                 display: block;
                 float: left;
                 width: ($pageWidth - 13em) * .15;
@@ -247,14 +288,14 @@
                 width: ($pageWidth - 13em) * .85;
             }
         }
-
+        
         .summary {
             .subtitle {
                 font-weight: bold;
                 padding-bottom: 1.5em;
             }
         }
-
+        
         .interest {
             .title {
                 font-weight: bold;
@@ -264,7 +305,7 @@
                 padding-bottom: 1.5em;
             }
         }
-
+        
         .experience {
             .position {
                 padding-bottom: 3em;
@@ -284,20 +325,20 @@
                         .start:after {
                             content: " - ";
                         }
-
+                        
                     }
                     &:after{
                         @include clearFix();
                     }
                 }
-
+                
                 .company {
                     padding-bottom: 1em;
                     .name {
                         display: inline-block;
                         float: left;
                     }
-
+                    
                     .address {
                         display: inline-block;
                         float: right;
@@ -310,7 +351,7 @@
                             padding-left: .5em;
                         }
                     }
-
+                    
                     &:after{
                         @include clearFix();
                     }
@@ -319,9 +360,9 @@
                     padding-left: 1em;
                 }
             }
-
+            
         }
-
+        
         .education {
             .school {
                 padding-bottom: 1.5em;
@@ -350,7 +391,7 @@
                         display: inline-block;
                         float: left;
                     }
-
+                    
                     .address {
                         display: inline-block;
                         float: right;
@@ -369,12 +410,12 @@
                 }
             }
         }
-
+        
         &:after{
             @include clearFix();
         }
     }
-
+    
     footer {
         border-top: .1em solid $fontMainColor;
         padding-top: .3em;
@@ -399,7 +440,7 @@
 .module .bizSkills {
     padding-top: 4em;
     width: $pageWidth - 10em;
-
+    
     .skillsheader {
         padding-bottom: 4em;
         .part1 {
@@ -483,7 +524,7 @@
                     border-bottom: .1em solid rgba($fontMainColor,0.5);
                     font-size: 1.2em;
                 }
-
+                
                 .details {
                     font-size: .7em;
                     padding-top: .2em;
@@ -516,7 +557,7 @@
 .module .bizAbout {
     padding-top: 4em;
     width: $pageWidth - 10em;
-
+    
     .part1 {
         display: block;
         float: left;
@@ -552,7 +593,7 @@
 .module .bizResources {
     padding-top: 4em;
     width: $pageWidth - 10em;
-
+    
     .part1 {
         display: block;
         float: left;
@@ -594,7 +635,7 @@
             padding: .2em 0em .2em 2.5em;
         }
     }
-
+    
     &:after{
         @include clearFix();
     }

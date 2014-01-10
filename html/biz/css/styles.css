@@ -1398,7 +1398,7 @@ body {
     margin-bottom: 1em; }
   body .alerts {
     position: relative;
-    width: 36; }
+    width: 30; }
     body .alerts .alert {
       background-color: rgba(255, 255, 255, 0.9);
       border: 0.1em solid #475890;
@@ -1411,15 +1411,18 @@ body {
       border-top-right-radius: 0.5em;
       border-bottom-right-radius: 0.5em;
       color: #324583;
+      font-size: .8em;
       margin: .5em auto;
       padding: .5em;
       vertical-align: text-top;
-      width: 33.9em; }
+      width: 27.9em; }
       body .alerts .alert .icon {
         display: inline-block;
+        margin: 0 0 0 0;
         padding-right: 1em;
         vertical-align: text-top;
-        width: 2em; }
+        width: 1.5em;
+        height: 100%; }
       body .alerts .alert .code {
         display: none;
         padding-top: .5em;
@@ -1427,9 +1430,10 @@ body {
       body .alerts .alert .message {
         display: inline-block;
         font-weight: bold;
+        margin: auto auto;
         padding-top: .5em;
         vertical-align: text-top;
-        width: 30em; }
+        width: 24em; }
       body .alerts .alert.notice {
         background-color: rgba(255, 255, 204, 0.9);
         border: .1em solid yellow;
@@ -1447,7 +1451,7 @@ body {
           padding-right: .5em;
           width: 3em; }
         body .alerts .alert.error .message {
-          width: 26em; }
+          width: 20em; }
       body .alerts .alert:after {
         content: ".";
         visibility: hidden;
@@ -1563,6 +1567,43 @@ body {
       top: -1em;
       left: 0em;
       width: 20em; }
+.module .bizContact .body {
+  background-color: #9ba3bb;
+  border: 0.1em solid #324583;
+  color: #23305c;
+  -webkit-box-shadow: 0.2em 0.2em 1em rgba(0, 0, 0, 0.5) ;
+  -moz-box-shadow: 0.2em 0.2em 1em rgba(0, 0, 0, 0.5) ;
+  box-shadow: 0.2em 0.2em 1em rgba(0, 0, 0, 0.5) ;
+  padding: 1.5em;
+  position: absolute;
+  top: 3em;
+  right: 5em;
+  width: 30em;
+  z-index: 500; }
+  .module .bizContact .body .loading {
+    margin: auto auto;
+    position: absolute;
+    top: .5em;
+    left: 1em; }
+  .module .bizContact .body .info {
+    padding-bottom: .7em; }
+    .module .bizContact .body .info .title {
+      border-bottom: 0.2em solid #ffa302;
+      display: block;
+      font-size: 1.2em;
+      margin-bottom: .5em;
+      padding-bottom: .1em;
+      text-align: right; }
+  .module .bizContact .body .form div {
+    padding: .2em;
+    vertical-align: text-top; }
+  .module .bizContact .body .form label {
+    display: block;
+    font-size: .8em; }
+  .module .bizContact .body .form .input {
+    display: block; }
+  .module .bizContact .body .form .message label {
+    display: block; }
 
 .module .bizOverview {
   padding-top: 4em;
