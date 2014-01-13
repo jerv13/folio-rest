@@ -7,13 +7,30 @@ $mainLighterColor: #475890;
 $highlight1Color: #ffa302;
 $highlight2Color: #ffff00;
 
+$displayMinSmall: 45em;
+/*
+    // Standard
+    @media screen and (min-width: $displayMinSmall) {
+
+    }
+    // Small
+    @media screen and (max-width: $displayMinSmall) {
+
+    }
+*/
 $pageWidth: 67em;
 $pageMinHeight: 40em;
 
+$pageSmallWidth: 100%;
+$pageSmallMinHeight: 20em;
+html {
+    height: 100%;
+}
 body {
     background-color: $mainColor;
     color: $fontMainColor;
     font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
 
     a, a:link {
         color: $fontMainColor;

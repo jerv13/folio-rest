@@ -4,9 +4,20 @@
     border-left: .1em solid rgba($fontMainColor,.4);
     margin-left: auto;
     margin-right: auto;
-    padding: .2em;
     position: relative;
-    width: $pageWidth; min-height: $pageMinHeight;
+    // Standard
+    @media screen and (min-width: $displayMinSmall) {
+        padding: .2em;
+        width: $pageWidth; min-height: 100%;
+    }
+    // Small
+    @media screen and (max-width: $displayMinSmall) {
+        font-size: 1.3em;
+        padding-left: .9%;
+        padding-right: .9%;
+        width: $pageSmallWidth - 4%; min-height: 100%;
+    }
+
     .loading {
         background-image: url('../images/loading-animation.gif');
         background-size:2em 2em;
@@ -22,120 +33,230 @@
         width: 2em; height: 2em;
     }
     .mainheader {
-        padding: 1em 5em 1em 5em;
+
         position: relative;
-        width: $pageWidth - 10em;
-        .part1 {
-            display: inline-block;
-            float: left;
-            margin-right: .5em;
+        // Standard
+        @media screen and (min-width: $displayMinSmall) {
+            padding: 1em 5em 1em 5em;
+            width: $pageWidth - 10em;
+            .part1 {
+                display: inline-block;
+                float: left;
+                margin-right: .5em;
+            }
+            .part2 {
+                background-color: rgba($fontMainColor,0.1);
+                display: inline-block;
+                float: left;
+                width: 37.5em; height: .3em;
+            }
+            .part3 {
+                display: inline-block;
+                float: right;
+                margin-left: .5em;
+            }
+            &:after{
+                @include clearFix();
+            }
         }
-        .part2 {
-            background-color: rgba($fontMainColor,0.1);
-            display: inline-block;
-            float: left;
-            width: 37.5em; height: .3em;
+        // Small
+        @media screen and (max-width: $displayMinSmall) {
+            padding: .5em .5% .5em .5%;
+            width: $pageSmallWidth;
         }
-        .part3 {
-            display: inline-block;
-            float: right;
-            margin-left: .5em;
-        }
-        &:after{
-            @include clearFix();
-        }
+
     }
     .mainbody {
-        padding: 1em 5em 1em 5em;
+
         position: relative;
-        width: $pageWidth - 10em;
-        min-height: $pageMinHeight;
+        // Standard
+        @media screen and (min-width: $displayMinSmall) {
+            padding: 1em 5em 3em 5em;
+            width: $pageWidth - 10em;
+        }
+        // Small
+        @media screen and (max-width: $displayMinSmall) {
+            padding: 1em .5% 2.4em .5%;
+            width: $pageSmallWidth;
+        }
+
     }
     .mainfooter {
         background-color: rgba($fontMainColor,0.1);
-        font-size: .7em;
-        margin-top: 1.5em;
-        padding: .4em 2em .3em 2em;
-        text-align: right;
+        // Standard
+        @media screen and (min-width: $displayMinSmall) {
+            font-size: .7em;
+            margin-top: 1.5em;
+            padding: .4em 2em .3em 2em;
+            position: absolute; bottom: .3em; right: .3em; left: .3em;
+            text-align: right;
+            height: 1.4em;
+        }
+        // Small
+        @media screen and (max-width: $displayMinSmall) {
+            font-size: .7em;
+            margin-top: 1.5em;
+            padding: .4em 1% .2em 1%;
+            position: absolute; bottom: .3em;
+            text-align: center;
+            width: $pageSmallWidth - 4%; height: 1.3em;
+        }
     }
 }
 
 .module .bizNav {
     li {
-        display: inline-block;
-        position: relative;
-        padding-right: .3em;
-        a {
-            color: rgba($fontActiveColor,0);
-            display: block;
-            font-size: .7em;
-            i {
-                background-color: rgba($fontMainColor,.6);
-                display: block;
-                position: relative;
-                width:3em * 1.4; height: 1em * 1.4;
-            }
-            &.active, &:link.active, &:visited.active, &:active.active, &:hover.active {
-                background-color: rgba($highlight1Color,1);
-                color: rgba($highlight1Color,1);
-            }
-            &, &:link, &:visited{
-                background-color: rgba($fontMainColor,.6);
+
+        // Standard
+        @media screen and (min-width: $displayMinSmall) {
+            display: inline-block;
+            position: relative;
+            padding-right: .3em;
+            a {
                 color: rgba($fontActiveColor,0);
-            }
-            &:active, &:hover {
-                background-color: rgba($fontActiveColor,1);
-                color: rgba($fontMainColor,1);
-            }
-            div {
-                padding-bottom: .3em;
-                position: absolute; top: -1.3em; left: 0em;
-                width: 20em;
+                display: block;
+                font-size: .7em;
+                i {
+                    background-color: rgba($fontMainColor,.6);
+                    display: block;
+                    position: relative;
+                    width:3em * 1.4; height: 1em * 1.4;
+                }
+                &.active, &:link.active, &:visited.active, &:active.active, &:hover.active {
+                    i {
+                        background-color: rgba($highlight1Color,1);
+                    }
+                    color: rgba($highlight1Color,1);
+                }
+                &, &:link, &:visited{
+                    background-color: rgba($fontMainColor,.6);
+                    color: rgba($fontActiveColor,0);
+                }
+                &:active, &:hover {
+                    background-color: rgba($fontActiveColor,1);
+                    color: rgba($fontMainColor,1);
+                }
+                div {
+                    padding-bottom: .3em;
+                    position: absolute; top: -1.3em; left: 0em;
+                    width: 20em;
+                }
             }
         }
+        // Small
+        @media screen and (max-width: $displayMinSmall) {
+            position: relative;
+
+            a {
+                display: block;
+                margin-bottom: .3em;
+                i {
+                    background-color: rgba($fontMainColor,.6);
+                    display: inline-block;
+                    margin-right: .5em;
+                    width:1.2em; height: 1em;
+                }
+                &.active, &:link.active, &:visited.active, &:active.active, &:hover.active {
+                    i {
+                        background-color: rgba($highlight1Color,1);
+                    }
+                    color: rgba($highlight1Color,1);
+                }
+                &, &:link, &:visited{
+                    //background-color: rgba($fontMainColor,.6);
+                    //color: rgba($fontActiveColor,0);
+                }
+                &:active, &:hover {
+                    background-color: rgba($fontActiveColor,.1);
+                    color: rgba($fontMainColor,1);
+                }
+                div {
+                    display: inline-block;
+                }
+            }
+        }
+
     }
 }
 
 .module .bizContact {
+
     .link {
-        display: inline-block;
-        position: relative;
-        a {
-            color: rgba($fontActiveColor,0);
-            display: block;
-            font-size: .7em;
-            
-            i {
-                color: $fontActiveColor;
-                font-size: 1.5em;
-            }
-            &:link, &:visited{
+
+        // Standard
+        @media screen and (min-width: $displayMinSmall) {
+            display: inline-block;
+            position: relative;
+            a {
                 color: rgba($fontActiveColor,0);
-            }
-            &:active, &:hover {
-                color: $fontActiveColor;
-                cursor: pointer;
-            }
-            div {
-                padding-bottom: .3em;
-                position: absolute; top: -1em; left: 0em;
-                width: 20em;
+                display: block;
+                font-size: .7em;
+
+                i {
+                    color: $fontActiveColor;
+                    font-size: 1.5em;
+                }
+                &:link, &:visited{
+                    color: rgba($fontActiveColor,0);
+                }
+                &:active, &:hover {
+                    color: $fontActiveColor;
+                    cursor: pointer;
+                }
+                div {
+                    padding-bottom: .3em;
+                    position: absolute; top: -1.3em; left: 0em;
+                }
             }
         }
-        
+        // Small
+        @media screen and (max-width: $displayMinSmall) {
+            position: relative;
+            a {
+                display: block;
+                margin-bottom: .3em;
+                i {
+                    color: $fontActiveColor;
+                    padding-right: .3em;
+                    font-size: 1.2em;
+                    width:1.2em;
+                }
+                &:link, &:visited{
+                    color: rgba($fontActiveColor,0);
+                }
+                &:active, &:hover {
+                    background-color: rgba($fontActiveColor,.1);
+                    color: $fontActiveColor;
+                    cursor: pointer;
+                }
+                div {
+                    display: inline-block;
+                }
+            }
+        }
     }
+
     .body {
         background-color: $mainLightColor;
         border: .1em solid rgba($mainColor, 1);
         color: $mainDarkColor;
         @include box-shadow(.2em, .2em, 1em, rgba(#000, .5));
-        padding: 1.5em;
-        position: absolute; top: 3em; right:5em;
-        width: 30em;
         z-index: 500;
+        // Standard
+        @media screen and (min-width: $displayMinSmall) {
+            padding: 1.5em;
+            position: absolute; top: 3em; right:5em;
+            width: 30em;
+        }
+        // Small
+        @media screen and (max-width: $displayMinSmall) {
+            padding: .5em 5% .5em 5%;
+            position: absolute; top: 3em; left:0;
+            width: $pageSmallWidth - 11%;
+        }
         .loading {
             margin: auto auto;
-            position: absolute; top:.5em; left: 1em; 
+            position: absolute; top:.5em; left: 1em;
         }
         .info {
             padding-bottom: .7em;
@@ -165,68 +286,27 @@
             }
         }
     }
+
+
 }
 
 .module .bizOverview {
-    padding-top: 4em;
-    width: $pageWidth - 10em;
-    
-    .part1 {
-        display: block;
-        float: left;
-        width: ($pageWidth - 12em) * .6;
-    }
-    .part2 {
-        display: block;
-        float: right;
-        padding-top: 3.8em;
-        padding-left: 2em;
-        width: ($pageWidth - 12em) * .4;
-    }
-    .title {
-        border-bottom: .1em solid $highlight1Color;
-        display: block;
-        font-size: 4em;
-        text-align: right;
-    }
-    .subtitle {
-        
-        display: block;
-        font-size: 1.2em;
-        padding-top: .5em;
-        text-align: right;
-    }
-    .summary {
-        line-height: 1.2em;
-    }
-    &:after{
-        @include clearFix();
-    }
-}
 
-.module .bizResume {
-    padding-top: 4em;
-    width: $pageWidth - 10em;
-    li {
-        list-style-type: square;
-        margin-left: 2em;
-        padding-bottom: .3em;
-    }
-    
-    header {
-        
-        padding-bottom: 4em;
+    // Standard
+    @media screen and (min-width: $displayMinSmall) {
+        padding-top: 4em;
+        width: $pageWidth - 10em;
         .part1 {
             display: block;
             float: left;
-            width: ($pageWidth - 13em) * .6;
+            width: ($pageWidth - 12em) * .6;
         }
         .part2 {
             display: block;
             float: right;
-            padding-top: 1em;
-            text-align: right;
-            width: ($pageWidth - 13em) * .4;
+            padding-top: 3.8em;
+            padding-left: 2em;
+            width: ($pageWidth - 12em) * .4;
         }
         .title {
             border-bottom: .1em solid $highlight1Color;
@@ -235,203 +315,511 @@
             text-align: right;
         }
         .subtitle {
-            
+
             display: block;
-            font-size: 1.1em;
+            font-size: 1.2em;
             padding-top: .5em;
             text-align: right;
         }
-        .address {
-            padding-bottom: .2em;
-            div {
-                display: inline-block;
-                padding-bottom: .2em;
-            }
-            zip {
-                padding-left: .5em;
-            }
-        }
-        .contact {
-            div {
-                padding-bottom: .2em;
-            }
-            .protocol {
-                font-size: .9em;
-            }
-        }
-        &:after{
-            @include clearFix();
+        .summary {
+            line-height: 1.2em;
         }
     }
-    .resumebody {
-        padding-bottom: 1em;
-        section {
+    // Small
+    @media screen and (max-width: $displayMinSmall) {
+        padding-top: 1em;
+        width: $pageSmallWidth;
+        .part1 {
+            display: block;
             float: left;
-            padding-bottom: 2em;
-            position: relative;
+            width: $pageSmallWidth - 3%;
+        }
+        .part2 {
+            display: block;
+            float: left;
+            padding-top: 2em;
+            width: $pageSmallWidth - 3%;
+        }
+        .title {
+            border-bottom: .1em solid $highlight1Color;
+            display: block;
+            font-size: 3em;
+            text-align: right;
+        }
+        .subtitle {
+
+            display: block;
+            font-size: 1em;
+            padding-top: .5em;
+            text-align: right;
+        }
+        .summary {
+            line-height: 1.2em;
+        }
+    }
+    &:after{
+        @include clearFix();
+    }
+}
+
+.module .bizResume {
+
+    // Standard
+    @media screen and (min-width: $displayMinSmall) {
+        padding-top: 4em;
+        width: $pageWidth - 10em;
+        li {
+            list-style-type: square;
+            margin-left: 2em;
+            padding-bottom: .3em;
+        }
+
+        header {
+
+            padding-bottom: 4em;
             .part1 {
-                
                 display: block;
                 float: left;
-                width: ($pageWidth - 13em) * .15;
-                .title {
-                    border-bottom: .1em solid $highlight1Color;
-                    font-weight: bold;
-                    text-align: right;
-                    text-transform: uppercase;
-                }
+                width: ($pageWidth - 13em) * .6;
             }
             .part2 {
                 display: block;
                 float: right;
-                padding-left: 2em;
-                width: ($pageWidth - 13em) * .85;
+                padding-top: 1em;
+                text-align: right;
+                width: ($pageWidth - 13em) * .4;
             }
-        }
-        
-        .summary {
-            .subtitle {
-                font-weight: bold;
-                padding-bottom: 1.5em;
-            }
-        }
-        
-        .interest {
             .title {
-                font-weight: bold;
-                padding-bottom: 1.5em;
+                border-bottom: .1em solid $highlight1Color;
+                display: block;
+                font-size: 4em;
+                text-align: right;
             }
-            .points {
-                padding-bottom: 1.5em;
+            .subtitle {
+
+                display: block;
+                font-size: 1.1em;
+                padding-top: .5em;
+                text-align: right;
+            }
+            .address {
+                padding-bottom: .2em;
+                div {
+                    display: inline-block;
+                    padding-bottom: .2em;
+                }
+                zip {
+                    padding-left: .5em;
+                }
+            }
+            .contact {
+                div {
+                    padding-bottom: .2em;
+                }
+                .protocol {
+                    font-size: .9em;
+                }
+            }
+            &:after{
+                @include clearFix();
             }
         }
-        
-        .experience {
-            .position {
-                padding-bottom: 3em;
-                .overview {
-                    margin-bottom: .3em;
+        .resumebody {
+            padding-bottom: 1em;
+            section {
+                float: left;
+                padding-bottom: 2em;
+                position: relative;
+                .part1 {
+
+                    display: block;
+                    float: left;
+                    width: ($pageWidth - 13em) * .15;
                     .title {
+                        border-bottom: .1em solid $highlight1Color;
                         font-weight: bold;
-                        display: inline-block;
-                        float: left;
-                    }
-                    .datarange {
-                        display: inline-block;
-                        float: right;
-                        div {
-                            display: inline-block;
-                        }
-                        .start:after {
-                            content: " - ";
-                        }
-                        
-                    }
-                    &:after{
-                        @include clearFix();
+                        text-align: right;
+                        text-transform: uppercase;
                     }
                 }
-                
-                .company {
-                    padding-bottom: 1em;
-                    .name {
-                        display: inline-block;
-                        float: left;
-                    }
-                    
-                    .address {
-                        display: inline-block;
-                        float: right;
-                        padding-bottom: .2em;
-                        div {
-                            display: inline-block;
-                            padding-bottom: .2em;
-                        }
-                        zip {
-                            padding-left: .5em;
-                        }
-                    }
-                    
-                    &:after{
-                        @include clearFix();
-                    }
-                }
-                .body {
-                    padding-left: 1em;
+                .part2 {
+                    display: block;
+                    float: right;
+                    padding-left: 2em;
+                    width: ($pageWidth - 13em) * .85;
                 }
             }
-            
-        }
-        
-        .education {
-            .school {
-                padding-bottom: 1.5em;
-                .degree {
-                    margin-bottom: .3em;
-                    .title {
-                        font-weight: bold;
-                        display: inline-block;
-                        float: left;
-                        width: 26em;
+
+            .summary {
+                .subtitle {
+                    font-weight: bold;
+                    padding-bottom: 1.5em;
+                }
+            }
+
+            .interest {
+                .title {
+                    font-weight: bold;
+                    padding-bottom: 1.5em;
+                }
+                .points {
+                    padding-bottom: 1.5em;
+                }
+            }
+
+            .experience {
+                .position {
+                    padding-bottom: 3em;
+                    .overview {
+                        margin-bottom: .3em;
+                        .title {
+                            font-weight: bold;
+                            display: inline-block;
+                            float: left;
+                        }
+                        .datarange {
+                            display: inline-block;
+                            float: right;
+                            div {
+                                display: inline-block;
+                            }
+                            .start:after {
+                                content: " - ";
+                            }
+
+                        }
+                        &:after{
+                            @include clearFix();
+                        }
                     }
-                    .type {
-                        display: inline-block;
-                        float: left;
+
+                    .company {
+                        padding-bottom: 1em;
+                        .name {
+                            display: inline-block;
+                            float: left;
+                        }
+
+                        .address {
+                            display: inline-block;
+                            float: right;
+                            padding-bottom: .2em;
+                            div {
+                                display: inline-block;
+                                padding-bottom: .2em;
+                            }
+                            zip {
+                                padding-left: .5em;
+                            }
+                        }
+
+                        &:after{
+                            @include clearFix();
+                        }
                     }
-                    .date {
-                        display: inline-block;
-                        float: right;
-                    }
-                    &:after{
-                        @include clearFix();
+                    .body {
+                        padding-left: 1em;
                     }
                 }
-                .company {
-                    .name {
-                        display: inline-block;
-                        float: left;
-                    }
-                    
-                    .address {
-                        display: inline-block;
-                        float: right;
-                        padding-bottom: .2em;
-                        div {
+
+            }
+
+            .education {
+                .school {
+                    padding-bottom: 1.5em;
+                    .degree {
+                        margin-bottom: .3em;
+                        .title {
+                            font-weight: bold;
                             display: inline-block;
-                            padding-bottom: .2em;
+                            float: left;
+                            width: 26em;
                         }
-                        zip {
-                            padding-left: .5em;
+                        .type {
+                            display: inline-block;
+                            float: left;
+                        }
+                        .date {
+                            display: inline-block;
+                            float: right;
+                        }
+                        &:after{
+                            @include clearFix();
                         }
                     }
-                    &:after{
-                        @include clearFix();
+                    .company {
+                        .name {
+                            display: inline-block;
+                            float: left;
+                        }
+
+                        .address {
+                            display: inline-block;
+                            float: right;
+                            padding-bottom: .2em;
+                            div {
+                                display: inline-block;
+                                padding-bottom: .2em;
+                            }
+                            zip {
+                                padding-left: .5em;
+                            }
+                        }
+                        &:after{
+                            @include clearFix();
+                        }
                     }
                 }
             }
+
+            &:after{
+                @include clearFix();
+            }
         }
-        
-        &:after{
-            @include clearFix();
+
+        footer {
+            border-top: .1em solid $fontMainColor;
+            padding-top: .3em;
+            text-align: right;
+            .link {
+                display: inline-block;
+                padding-left: 2em;
+                i{
+                    display: inline-block;
+                }
+                div {
+                    display: inline-block;
+                    padding-left: .7em;
+                }
+            }
         }
     }
-    
-    footer {
-        border-top: .1em solid $fontMainColor;
-        padding-top: .3em;
-        text-align: right;
-        .link {
-            display: inline-block;
-            padding-left: 2em;
-            i{
-                display: inline-block;
+    // Small
+    @media screen and (max-width: $displayMinSmall) {
+        padding-top: 1em;
+        width: $pageSmallWidth;
+        li {
+            list-style-type: square;
+            margin-left: 2em;
+            padding-bottom: .3em;
+        }
+
+        header {
+
+            padding-bottom: 1em;
+            .part1 {
+                display: block;
+                width: $pageSmallWidth - 3%;
             }
-            div {
+            .part2 {
+                display: block;
+                font-size: .7em;
+                padding-top: 1em;
+                text-align: right;
+                width: $pageSmallWidth - 3%;
+            }
+            .title {
+                border-bottom: .1em solid $highlight1Color;
+                display: block;
+                font-size: 3em;
+                text-align: right;
+            }
+            .subtitle {
+                display: block;
+                font-size: 1em;
+                padding-top: .5em;
+                text-align: right;
+            }
+
+            .address {
+                padding-bottom: .2em;
+                div {
+                    display: inline-block;
+                    padding-bottom: .2em;
+                }
+                zip {
+                    padding-left: .5em;
+                }
+            }
+            .contact {
+                div {
+                    padding-bottom: .2em;
+                }
+                .protocol {
+                    font-size: .9em;
+                }
+            }
+            &:after{
+                @include clearFix();
+            }
+        }
+        .resumebody {
+            padding-bottom: 1em;
+            section {
+                padding-bottom: 2em;
+                position: relative;
+                .part1 {
+                    display: block;
+                    width: $pageSmallWidth - 3%;
+                    .title {
+                        border-bottom: .1em solid $highlight1Color;
+                        font-weight: bold;
+                        text-align: right;
+                        text-transform: uppercase;
+                    }
+                }
+                .part2 {
+                    display: block;
+                    padding-left: 2em;
+                    width: $pageSmallWidth - 3%;
+                }
+            }
+
+            .summary {
+                .subtitle {
+                    font-weight: bold;
+                    padding-bottom: 1.5em;
+                }
+            }
+
+            .interest {
+                .title {
+                    font-weight: bold;
+                    padding-bottom: 1.5em;
+                }
+                .points {
+                    padding-bottom: 1.5em;
+                }
+            }
+
+            .experience {
+                .position {
+                    padding-bottom: 3em;
+                    .overview {
+                        margin-bottom: .3em;
+                        .title {
+                            font-weight: bold;
+                            display: inline-block;
+                            float: left;
+                        }
+                        .datarange {
+                            display: inline-block;
+                            float: right;
+                            div {
+                                display: inline-block;
+                            }
+                            .start:after {
+                                content: " - ";
+                            }
+
+                        }
+                        &:after{
+                            @include clearFix();
+                        }
+                    }
+
+                    .company {
+                        padding-bottom: 1em;
+                        .name {
+                            display: inline-block;
+                            float: left;
+                        }
+
+                        .address {
+                            display: inline-block;
+                            float: right;
+                            padding-bottom: .2em;
+                            div {
+                                display: inline-block;
+                                padding-bottom: .2em;
+                            }
+                            zip {
+                                padding-left: .5em;
+                            }
+                        }
+
+                        &:after{
+                            @include clearFix();
+                        }
+                    }
+                    .body {
+                        padding-left: 1em;
+                    }
+                }
+
+            }
+
+            .education {
+                .school {
+                    padding-bottom: 1.5em;
+                    .degree {
+                        margin-bottom: .3em;
+                        .title {
+                            font-weight: bold;
+                            display: inline-block;
+                            float: left;
+                            width: 26em;
+                        }
+                        .type {
+                            display: inline-block;
+                            float: left;
+                        }
+                        .date {
+                            display: inline-block;
+                            float: right;
+                        }
+                        &:after{
+                            @include clearFix();
+                        }
+                    }
+                    .company {
+                        .name {
+                            display: inline-block;
+                            float: left;
+                        }
+
+                        .address {
+                            display: inline-block;
+                            float: right;
+                            padding-bottom: .2em;
+                            div {
+                                display: inline-block;
+                                padding-bottom: .2em;
+                            }
+                            zip {
+                                padding-left: .5em;
+                            }
+                        }
+                        &:after{
+                            @include clearFix();
+                        }
+                    }
+                }
+            }
+
+            &:after{
+                @include clearFix();
+            }
+        }
+
+        footer {
+            border-top: .1em solid $fontMainColor;
+            padding-top: .3em;
+            text-align: right;
+            .link {
                 display: inline-block;
-                padding-left: .7em;
+                padding-left: 2em;
+                i{
+                    display: inline-block;
+                }
+                div {
+                    display: inline-block;
+                    padding-left: .7em;
+                }
             }
         }
     }
+
     &:after{
         @include clearFix();
     }
@@ -440,7 +828,7 @@
 .module .bizSkills {
     padding-top: 4em;
     width: $pageWidth - 10em;
-    
+
     .skillsheader {
         padding-bottom: 4em;
         .part1 {
@@ -524,7 +912,7 @@
                     border-bottom: .1em solid rgba($fontMainColor,0.5);
                     font-size: 1.2em;
                 }
-                
+
                 .details {
                     font-size: .7em;
                     padding-top: .2em;
@@ -555,35 +943,73 @@
 }
 
 .module .bizAbout {
-    padding-top: 4em;
-    width: $pageWidth - 10em;
-    
-    .part1 {
-        display: block;
-        float: left;
-        width: ($pageWidth - 12em) * .4;
+
+    // Standard
+    @media screen and (min-width: $displayMinSmall) {
+        padding-top: 4em;
+        width: $pageWidth - 10em;
+
+        .part1 {
+            display: block;
+            float: left;
+            width: ($pageWidth - 12em) * .4;
+        }
+        .part2 {
+            display: block;
+            float: right;
+            padding-top: 1.8em;
+            padding-left: 2em;
+            width: ($pageWidth - 12em) * .6;
+        }
+        .title {
+            border-bottom: .1em solid $highlight1Color;
+            display: block;
+            font-size: 2em;
+            font-weight: bold;
+            text-align: right;
+        }
+        .subtitle {
+            display: block;
+            font-size: 1.1em;
+            padding-top: .5em;
+            text-align: right;
+        }
+        .summary {}
     }
-    .part2 {
-        display: block;
-        float: right;
-        padding-top: 1.8em;
-        padding-left: 2em;
-        width: ($pageWidth - 12em) * .6;
+    // Small
+    @media screen and (max-width: $displayMinSmall) {
+        padding-top: 1em;
+        width: $pageSmallWidth;
+
+        .part1 {
+            display: block;
+            float: left;
+            width: $pageSmallWidth - 3%;
+        }
+        .part2 {
+            display: block;
+            float: left;
+            padding-top: 2em;
+            width: $pageSmallWidth - 3%;
+        }
+        .title {
+            border-bottom: .1em solid $highlight1Color;
+            display: block;
+            font-size: 2em;
+            text-align: right;
+        }
+        .subtitle {
+
+            display: block;
+            font-size: 1em;
+            padding-top: .5em;
+            text-align: right;
+        }
+        .summary {
+            line-height: 1.2em;
+        }
     }
-    .title {
-        border-bottom: .1em solid $highlight1Color;
-        display: block;
-        font-size: 2em;
-        font-weight: bold;
-        text-align: right;
-    }
-    .subtitle {
-        display: block;
-        font-size: 1.1em;
-        padding-top: .5em;
-        text-align: right;
-    }
-    .summary {}
+
     &:after{
         @include clearFix();
     }
@@ -591,51 +1017,102 @@
 
 
 .module .bizResources {
-    padding-top: 4em;
-    width: $pageWidth - 10em;
-    
-    .part1 {
-        display: block;
-        float: left;
-        width: ($pageWidth - 12em) * .4;
-    }
-    .part2 {
-        display: block;
-        float: right;
-        padding-top: 1.8em;
-        padding-left: 2em;
-        width: ($pageWidth - 12em) * .6;
-    }
-    .title {
-        border-bottom: .1em solid $highlight1Color;
-        display: block;
-        font-size: 2em;
-        font-weight: bold;
-        text-align: right;
-    }
-    .subtitle {
-        display: block;
-        font-size: 1.1em;
-        padding-top: .5em;
-        text-align: right;
-    }
-    .summary {
-        padding-bottom: 1em;
-    }
-    .link {
-        display: block;
-        position: relative;
-        padding-bottom: .5em;
-        .label {
-            display: inline-block;
-            padding-left: .7em;
+
+    // Standard
+    @media screen and (min-width: $displayMinSmall) {
+        padding-top: 4em;
+        width: $pageWidth - 10em;
+
+        .part1 {
+            display: block;
+            float: left;
+            width: ($pageWidth - 12em) * .4;
         }
-        .description {
-            font-size: .7em;
-            padding: .2em 0em .2em 2.5em;
+        .part2 {
+            display: block;
+            float: right;
+            padding-top: 1.8em;
+            padding-left: 2em;
+            width: ($pageWidth - 12em) * .6;
+        }
+        .title {
+            border-bottom: .1em solid $highlight1Color;
+            display: block;
+            font-size: 2em;
+            font-weight: bold;
+            text-align: right;
+        }
+        .subtitle {
+            display: block;
+            font-size: 1.1em;
+            padding-top: .5em;
+            text-align: right;
+        }
+        .summary {
+            padding-bottom: 1em;
+        }
+        .link {
+            display: block;
+            position: relative;
+            padding-bottom: .5em;
+            .label {
+                display: inline-block;
+                padding-left: .7em;
+            }
+            .description {
+                font-size: .7em;
+                padding: .2em 0em .2em 2.5em;
+            }
         }
     }
-    
+    // Small
+    @media screen and (max-width: $displayMinSmall) {
+        padding-top: 1em;
+        width: $pageSmallWidth;
+
+        .part1 {
+            display: block;
+            float: left;
+            width: $pageSmallWidth - 3%;
+        }
+        .part2 {
+            display: block;
+            float: left;
+            padding-top: 2em;
+            width: $pageSmallWidth - 3%;
+        }
+        .title {
+            border-bottom: .1em solid $highlight1Color;
+            display: block;
+            font-size: 2em;
+            text-align: right;
+        }
+        .subtitle {
+
+            display: block;
+            font-size: 1em;
+            padding-top: .5em;
+            text-align: right;
+        }
+        .summary {
+            line-height: 1.2em;
+            padding-bottom: 1em;
+        }
+        .link {
+            display: block;
+            position: relative;
+            padding-bottom: .5em;
+            .label {
+                display: inline-block;
+                padding-left: .7em;
+            }
+            .description {
+                font-size: .7em;
+                padding: .2em 0em .2em 2.5em;
+            }
+        }
+    }
+
     &:after{
         @include clearFix();
     }
