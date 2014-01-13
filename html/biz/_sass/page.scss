@@ -252,7 +252,7 @@
         @media screen and (max-width: $displayMinSmall) {
             padding: .5em 5% .5em 5%;
             position: absolute; top: 3em; left:0;
-            width: $pageSmallWidth - 11%;
+            width: $pageSmallWidth - 11%; min-height: 2em;
         }
         .loading {
             margin: auto auto;
@@ -606,7 +606,7 @@
 
         header {
 
-            padding-bottom: 1em;
+            padding-bottom: 2em;
             .part1 {
                 display: block;
                 width: $pageSmallWidth - 3%;
@@ -654,23 +654,27 @@
             }
         }
         .resumebody {
+            line-height: 1.2em;
             padding-bottom: 1em;
             section {
                 padding-bottom: 2em;
                 position: relative;
                 .part1 {
                     display: block;
+                    padding-bottom: 2em;
                     width: $pageSmallWidth - 3%;
                     .title {
                         border-bottom: .1em solid $highlight1Color;
+                        color: $highlight1Color;
+                        font-size: 1.2em;
                         font-weight: bold;
-                        text-align: right;
+                        text-align: left;
                         text-transform: uppercase;
                     }
                 }
                 .part2 {
                     display: block;
-                    padding-left: 2em;
+                    padding-left: .3em;
                     width: $pageSmallWidth - 3%;
                 }
             }
@@ -684,8 +688,11 @@
 
             .interest {
                 .title {
+                    border-bottom: .1em solid rgba($fontMainColor,0.5);
+                    font-size: 1.1em;
                     font-weight: bold;
-                    padding-bottom: 1.5em;
+                    margin-bottom: 1em;
+                    padding-bottom: .1em;
                 }
                 .points {
                     padding-bottom: 1.5em;
@@ -698,13 +705,15 @@
                     .overview {
                         margin-bottom: .3em;
                         .title {
+                            border-bottom: .1em solid rgba($fontMainColor,0.5);
+                            font-size: 1.1em;
                             font-weight: bold;
-                            display: inline-block;
-                            float: left;
+                            display: block;
+                            padding-bottom: .1em;
                         }
                         .datarange {
-                            display: inline-block;
-                            float: right;
+                            display: block;
+                            font-size: .7em;
                             div {
                                 display: inline-block;
                             }
@@ -721,13 +730,12 @@
                     .company {
                         padding-bottom: 1em;
                         .name {
-                            display: inline-block;
-                            float: left;
+                            display: block;
                         }
 
                         .address {
                             display: inline-block;
-                            float: right;
+                            font-size: .7em;
                             padding-bottom: .2em;
                             div {
                                 display: inline-block;
@@ -737,13 +745,9 @@
                                 padding-left: .5em;
                             }
                         }
-
-                        &:after{
-                            @include clearFix();
-                        }
                     }
                     .body {
-                        padding-left: 1em;
+                        padding-left: .3em;
                     }
                 }
 
@@ -755,18 +759,20 @@
                     .degree {
                         margin-bottom: .3em;
                         .title {
+                            border-bottom: .1em solid rgba($fontMainColor,0.5);
                             font-weight: bold;
-                            display: inline-block;
-                            float: left;
-                            width: 26em;
+                            display: block;
                         }
                         .type {
                             display: inline-block;
-                            float: left;
+                            font-size: .7em;
+                            &:after{
+                                content: ", ";
+                            }
                         }
                         .date {
                             display: inline-block;
-                            float: right;
+                            font-size: .7em;
                         }
                         &:after{
                             @include clearFix();
@@ -774,13 +780,12 @@
                     }
                     .company {
                         .name {
-                            display: inline-block;
-                            float: left;
+                            display: block;
                         }
 
                         .address {
                             display: inline-block;
-                            float: right;
+                            font-size: .7em;
                             padding-bottom: .2em;
                             div {
                                 display: inline-block;
@@ -789,9 +794,6 @@
                             zip {
                                 padding-left: .5em;
                             }
-                        }
-                        &:after{
-                            @include clearFix();
                         }
                     }
                 }

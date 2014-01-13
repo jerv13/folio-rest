@@ -7,7 +7,7 @@ ToDo
     - sort
     - search
 
-- data
+- data: fix and complete actual data
 - data.experice: Add actual months to date ranges
 
 - html.ufo: begin layout and modeling

@@ -1681,7 +1681,8 @@ body {
       position: absolute;
       top: 3em;
       left: 0;
-      width: 89%; } }
+      width: 89%;
+      min-height: 2em; } }
   .module .bizContact .body .loading {
     margin: auto auto;
     position: absolute;
@@ -1949,7 +1950,7 @@ body {
       margin-left: 2em;
       padding-bottom: .3em; }
     .module .bizResume header {
-      padding-bottom: 1em; }
+      padding-bottom: 2em; }
       .module .bizResume header .part1 {
         display: block;
         width: 97%; }
@@ -1987,28 +1988,35 @@ body {
         height: 0;
         clear: both; }
     .module .bizResume .resumebody {
+      line-height: 1.2em;
       padding-bottom: 1em; }
       .module .bizResume .resumebody section {
         padding-bottom: 2em;
         position: relative; }
         .module .bizResume .resumebody section .part1 {
           display: block;
+          padding-bottom: 2em;
           width: 97%; }
           .module .bizResume .resumebody section .part1 .title {
             border-bottom: 0.1em solid #ffa302;
+            color: #ffa302;
+            font-size: 1.2em;
             font-weight: bold;
-            text-align: right;
+            text-align: left;
             text-transform: uppercase; }
         .module .bizResume .resumebody section .part2 {
           display: block;
-          padding-left: 2em;
+          padding-left: .3em;
           width: 97%; }
       .module .bizResume .resumebody .summary .subtitle {
         font-weight: bold;
         padding-bottom: 1.5em; }
       .module .bizResume .resumebody .interest .title {
+        border-bottom: 0.1em solid rgba(238, 238, 238, 0.5);
+        font-size: 1.1em;
         font-weight: bold;
-        padding-bottom: 1.5em; }
+        margin-bottom: 1em;
+        padding-bottom: .1em; }
       .module .bizResume .resumebody .interest .points {
         padding-bottom: 1.5em; }
       .module .bizResume .resumebody .experience .position {
@@ -2016,12 +2024,14 @@ body {
         .module .bizResume .resumebody .experience .position .overview {
           margin-bottom: .3em; }
           .module .bizResume .resumebody .experience .position .overview .title {
+            border-bottom: 0.1em solid rgba(238, 238, 238, 0.5);
+            font-size: 1.1em;
             font-weight: bold;
-            display: inline-block;
-            float: left; }
+            display: block;
+            padding-bottom: .1em; }
           .module .bizResume .resumebody .experience .position .overview .datarange {
-            display: inline-block;
-            float: right; }
+            display: block;
+            font-size: .7em; }
             .module .bizResume .resumebody .experience .position .overview .datarange div {
               display: inline-block; }
             .module .bizResume .resumebody .experience .position .overview .datarange .start:after {
@@ -2035,40 +2045,34 @@ body {
         .module .bizResume .resumebody .experience .position .company {
           padding-bottom: 1em; }
           .module .bizResume .resumebody .experience .position .company .name {
-            display: inline-block;
-            float: left; }
+            display: block; }
           .module .bizResume .resumebody .experience .position .company .address {
             display: inline-block;
-            float: right;
+            font-size: .7em;
             padding-bottom: .2em; }
             .module .bizResume .resumebody .experience .position .company .address div {
               display: inline-block;
               padding-bottom: .2em; }
             .module .bizResume .resumebody .experience .position .company .address zip {
               padding-left: .5em; }
-          .module .bizResume .resumebody .experience .position .company:after {
-            content: ".";
-            visibility: hidden;
-            display: block;
-            height: 0;
-            clear: both; }
         .module .bizResume .resumebody .experience .position .body {
-          padding-left: 1em; }
+          padding-left: .3em; }
       .module .bizResume .resumebody .education .school {
         padding-bottom: 1.5em; }
         .module .bizResume .resumebody .education .school .degree {
           margin-bottom: .3em; }
           .module .bizResume .resumebody .education .school .degree .title {
+            border-bottom: 0.1em solid rgba(238, 238, 238, 0.5);
             font-weight: bold;
-            display: inline-block;
-            float: left;
-            width: 26em; }
+            display: block; }
           .module .bizResume .resumebody .education .school .degree .type {
             display: inline-block;
-            float: left; }
+            font-size: .7em; }
+            .module .bizResume .resumebody .education .school .degree .type:after {
+              content: ", "; }
           .module .bizResume .resumebody .education .school .degree .date {
             display: inline-block;
-            float: right; }
+            font-size: .7em; }
           .module .bizResume .resumebody .education .school .degree:after {
             content: ".";
             visibility: hidden;
@@ -2076,23 +2080,16 @@ body {
             height: 0;
             clear: both; }
         .module .bizResume .resumebody .education .school .company .name {
-          display: inline-block;
-          float: left; }
+          display: block; }
         .module .bizResume .resumebody .education .school .company .address {
           display: inline-block;
-          float: right;
+          font-size: .7em;
           padding-bottom: .2em; }
           .module .bizResume .resumebody .education .school .company .address div {
             display: inline-block;
             padding-bottom: .2em; }
           .module .bizResume .resumebody .education .school .company .address zip {
             padding-left: .5em; }
-        .module .bizResume .resumebody .education .school .company:after {
-          content: ".";
-          visibility: hidden;
-          display: block;
-          height: 0;
-          clear: both; }
       .module .bizResume .resumebody:after {
         content: ".";
         visibility: hidden;
