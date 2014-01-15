@@ -45,7 +45,7 @@ Requirements
     - Must expose cofiguration required by client as API and and JS file
     - Must expose available end-point to client as key value object ({ "key": "api_path", ...})
     - Should have good documentation
-    
+
 - Database:
     - Must utilize data from DB
     - Should use Redis DB
@@ -57,7 +57,7 @@ Nice to haves:
 --------------
 
 - oAuth to google, facebook, linkedin
-- i16n
+- i16n (.po .mo file using node-gettext)
 - info calls for API documentation
 
 Features
@@ -128,7 +128,7 @@ Usage:
     `
     Biz:
     sass --watch ./html/biz/_sass/styles.scss:./html/biz/css/styles.css
-    
+
     CORE (jfolio)
     sass --watch ./html/jfolio/_sass/styles.scss:./html/jfolio/css/styles.css
     `
