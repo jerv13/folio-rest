@@ -1,13 +1,18 @@
 angular.module('biz.contact', ['jfolio.alert', 'jfolio.http'])
 
- .factory('contactDataService', ['CoreHttpService', function(CoreHttpService) {
+    .factory('contactDataService', ['CoreHttpService', function(CoreHttpService) {
 
         var contactDataService = new CoreHttpService('user.profile.professional.contact.php');
 
         return contactDataService;
     }])
 
- .directive('bizContactInclude', ['Alerts', 'contactDataService', function(Alerts, contactDataService) {
+    .factory('contactReCaptcha', [function() {
+
+        return Recaptcha;
+    }])
+
+    .directive('bizContactInclude', ['Alerts', 'contactDataService', 'contactReCaptcha', function(Alerts, contactDataService, contactReCaptcha) {
 
         return {
             restrict: 'A',
@@ -49,9 +54,24 @@ angular.module('biz.contact', ['jfolio.alert', 'jfolio.http'])
                         console.log('contactDataService.execute');
                         contactDataService.execute();
                     }
-                    
+
                     scope.bizContactFormVisible = !scope.bizContactFormVisible;
                 };
+
+                scope.buildReCaptcha = function(elm) {
+
+                    console.log("reCAPTCHA");
+
+                    contactReCaptcha.create("6Le9fu0SAAAAAAK27WxvBM23IvaeZ-fWJpIqkyRP",
+                        elm,
+                        {
+                            theme: "clean",
+                            callback: function(){ console.log("reCAPTCHA SHOWN")}
+                        }
+                    );
+                };
+
+
             }
         };
     }

@@ -43,11 +43,12 @@
                             <textarea id="bizContactFormMessage" name="message"></textarea>
                         </div>
                     </div>
-                    <div class="message">
+                    <div class="submit">
                         <div class="input">
-                            <input type="button" value="Send" />
+                            <input type="button" value="Send" ng-click="buildReCaptcha('contactReCaptcha')" />
                         </div>
                     </div>
+                    <div id="contactReCaptcha" class="reCAPTCHA"></div>
                 </form>
             </div>
         </div>
