@@ -1,5 +1,5 @@
 <?php
-$mysqlConfig = include(__DIR__ . 'config.mysql.php');
+$mysqlConfig = include(__DIR__ . '/config.mysql.php');
 // 'doctrine' =>
 return [
     'connection' => [

@@ -1,7 +1,7 @@
 <?php
 return array(
-    'doctrine' => include(__DIR__ . 'config.doctrine.php'),
-    'db' => include(__DIR__ . 'config.db.php'),
+    'doctrine' => include(__DIR__ . '/config.doctrine.php'),
+    'db' => include(__DIR__ . '/config.db.php'),
     'zf-mvc-auth' => array(
         'authentication' => array(
             'http' => array(

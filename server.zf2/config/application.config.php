@@ -7,6 +7,8 @@
 return array(
     'modules' => array(
         'Application',
+        'DoctrineModule',
+        'DoctrineORMModule',
         'ZF\\DevelopmentMode',
         'ZF\\Apigility',
         'ZF\\Apigility\\Provider',
@@ -32,7 +34,7 @@ return array(
             './vendor'
         ),
         'config_glob_paths' => array(
-            __DIR__ . 'autoload/{,*.}{global,local}.php'
+            __DIR__ . '/autoload/{,*.}{global,local}.php'
         ),
         'config_cache_key' => 'application.config.cache',
         'config_cache_enabled' => true,

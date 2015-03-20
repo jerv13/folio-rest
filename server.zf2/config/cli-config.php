@@ -12,7 +12,6 @@ include 'vendor/autoload.php';
 
 $config = include 'config/application.config.php';
 
-
 $application = Zend\Mvc\Application::init($config);
 $serviceMgr = $application->getServiceManager();
 
