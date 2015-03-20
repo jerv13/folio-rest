@@ -1,0 +1,18 @@
+{
+  "content": {
+    "title": "",
+    "body": "",
+    "detail": null
+  },
+  "dateRange": {
+    "start": "2002-12-01T00:00:00Z",
+    "end": "2003-12-01T00:00:00Z"
+  },
+  "company": {
+    "name": "",
+    "summary": "",
+    "address": "<address>",
+    "contacts": ["<contact>"]
+  },
+  "degrees": ["<degree>"]
+}
