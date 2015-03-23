@@ -6,7 +6,7 @@ use Zend\Stdlib\ArraySerializableInterface;
 
 
 /**
- * Class AbstractEntity
+ * Class AbstractArraySerializableEntity
  *
  * LongDescHere
  *
@@ -20,7 +20,7 @@ use Zend\Stdlib\ArraySerializableInterface;
  * @version   Release: <package_version>
  * @link      https://github.com/jervdesign
  */
-abstract class AbstractEntity implements ArraySerializableInterface
+abstract class AbstractArraySerializableEntity implements ArraySerializableInterface
 {
     /**
      * Exchange internal values from provided array

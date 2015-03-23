@@ -1,36 +1,34 @@
 <?php
 namespace JrvFolio\V1\Rest\Address;
 
-use JrvFolio\Entity\Address;
+use JrvFolio\Hydrator\ClassMethodsBlacklist;
+use JrvFolio\Rest\AbstractEntityManagerResourceListener;
+use Zend\Stdlib\Hydrator\ClassMethods;
+use Zend\Stdlib\Hydrator\Filter\FilterComposite;
 use ZF\ApiProblem\ApiProblem;
 use ZF\Rest\AbstractResourceListener;
 
-class AddressResource extends AbstractResourceListener
+class AddressResource extends AbstractEntityManagerResourceListener
 {
-    /**
-     * getServiceManager
-     *
-     * @return \Zend\ServiceManager\ServiceLocatorInterface
-     */
-    protected function getServiceManager()
-    {
-        return $this->getEvent()->getApplication()->getServiceManager();
-    }
-
     /**
      * Create a resource
      *
      * @param  mixed $data
+     *
      * @return ApiProblem|mixed
      */
     public function create($data)
     {
-        $address = new Address();
+        $data = (array)$data;
+        $address = new AddressEntity();
 
-        $address->exchangeArray($data);
+        $hydrator = new ClassMethodsBlacklist(['id'], false);
 
-        /** @var \Doctrine\ORM\EntityManager $entityManager */
-        $entityManager = $this->getServiceManager()->get('\Doctrine\ORM\EntityManager');
+        $hydrator->hydrate($data, $address);
+
+        var_dump($address); die;
+
+        $entityManager = $this->getEntityManger();
 
         $entityManager->persist($address);
 
@@ -43,48 +41,64 @@ class AddressResource extends AbstractResourceListener
      * Delete a resource
      *
      * @param  mixed $id
+     *
      * @return ApiProblem|mixed
      */
     public function delete($id)
     {
-        return new ApiProblem(405, 'The DELETE method has not been defined for individual resources');
+        return new ApiProblem(
+            405,
+            'The DELETE method has not been defined for individual resources'
+        );
     }
 
     /**
      * Delete a collection, or members of a collection
      *
      * @param  mixed $data
+     *
      * @return ApiProblem|mixed
      */
     public function deleteList($data)
     {
-        return new ApiProblem(405, 'The DELETE method has not been defined for collections');
+        return new ApiProblem(
+            405,
+            'The DELETE method has not been defined for collections'
+        );
     }
 
     /**
      * Fetch a resource
      *
      * @param  mixed $id
+     *
      * @return ApiProblem|mixed
      */
     public function fetch($id)
     {
-        $address = new Address();
-        $address->setId($id);
-        $address->setAddress('test');
+        $entityManager = $this->getEntityManger();
 
-        return $address->getArrayCopy();
+        $address = $entityManager->find(
+            'JrvFolio\V1\Rest\Address\AddressEntity',
+            $id
+        );
+
+        return $address;
     }
 
     /**
      * Fetch all or a subset of resources
      *
      * @param  array $params
+     *
      * @return ApiProblem|mixed
      */
     public function fetchAll($params = array())
     {
-        return new ApiProblem(405, 'The GET method has not been defined for collections');
+        return new ApiProblem(
+            405,
+            'The GET method has not been defined for collections'
+        );
     }
 
     /**
@@ -92,22 +106,30 @@ class AddressResource extends AbstractResourceListener
      *
      * @param  mixed $id
      * @param  mixed $data
+     *
      * @return ApiProblem|mixed
      */
     public function patch($id, $data)
     {
-        return new ApiProblem(405, 'The PATCH method has not been defined for individual resources');
+        return new ApiProblem(
+            405,
+            'The PATCH method has not been defined for individual resources'
+        );
     }
 
     /**
      * Replace a collection or members of a collection
      *
      * @param  mixed $data
+     *
      * @return ApiProblem|mixed
      */
     public function replaceList($data)
     {
-        return new ApiProblem(405, 'The PUT method has not been defined for collections');
+        return new ApiProblem(
+            405,
+            'The PUT method has not been defined for collections'
+        );
     }
 
     /**
@@ -115,10 +137,14 @@ class AddressResource extends AbstractResourceListener
      *
      * @param  mixed $id
      * @param  mixed $data
+     *
      * @return ApiProblem|mixed
      */
     public function update($id, $data)
     {
-        return new ApiProblem(405, 'The PUT method has not been defined for individual resources');
+        return new ApiProblem(
+            405,
+            'The PUT method has not been defined for individual resources'
+        );
     }
 }

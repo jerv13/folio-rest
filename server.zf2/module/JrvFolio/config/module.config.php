@@ -30,10 +30,8 @@ return array(
             'route_identifier_name' => 'address_id',
             'collection_name' => 'address',
             'entity_http_methods' => array(
-                0 => 'GET',
-                1 => 'PATCH',
-                2 => 'PUT',
-                3 => 'DELETE',
+                0 => 'POST',
+                1 => 'GET',
             ),
             'collection_http_methods' => array(
                 0 => 'GET',
@@ -71,7 +69,7 @@ return array(
                 'entity_identifier_name' => 'id',
                 'route_name' => 'jrv-folio.rest.address',
                 'route_identifier_name' => 'address_id',
-                'hydrator' => 'Zend\\Stdlib\\Hydrator\\ArraySerializable',
+                'hydrator' => 'Zend\\Stdlib\\Hydrator\\ClassMethods',
             ),
             'JrvFolio\\V1\\Rest\\Address\\AddressCollection' => array(
                 'entity_identifier_name' => 'id',
@@ -102,20 +100,20 @@ return array(
             ),
         ),
     ),
-    'doctrine' => [
-        'driver' => [
-            'JrvFolio' => [
-                'class' => 'Doctrine\ORM\Mapping\Driver\AnnotationDriver',
+    'doctrine' => array(
+        'driver' => array(
+            'JrvFolio' => array(
+                'class' => 'Doctrine\\ORM\\Mapping\\Driver\\AnnotationDriver',
                 'cache' => 'array',
-                'paths' => [
-                    __DIR__ . '/../src/JrvFolio/Entity'
-                ]
-            ],
-            'orm_default' => [
-                'drivers' => [
-                    'JrvFolio' => 'JrvFolio'
-                ]
-            ]
-        ]
-    ],
+                'paths' => array(
+                    0 => __DIR__ . '/../src/JrvFolio',
+                ),
+            ),
+            'orm_default' => array(
+                'drivers' => array(
+                    'JrvFolio' => 'JrvFolio',
+                ),
+            ),
+        ),
+    ),
 );
