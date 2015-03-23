@@ -26,8 +26,6 @@ class AddressResource extends AbstractEntityManagerResourceListener
 
         $hydrator->hydrate($data, $address);
 
-        var_dump($address); die;
-
         $entityManager = $this->getEntityManger();
 
         $entityManager->persist($address);
