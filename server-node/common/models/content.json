@@ -1,0 +1,36 @@
+{
+  "name": "Content",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true,
+      "required": false,
+      "index": true
+    },
+    "title": {
+      "type": "string",
+      "id": false,
+      "required": true,
+      "index": false
+    },
+    "body": {
+      "type": "string",
+      "id": false,
+      "required": true,
+      "index": false
+    },
+    "date": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}
