@@ -1,7 +1,7 @@
 {
   "name": "Content",
   "base": "PersistedModel",
-  "strict": false,
+  "strict": true,
   "idInjection": false,
   "options": {
     "validateUpsert": true
@@ -27,6 +27,9 @@
     },
     "date": {
       "type": "date"
+    },
+    "details": {
+      "type": "object"
     }
   },
   "validations": [],

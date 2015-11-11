@@ -1,6 +1,6 @@
 {
-    "username": "",
-    "password": "",
-    "email": "",
+    "username": "String",
+    "password": "String",
+    "email": "String",
     "roles": ["<role>"]
 }

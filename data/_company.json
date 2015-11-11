@@ -1,6 +1,8 @@
 {
-    "name": "",
-    "summary": "",
-    "address": "<address>",
-    "contacts": []
+    "name": "String",
+    "summary": "String",
+    "address": "Address",
+    "contacts": [
+        "Contact"
+    ]
 }

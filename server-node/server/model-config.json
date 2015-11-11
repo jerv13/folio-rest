@@ -29,5 +29,9 @@
   "Content": {
     "dataSource": "db",
     "public": true
+  },
+  "Detail": {
+    "dataSource": "db",
+    "public": true
   }
 }

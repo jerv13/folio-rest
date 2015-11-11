@@ -1,8 +1,7 @@
 {
-    "name": "",
-    "details": "",
+    "name": "String",
+    "details": "String",
     "level": 1,
-    "dataSince": "",
-    "dataLastUsed": "",
-    "relatedUsed": []
+    "dataSince": "2000-01-01T00:00:00Z",
+    "dataLastUsed": "2000-01-01T00:00:00Z",
 }

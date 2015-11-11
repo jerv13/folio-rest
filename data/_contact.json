@@ -1,7 +1,7 @@
 {
-    "name": "",
-    "phone": "",
-    "email": "",
-    "site": "",
-    "address": "<address>"
+    "name": "String",
+    "phone": "String",
+    "email": "String",
+    "site": "String",
+    "address": "Address"
 }

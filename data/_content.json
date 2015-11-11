@@ -1,5 +1,9 @@
 {
-  "title": "",
-  "body": "",
-  "detail": null
+  "title": "String",
+  "body": "String",
+  "subtitle": "String",
+  "summary": "String",
+  "points": [
+    "String"
+  ]
 }

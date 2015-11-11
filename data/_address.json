@@ -1,7 +1,7 @@
 {
-    "address": "",
-    "addressMore": "",
-    "city": "",
-    "state": "",
-    "zip": ""
+    "address": "String",
+    "addressMore": "String",
+    "city": "String",
+    "state": "String",
+    "zip": "String"
 }

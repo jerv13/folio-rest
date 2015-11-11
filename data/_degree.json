@@ -1,5 +1,5 @@
 {
-  "areaofstudy": "",
-  "type": "",
-  "date": "2003-12-01T00:00:00Z"
+  "areaofstudy": "String",
+  "type": "String",
+  "date": "0000-01-01T00:00:00Z"
 }

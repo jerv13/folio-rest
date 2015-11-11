@@ -1,7 +1,7 @@
 {
-    "title": "",
-    "summary": "",
-    "skills": ["<skill>"],
-    "dateRange": "<dateRange>",
-    "company": "<company>"
+    "title": "String",
+    "summary": "String",
+    "skills": ["Skill"],
+    "dateRange": "DateRange",
+    "company": "Company"
 }

@@ -1,7 +1,7 @@
 {
-  "subtitle": "",
-  "summary": "",
-  "points": [],
-  "intro": "",
-  "tagline": ""
+  "subtitle": "String",
+  "summary": "String",
+  "points": ["String"],
+  "intro": "String",
+  "tagline": "String"
 }
