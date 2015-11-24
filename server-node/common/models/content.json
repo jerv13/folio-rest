@@ -13,23 +13,26 @@
       "required": false,
       "index": true
     },
-    "title": {
-      "type": "string",
-      "id": false,
-      "required": true,
-      "index": false
-    },
     "body": {
       "type": "string",
       "id": false,
       "required": true,
       "index": false
     },
-    "date": {
-      "type": "date"
+    "subtitle": {
+      "type": "string"
     },
-    "details": {
-      "type": "object"
+    "title": {
+      "type": "string",
+      "id": false,
+      "required": true,
+      "index": false
+    },
+    "summary": {
+      "type": "string"
+    },
+    "points": {
+      "type": "string"
     }
   },
   "validations": [],

@@ -30,7 +30,43 @@
     "dataSource": "db",
     "public": true
   },
-  "Detail": {
+  "Address": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Company": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Contact": {
+    "dataSource": null,
+    "public": true
+  },
+  "Created": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Degree": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Link": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Modified": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Position": {
+    "dataSource": "db",
+    "public": true
+  },
+  "School": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Skill": {
     "dataSource": "db",
     "public": true
   }

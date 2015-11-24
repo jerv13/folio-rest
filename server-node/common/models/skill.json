@@ -1,0 +1,30 @@
+{
+  "name": "Skill",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "details": {
+      "type": "string"
+    },
+    "level": {
+      "type": "number"
+    },
+    "dateSince": {
+      "type": "date"
+    },
+    "dateLastUsed": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}

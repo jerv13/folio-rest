@@ -1,0 +1,24 @@
+{
+  "name": "Degree",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "areaOfStudy": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}

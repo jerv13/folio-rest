@@ -1,0 +1,37 @@
+{
+  "name": "Position",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "summary": {
+      "type": "string",
+      "required": true
+    },
+    "skills": {
+      "type": [
+        "object"
+      ]
+    },
+    "companyId": {
+      "type": "string"
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}
