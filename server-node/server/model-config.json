@@ -32,42 +32,50 @@
   },
   "Address": {
     "dataSource": "db",
-    "public": true
+    "public": false
   },
   "Company": {
     "dataSource": "db",
-    "public": true
+    "public": false
   },
   "Contact": {
     "dataSource": null,
-    "public": true
+    "public": false
   },
   "Created": {
     "dataSource": "db",
-    "public": true
+    "public": false
   },
   "Degree": {
     "dataSource": "db",
-    "public": true
+    "public": false
   },
   "Link": {
     "dataSource": "db",
-    "public": true
+    "public": false
   },
   "Modified": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ProfileContent": {
     "dataSource": "db",
     "public": true
   },
   "Position": {
     "dataSource": "db",
-    "public": true
+    "public": false
   },
   "School": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Service": {
     "dataSource": "db",
     "public": true
   },
   "Skill": {
     "dataSource": "db",
-    "public": true
+    "public": false
   }
 }

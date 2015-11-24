@@ -2,7 +2,7 @@ angular.module('biz.overview', ['jfolio.alert', 'jfolio.http'])
 
     .factory('overviewDataService', ['CoreHttpService', function(CoreHttpService) {
 
-        var overviewDataService = new CoreHttpService('user.profile.professional.overview.php');
+        var overviewDataService = new CoreHttpService('/ProfileContents/overview');
 
         return overviewDataService;
     }])

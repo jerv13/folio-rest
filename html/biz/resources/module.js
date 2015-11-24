@@ -2,7 +2,7 @@ angular.module('biz.resources', ['jfolio.alert', 'jfolio.http'])
 
     .factory('resourcesDataService', ['CoreHttpService', function(CoreHttpService) {
 
-        var resourcesDataService = new CoreHttpService('user.profile.professional.resources.php');
+        var resourcesDataService = new CoreHttpService('/ProfileContents/resources');
 
         return resourcesDataService;
     }])

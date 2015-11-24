@@ -2,7 +2,7 @@ angular.module('biz.skills', ['jfolio.alert', 'jfolio.http'])
 
     .factory('skillsDataService', ['CoreHttpService', function(CoreHttpService) {
 
-        var skillsDataService = new CoreHttpService('user.profile.professional.skills.php');
+        var skillsDataService = new CoreHttpService('/ProfileContents/skills');
 
         return skillsDataService;
     }])

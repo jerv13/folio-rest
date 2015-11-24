@@ -2,7 +2,7 @@ angular.module('biz.about', ['jfolio.alert', 'jfolio.http'])
 
     .factory('aboutDataService', ['CoreHttpService', function(CoreHttpService) {
 
-        var aboutDataService = new CoreHttpService('user.profile.personal.php');
+        var aboutDataService = new CoreHttpService('/ProfileContents/personal');
 
         return aboutDataService;
     }])

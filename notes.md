@@ -1,6 +1,11 @@
 Requirements
 ------------
 
+### ToDo ###
+
+- Convert to Angular Routes
+- Use LoopBack angular SDK
+
 ### HTML Application ###
 
 - Must be display in standard modern browsers

@@ -2,7 +2,7 @@ angular.module('biz.contact', ['jfolio.alert', 'jfolio.http'])
 
     .factory('contactDataService', ['CoreHttpService', function(CoreHttpService) {
 
-        var contactDataService = new CoreHttpService('user.profile.professional.contact.php');
+        var contactDataService = new CoreHttpService('/ProfileContents/contact');
 
         return contactDataService;
     }])

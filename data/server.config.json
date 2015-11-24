@@ -5,9 +5,11 @@
         "url": {
             "scheme": "http",
             "hostname": "localhost",
-            "port": "",
-            "basepath": "folioREST/server.php"
+            "port": "3000",
+            "basepath": "/"
         },
-        "endpoints": []
+        "endpoints": [
+
+        ]
     }
 }

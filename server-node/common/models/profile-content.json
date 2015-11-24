@@ -1,20 +1,12 @@
 {
-  "name": "Created",
-  "base": "PersistedModel",
-  "strict": false,
+  "name": "ProfileContent",
+  "base": "Model",
+  "strict": true,
   "idInjection": false,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "date": {
-      "type": "date",
-      "required": true
-    },
-    "userId": {
-      "type": "string",
-      "required": true
-    }
   },
   "validations": [],
   "relations": {},
@@ -29,12 +21,6 @@
       "accessType": "READ",
       "principalType": "ROLE",
       "principalId": "$everyone",
-      "permission": "ALLOW"
-    },
-    {
-      "accessType": "*",
-      "principalType": "ROLE",
-      "principalId": "admin",
       "permission": "ALLOW"
     }
   ],

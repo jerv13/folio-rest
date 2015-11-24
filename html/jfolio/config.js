@@ -1,45 +1,49 @@
 /* expects a global var: jfolioServerConfig */
 angular.module('jfolio.config', [])
 
-    .factory('coreConfig', [function() {
+    .factory(
+        'coreConfig', [
+            function () {
 
-    }
-])
+            }
+        ]
+    )
+    .factory(
+        'httpConfig', [
+            function () {
 
-    .factory('httpConfig', [function() {
+                var HttpConfig = function () {
+                    var self = this;
 
-        var HttpConfig = function() {
+                    self.url = {
+                        scheme: "http",
+                        hostname: "localhost",
+                        port: "3000",
+                        basepath: "api"
+                    };
 
-            var self = this;
+                    self.setUrl = function (url) {
+                        if (typeof(url) === "object") {
 
-            self.url = {
-                scheme: "",
-                hostname: "/",
-                port: "",
-                basepath: "@folioREST/folioREST/server.php"
-            };
+                            self.url = url;
+                        }
+                    };
 
-            self.setUrl = function(url) {
-                if(typeof(url) === "object"){
+                    self.getFullUrl = function (filepath) {
 
-                    self.url = url;
+                        return self.url.scheme + (self.url.scheme.length > 0 ? "://" : "/") + self.url.hostname + (self.url.port.length > 0 ? ":" : "") + self.url.port + "/" + self.url.basepath + "/" + ((typeof(filepath) === "string") ? filepath : "");
+                    };
+                };
+
+                var httpConfig = new HttpConfig();
+
+                if (typeof jfolioServerConfig !== 'undefined' && jfolioServerConfig.httpConfig && jfolioServerConfig.httpConfig.url) {
+                    httpConfig.setUrl(jfolioServerConfig.httpConfig.url);
+                } else {
+                    console.log("Server config not available, using default");
                 }
-            };
 
-            self.getFullUrl = function(filepath) {
-
-                return self.url.scheme + (self.url.scheme.length > 0 ? "://" : "/") + self.url.hostname + (self.url.port.length > 0 ? ":" : "") + self.url.port + "/" + self.url.basepath + "/" + ((typeof(filepath) === "string") ? filepath : "");
-            };
-        };
-
-        var httpConfig = new HttpConfig();
-        if(jfolioServerConfig && jfolioServerConfig.httpConfig && jfolioServerConfig.httpConfig.url){
-
-            httpConfig.setUrl(jfolioServerConfig.httpConfig.url);
-        } else {
-            console.log("Server config not available, using default");
-        }
-
-        return httpConfig;
-    }
-]);
+                return httpConfig;
+            }
+        ]
+    );
