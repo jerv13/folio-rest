@@ -18,7 +18,7 @@ angular.module('jfolio.config', [])
                     self.url = {
                         scheme: "http",
                         hostname: "localhost",
-                        port: "3000",
+                        port: "8888",
                         basepath: "api"
                     };
 
