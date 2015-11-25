@@ -22,6 +22,9 @@
   "routes": {
   },
   "files": {
+    "loopback#static": {
+      "params": "$!../html/public"
+    }
   },
   "final": {
     "loopback#urlNotFound": {}
