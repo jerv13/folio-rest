@@ -1,0 +1,118 @@
+@fontMainColor: #EEEEEE;
+@fontActiveColor: #FFFFFF;
+@mainColor: #324583;
+@mainDarkColor: #23305c;
+@mainLightColor: #9ba3bb;
+@mainLighterColor: #475890;
+@highlight1Color: #ffa302;
+@highlight2Color: #ffff00;
+
+@displayMinSmall: 45em;
+/*
+    // Standard
+    @media screen and (min-width: @displayMinSmall) {
+
+    }
+    // Small
+    @media screen and (max-width: @displayMinSmall) {
+
+    }
+*/
+@pageWidth: 67em;
+@pageMinHeight: 40em;
+
+@pageSmallWidth: 100%;
+@pageSmallMinHeight: 20em;
+html {
+    height: 100%;
+}
+body {
+    background-color: @mainColor;
+    color: @fontMainColor;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+
+    a, a:link {
+        color: @fontMainColor;
+    }
+    a:visited {
+        color: @fontMainColor;
+    }
+    a:active {
+        color: @fontActiveColor;
+    }
+    a:hover {
+        color: @fontActiveColor;
+        cursor: pointer;
+    }
+    p {
+        margin-bottom: 1em;
+    }
+
+    .alerts {
+        position: relative;
+        width: 30;
+        .alert{
+            background-color: rgba(white, .9);
+            border: .1em solid @mainLighterColor;
+            @include border-top-radius(.5em);
+            @include border-bottom-radius(.5em);
+            @include border-left-radius(.5em);
+            @include border-right-radius(.5em);
+            color: @mainColor;
+            font-size: .8em;
+            margin: .5em auto;
+            padding: .5em;
+            vertical-align: text-top;
+            width: 27.9em;
+            .icon {
+                display: inline-block;
+                margin: 0 0 0 0;
+                padding-right: 1em;
+                vertical-align: text-top;
+                width: 1.5em; height: 100%;
+            }
+            .code {
+                display: none;
+                padding-top: .5em;
+                vertical-align: text-top;
+            }
+            .message {
+                display: inline-block;
+                font-weight: bold;
+                margin: auto auto;
+                padding-top: .5em;
+                vertical-align: text-top;
+                width: 24em;
+            }
+            &.info {}
+            &.notice {
+                background-color: rgba(#FFFFCC, .9);
+                border: .1em solid yellow;
+                color: #333333;
+            }
+            &.warning {
+                background-color: rgba(#FFE0B2, .9);
+                border: .1em solid orange;
+                color: #4C2E00;
+            }
+            &.error {
+                background-color: rgba(#FFCCCC, .9);
+                border: .1em solid red;
+                color: #4C0000;
+                .code {
+                    display: inline-block;
+                    padding-right: .5em;
+                    width: 3em;
+                }
+                .message {
+                    width: 20em;
+                }
+            }
+            &:after{
+                @include clearFix();
+            }
+        }
+
+    }
+}

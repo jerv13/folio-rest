@@ -26,13 +26,7 @@ module.exports = function (ProfileContent) {
             name: all.contact.name
         };
 
-        var result = {
-            code: 200,
-            data: content,
-            message: ''
-        };
-
-        cb(null, result)
+        cb(null, content)
     };
 
     ProfileContent.resources = function (req, cb) {
@@ -46,18 +40,16 @@ module.exports = function (ProfileContent) {
     };
 
     ProfileContent.skills = function (req, cb) {
-
-        var content = require(root + "user.profile.professional.json");
-        var edu = require(root + "user.profile.education.json");
-        content.education = edu.schools;
+        var all = require(root + "user.profile.professional.json");
+        var content = all.skills;
 
         cb(null, content)
     };
 
     ProfileContent.resume = function (req, cb) {
-
-        var all = require(root + "user.profile.professional.json");
-        var content = all.skills;
+        var content = require(root + "user.profile.professional.json");
+        var edu = require(root + "user.profile.education.json");
+        content.education = edu.schools;
 
         cb(null, content)
     };

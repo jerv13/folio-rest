@@ -9,4 +9,4 @@ Simple protfoilio site for demonstration of:
 - HTML/JS modular design
 - CSS3 and media queries
 - REST using php or node.js
-- Redis or Mongo DB
+- Mongo DB

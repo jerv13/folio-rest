@@ -1,5 +1,5 @@
 {
-  "name": "server-node",
+  "name": "folio-rest-server-node",
   "version": "1.0.0",
   "main": "server/server.js",
   "scripts": {

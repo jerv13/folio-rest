@@ -3,7 +3,9 @@ module.exports = function (Service) {
     Service.config = function (req, cb) {
         var content = require("./../../../data/server.config.json");
 
-        cb(null, "TEST")
+        var err = new Error(err);
+
+        cb(err, content);
     };
 
     Service.remoteMethod(
@@ -16,9 +18,9 @@ module.exports = function (Service) {
         }
     );
 
-    Service.afterRemote('config', function(context, remoteMethodOutput, next) {
-        console.log(context);
-        context.result = "testd"; //JSON.stringify(context.result);
-        next();
-    });
+    //Service.afterRemote('config', function(context, remoteMethodOutput, next) {
+    //    console.log(context);
+    //    context.result = "testd"; //JSON.stringify(context.result);
+    //    next();
+    //});
 };

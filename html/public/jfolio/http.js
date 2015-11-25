@@ -1,9 +1,16 @@
+/**
+ * jfolio.http
+ */
 angular.module('jfolio.http', ['jfolio.config'])
 
     .factory(
         'coreHttp', [
             '$http', 'httpConfig', function ($http, httpConfig) {
 
+                /**
+                 * CoreHttp
+                 * @constructor
+                 */
                 var CoreHttp = function () {
 
                     var self = this;
@@ -63,10 +70,9 @@ angular.module('jfolio.http', ['jfolio.config'])
                         success(
                             function (data, status, headers, config) {
                                 console.log('CoreHttp.success', data);
-                                if (typeof(data) !== 'object' || typeof(data.code) === 'undefined' || typeof(data.message) === 'undefined') {
+                                if (typeof(data) !== 'object') {
 
                                     if (typeof(onFail) === 'function') {
-
                                         onFail(
                                             {
                                                 code: 500,
@@ -79,23 +85,24 @@ angular.module('jfolio.http', ['jfolio.config'])
                                     return;
                                 }
 
-                                if (data.code !== 200 || status !== 200) {
+                                if (status !== 200) {
 
-                                    if (!data.message) {
-
-                                        data.message = self.defaultMessage;
+                                    if (typeof data !== 'object' || data === null) {
+                                        data = {};
                                     }
 
-                                    if (!data.code) {
-
-                                        data.code = status;
+                                    if (!data.error) {
+                                        data.error = {
+                                            status: status,
+                                            message: self.defaultMessage
+                                        }
                                     }
 
                                     if (typeof(onFail) === 'function') {
                                         onFail(
                                             {
-                                                code: data.code,
-                                                message: data.message
+                                                code: data.error.status,
+                                                message: data.error.message
                                             }
                                         );
                                     }
@@ -105,9 +112,7 @@ angular.module('jfolio.http', ['jfolio.config'])
                                 }
 
                                 if ((typeof(onSuccess) === 'function')) {
-
-                                    onSuccess(data.data, config);
-
+                                    onSuccess(data, config);
                                 }
 
                                 self.loading = false;
@@ -132,7 +137,6 @@ angular.module('jfolio.http', ['jfolio.config'])
                                 return;
                             }
                         );
-
                     };
                 };
 
@@ -145,6 +149,14 @@ angular.module('jfolio.http', ['jfolio.config'])
         'CoreHttpService', [
             'coreHttp', function (coreHttp) {
 
+                /**
+                 * CoreHttpService
+                 * @param url
+                 * @param reqData
+                 * @param onSuccess
+                 * @param onFail
+                 * @constructor
+                 */
                 var CoreHttpService = function (url, reqData, onSuccess, onFail) {
 
                     var self = this;
