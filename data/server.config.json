@@ -1,15 +1,11 @@
 {
-    "coreConfig": {
+    "url": {
+        "scheme": "http",
+        "hostname": "localhost",
+        "port": "3000",
+        "basepath": "/"
     },
-    "httpConfig": {
-        "url": {
-            "scheme": "http",
-            "hostname": "localhost",
-            "port": "3000",
-            "basepath": "/"
-        },
-        "endpoints": [
+    "endpoints": [
 
-        ]
-    }
+    ]
 }

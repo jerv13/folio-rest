@@ -7,7 +7,7 @@
             <div class="subtitle">Links to Good Information</div>
         </div>
         <div class="part2">
-            <div class="summary">Da Da Da</div>
+            <div class="summary">Links</div>
 
             <div class="link" ng-repeat="link in resourcesDataService.data.links">
                 <a href="{{link.url}}" target="_blank"><i class="fa fa-external-link-square" title="{{link.title}}"></i><div class="label">{{link.title}}</div></a>

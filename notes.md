@@ -134,37 +134,11 @@ Unity/blender
 Dependencies
 ------------
 
-### SASS (DEV) ###
-
-Install:
-
-    `
-    gem install sass
-    `
-
-Usage:
-
-    `
-    Biz:
-    sass --watch ./html/biz/_sass/styles.scss:./html/biz/css/styles.css
-
-    CORE (jfolio)
-    sass --watch ./html/jfolio/_sass/styles.scss:./html/jfolio/css/styles.css
-    `
+### LESS (DEV) ###
 
 Resources:
 
-### SASS - bourbon (DEV) ###
-
-Install:
-
-    `
-    gem install bourbon
-    cd html/_sass/lib/bourbon
-    bourbon install
-    `
-
-Resources:
+    http://lesscss.org/
 
 ### AngularJS (DEV, QA, PROD) ###
 

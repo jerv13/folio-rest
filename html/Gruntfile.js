@@ -12,14 +12,22 @@ module.exports = function (grunt) {
                         sourceMap: true
                     },
                     files: {
-                        'js/scripts.min.js': [
-                            'public/biz/index.js',
+                        'public/jfolio/js/scripts.min.js': [
+                            'public/jfolio/_js/alerts.js',
+                            'public/jfolio/_js/config.js',
+                            'public/jfolio/_js/core.js',
+                            'public/jfolio/_js/exception.js',
+                            'public/jfolio/_js/http.js'
+                        ],
+                        'public/biz/js/scripts.min.js': [
+                            'public/biz/_js/index.js',
                             'public/biz/about/module.js',
                             'public/biz/contact/module.js',
                             'public/biz/nav/module.js',
                             'public/biz/overview/module.js',
                             'public/biz/resources/module.js',
-                            'public/biz/resources/skills.js'
+                            'public/biz/resume/module.js',
+                            'public/biz/skills/module.js'
                         ]
                     }
                 }
@@ -28,14 +36,22 @@ module.exports = function (grunt) {
                 options: {},
                 dist: {
                     files: {
-                        'js/scripts.js': [
-                            'public/biz/index.js',
+                        'public/jfolio/js/scripts.js': [
+                            'public/jfolio/_js/alerts.js',
+                            'public/jfolio/_js/config.js',
+                            'public/jfolio/_js/core.js',
+                            'public/jfolio/_js/exception.js',
+                            'public/jfolio/_js/http.js'
+                        ],
+                        'public/biz/js/scripts.js': [
+                            'public/biz/_js/index.js',
                             'public/biz/about/module.js',
                             'public/biz/contact/module.js',
                             'public/biz/nav/module.js',
                             'public/biz/overview/module.js',
                             'public/biz/resources/module.js',
-                            'public/biz/resources/skills.js'
+                            'public/biz/resume/module.js',
+                            'public/biz/skills/module.js'
                         ]
                     }
                 }
@@ -43,31 +59,29 @@ module.exports = function (grunt) {
             less: {
                 development: {
                     options: {
-                        paths: ["assets/css"]
+                        compress: false,
+                        yuicompress: false,
+                        optimization: 2
                     },
                     files: {
-                        "public/biz/css/test.css": [
-                            "public/biz/_less/base.less",
-                            "public/biz/_less/page.less",
+                        "public/biz/css/styles.css": [
                             "public/biz/_less/styles.less"
                         ]
                     }
                 },
-                production: {
+                default: {
                     options: {
                         paths: ["assets/css"],
                         plugins: [
-                            new (require('less-plugin-autoprefix'))({browsers: ["last 2 versions"]}),
-                            new (require('less-plugin-clean-css'))(cleanCssOptions)
+                            //new (require('less-plugin-autoprefix'))({browsers: ["last 2 versions"]}),
+                            //new (require('less-plugin-clean-css'))(cleanCssOptions)
                         ],
                         modifyVars: {
                             bizImgPath: '"/biz/images"'
                         }
                     },
                     files: {
-                        "public/biz/css/test.css": [
-                            "public/biz/_less/base.less",
-                            "public/biz/_less/page.less",
+                        "public/biz/css/styles.css": [
                             "public/biz/_less/styles.less"
                         ]
                     }
@@ -83,5 +97,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
 
     // Default task(s).
-    grunt.registerTask('default', ['uglify', 'copy', 'concat', 'less']);
+    grunt.registerTask('default', ['uglify', 'concat', 'less']);
 };

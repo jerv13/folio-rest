@@ -7,13 +7,13 @@
             <div class="info">
                 <div class="title">Contact</div>
                 <div class="details" >
-                    <div class="name">{{contactDataService.data.contact.name}}</div>
-                    <div class="phone">{{contactDataService.data.contact.phone}}</div>
-                    <div class="email">{{contactDataService.data.contact.email}}</div>
+                    <div class="name">{{contactDataService.data.name}}</div>
+                    <div class="phone">{{contactDataService.data.phone}}</div>
+                    <div class="email">{{contactDataService.data.email}}</div>
                     <div class="address">
-                        <div class="city">{{contactDataService.data.contact.address.city}}</div>
-                        <div class="state">,{{contactDataService.data.contact.address.state}}</div>
-                        <div class="zip">{{contactDataService.data.contact.address.zip}}</div>
+                        <span class="city">{{contactDataService.data.address.city}}</span>
+                        <span class="state">,{{contactDataService.data.address.state}}</span>
+                        <span class="zip">{{contactDataService.data.address.zip}}</span>
                     </div>
                 </div>
             </div>
