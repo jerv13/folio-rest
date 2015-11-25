@@ -23,7 +23,7 @@
   },
   "files": {
     "loopback#static": {
-      "params": "$!../html/public"
+      "params": "$!../../html/public"
     }
   },
   "final": {
