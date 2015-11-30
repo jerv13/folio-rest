@@ -36,7 +36,6 @@ angular.module('jfolio.http', ['jfolio.config'])
                     };
 
                     self.get = function (url, data, onSuccess, onFail, headers) {
-
                         self.loading = true;
 
                         var config = {

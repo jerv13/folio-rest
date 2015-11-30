@@ -31,12 +31,13 @@ angular.module('jfolio.config', [])
 
                     self.getFullUrl = function (filepath) {
 
-                        return self.url.scheme
-                            + (self.url.scheme.length > 0 ? "://" : "/")
-                            + (self.url.scheme.hostname > 0 ? self.url.scheme.hostname : "/")
+                        var url =  (self.url.scheme.length > 0 ? self.url.scheme + "://" : "")
+                            + (self.url.hostname.length > 0 ? self.url.hostname : "")
                             + (self.url.port.length > 0 ? ":"+ self.url.port : "")
-                            + (self.url.basepath > 0 ? "/" + self.url.basepath + "/" : "")
+                            + (self.url.basepath.length > 0 ? "/" + self.url.basepath : "")
                             + ((typeof(filepath) === "string") ? filepath : "");
+                        console.log('Full Url: ' + url);
+                        return url;
                     };
                 };
 
