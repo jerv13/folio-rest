@@ -9,17 +9,44 @@
     <title>Jerv Folio</title>
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <style type="text/css">
+        header {
+            background-color: #324583;
+            color: #FFFFFF;
+            border-bottom: 5px solid #151d37;
+            margin-bottom: 1em;
+        }
+        .main {
+            border: 1px solid #c8d0ea;
+            padding-bottom: 1em;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12"><h1>Jerv Folio Sites</h1></div>
-        </div>
-        <div class="row" style="border: 1px solid #ff0000;">
-            <div class="col-md-6"><a href="/biz/index.html">Simple Biz Site</a></div>
-            <div class="col-md-6"><a href="/biz/index.html" class="btn btn-primary btn-sm" role="button">Go</a></div>
+<div class="container main">
+    <header class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12"><h1>Jerv Folio Sites</h1></div>
+    </header>
+    <div class="row">
+        <div class="col-lg-5 col-md-6 col-sm-8 col-xs-12">
+            <ul class="nav nav-pills nav-stacked">
+                <li>
+                    <div class="row list-group-item">
+                        <div class="col-md-11 col-sm-11 col-xs-11">
+                            <strong><a href="/biz/index.html">Simple Biz Site</a></strong>
+                        </div>
+                        <div class="col-md-1 col-sm-1 col-xs-1">
+                            <a href="/biz/index.html"
+                               class="btn btn-primary btn-xs">Go</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
+</div>
 </body>
 </html>
