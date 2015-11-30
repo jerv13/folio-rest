@@ -119,9 +119,9 @@ angular.module('jfolio.config', [])
                     var self = this;
 
                     self.url = {
-                        scheme: "http",
-                        hostname: "localhost",
-                        port: "80",
+                        scheme: "",
+                        hostname: "",
+                        port: "",
                         basepath: "api"
                     };
 
@@ -134,7 +134,12 @@ angular.module('jfolio.config', [])
 
                     self.getFullUrl = function (filepath) {
 
-                        return self.url.scheme + (self.url.scheme.length > 0 ? "://" : "/") + self.url.hostname + (self.url.port.length > 0 ? ":" : "") + self.url.port + "/" + self.url.basepath + "/" + ((typeof(filepath) === "string") ? filepath : "");
+                        return self.url.scheme
+                            + (self.url.scheme.length > 0 ? "://" : "/")
+                            + (self.url.scheme.hostname > 0 ? self.url.scheme.hostname : "/")
+                            + (self.url.port.length > 0 ? ":"+ self.url.port : "")
+                            + (self.url.basepath > 0 ? "/" + self.url.basepath + "/" : "")
+                            + ((typeof(filepath) === "string") ? filepath : "");
                     };
                 };
 
