@@ -4,5 +4,10 @@
   "main": "server-node/server/server.js",
   "dependencies": {
   },
-  "description": "folio-rest"
+  "description": "folio-rest",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jerv13/folio-rest"
+  }
 }
