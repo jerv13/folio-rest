@@ -1,0 +1,8 @@
+{
+  "name": "folio-rest",
+  "version": "1.0.0",
+  "main": "server-node/server/server.js",
+  "dependencies": {
+  },
+  "description": "folio-rest"
+}
