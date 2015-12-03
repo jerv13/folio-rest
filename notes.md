@@ -35,7 +35,7 @@ Requirements
     - May allow user registration
     - May allow for comments system
         - Utilize pagination
-    - Must expose cofiguration required by client as API and and JS file
+    - Must expose configuration required by client as API and and JS file
     - Must expose available end-point to client as key value object ({ "key": "api_path", ...})
     - Should have good documentation
     - May include i18n
@@ -133,6 +133,8 @@ Unity/blender
 
 Dependencies
 ------------
+
+### Grunt (DEV) ###
 
 ### LESS (DEV) ###
 
