@@ -1,10 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>Resume</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-Language" content="en"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/resume/css/styles.css"/>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.20/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.20/angular-resource.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="/resume/js/lb-services.js"></script>
+    <script src="/resume/js/module.js"></script>
+    <script src="/resume/js/editable.js"></script>
+    <script src="/resume/js/resume.js"></script>
+    <script src="/resume/js/login.js"></script>
 </head>
-<body>
+<body ng-app="jervfolio.resume">
+
+<!--<div ng-controller="jervfolioResumeLoginController">-->
+    <!--<form>-->
+        <!--<label>Username: </label>-->
+        <!--<input type="text" ng-model="user.email"/>-->
+        <!--<label>Password: </label>-->
+        <!--<input type="password" ng-model="user.password"/>-->
+    <!--</form>-->
+    <!--<pre>{{user | json}}</pre>-->
+<!--</div>-->
+
+<div ng-controller="jervfolio.resume.resume.controller">
+    <div class="bizResume">
+
+        <!--<button class="btn btn-primary" ng-click="editing=!editing">Edit</button>-->
+
+        <!--<div editable="{{editing}}" ng-model="resume.contact.phone">sasdasd</div>-->
+
+        <div class="loading" ng-show="loading">Loading</div>
+        
+        <div class="alerts" ng-show="alerts.length > 0"><div ng-repeat="alert in alerts"><div class="alert {{alert.type}} number_{{alert.code}}"><div class="icon"><i class="fa fa-exclamation-triangle fa-2x"></i></div><div class="code">{{alert.code}}: </div><div class="message">{{alert.message}}</div><div></div></div></div></div>
+        
+        <div ng-show="resume">
+            <header class="resumeheader">
+                <div class="part1">
+                    <div class="title">{{resume.contact.name}}</div>
+                    <div class="subtitle">{{resume.title}}</div>
+                </div>
+                <div class="part2">
+                    <div class="address">
+                        <div class="city">{{resume.contact.address.city}}</div>
+                        <div class="state">,{{resume.contact.address.state}}</div>
+                        <div class="zip">{{resume.contact.address.zip}}</div>
+                    </div>
+                    <div class="contact">
+                        <div class="phone">{{resume.contact.phone}}</div>
+                        <div class="email">{{resume.contact.email}}</div>
+                        <div class="website"><a href="{{resume.contentContact.contact.site}}" target="_blank"><span class="protocol"></span>{{resume.contentContact.contact.site}}</a></div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="resumebody">
+                <section class="summary">
+                    <div class="part1">
+                        <div class="title">Summary</div>
+                    </div>
+                    <div class="part2">
+                        <div class="subtitle">{{resume.title}}</div>
+                        <div class="points">
+                            <ul>
+                                <li ng-repeat="point in resume.outline">{{point}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="interests">
+                    <div class="part1">
+                        <div class="title">Interests</div>
+                    </div>
+                    <div class="part2">
+                        <div ng-repeat="interest in resume.interests" class="interest">
+                            <div class="title">{{interest.title}}</div>
+                            <div class="points" ng-show="interest.outline.length > 0">
+                                <ul>
+                                    <li ng-repeat="point in interest.outline">{{point}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="experience">
+                    <div class="part1">
+                        <div class="title">Experience</div>
+                    </div>
+                    <div class="part2">
+                        <div class="position" ng-repeat="experience in resume.experience">
+                            <div class="overview">
+                                <div class="title">{{experience.title}}</div>
+                                <div class="datarange">
+                                    <div class="start">{{experience.position.dateRange.start | date:'MM/yyyy'}}</div>
+                                    <div class="end" ng-show="experience.position.dateRange.end">{{experience.position.dateRange.end | date:'MM/yyyy'}}</div>
+                                    <div class="now" ng-hide="experience.position.dateRange.end">present</div>
+                                </div>
+                            </div>
+                            <div class="company">
+                                <div class="name">{{experience.position.company.name}}</div>
+                                <div class="address">
+                                    <div class="city">{{experience.position.company.address.city}}</div>
+                                    <div class="state">,{{experience.position.company.address.state}}</div>
+                                    <div class="zip">{{experience.position.company.address.zip}}</div>
+                                </div>
+                            </div>
+                            <div class="body"><p ng-repeat="ebody in experience.body" ng-bind="ebody"></p></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="education">
+                    <div class="part1">
+                        <div class="title">Education</div>
+                    </div>
+                    <div class="part2">
+                        <div class="school" ng-repeat="school in resume.education">
+                            <div class="degree">
+                                <div class="title">{{school.degrees[0].areaofstudy}}</div>
+                                <div class="type">{{school.degrees[0].type}}</div>
+                                <div class="date">{{school.degrees[0].date | date:'yyyy'}}</div>
+                            </div>
+                            <div class="company">
+                                <div class="name">{{school.company.name}}</div>
+                                <div class="address">
+                                    <div class="city">{{school.company.address.city}}</div>
+                                    <div class="state">,{{school.company.address.state}}</div>
+                                    <div class="zip">{{school.company.address.zip}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <footer class="resumefooter">
+                <div class="copyright">Copyright (C) 2015 JervDesign.</div>
+            </footer>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
