@@ -1,11 +1,10 @@
 {
-    "url": {
-        "scheme": "http",
-        "hostname": "localhost",
-        "port": "3000",
-        "basepath": "/"
-    },
-    "endpoints": [
-
-    ]
+  "url": {
+    "scheme": "http",
+    "hostname": "localhost",
+    "port": "3000",
+    "basepath": "/"
+  },
+  "endpoints": [
+  ]
 }

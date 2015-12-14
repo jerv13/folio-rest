@@ -5,7 +5,7 @@ angular.module('biz.nav', [])
         return {
             restrict: 'A',
             //template : '',
-            templateUrl: 'nav/module.tpl',
+            templateUrl: '/biz/nav/module.tpl',
             scope: {
                 navitems: '=',
                 activenavsection: '=',

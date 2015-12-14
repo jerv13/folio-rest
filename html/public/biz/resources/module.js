@@ -12,7 +12,7 @@ angular.module('biz.resources', ['jfolio.alert', 'jfolio.http'])
         return {
             restrict: 'A',
             //template : '',
-            templateUrl: 'resources/module.tpl',
+            templateUrl: '/biz/resources/module.tpl',
             link: function(scope, element, attrs, ngModel) {
 
                 console.log("bizResourcesInclude");

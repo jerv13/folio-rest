@@ -1874,6 +1874,9 @@ body .alerts .alert.error .message {
   padding-bottom: .1em;
   text-align: right;
 }
+.module .bizContact .body .info .details .link {
+  display: block;
+}
 .module .bizContact .body .form div {
   padding: .2em;
   vertical-align: text-top;
@@ -2515,6 +2518,9 @@ body .alerts .alert.error .message {
 .module .bizSkills .skills .skill .info .details {
   font-size: .7em;
   padding-top: .2em;
+}
+.module .bizSkills .skills .skill .info .details .link {
+  display: block;
 }
 .module .bizSkills .skills .skill .level {
   display: block;

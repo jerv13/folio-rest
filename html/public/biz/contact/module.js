@@ -17,7 +17,7 @@ angular.module('biz.contact', ['jfolio.alert', 'jfolio.http'])
         return {
             restrict: 'A',
             //template : '',
-            templateUrl: 'contact/module.tpl',
+            templateUrl: '/biz/contact/module.tpl',
             link: function(scope, element, attrs, ngModel) {
 
                 console.log("bizContactInclude");

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('biz.index', ['jfolio.exception', 'jfolio.alert', 'biz.nav', 'biz.contact', 'biz.resume', 'biz.overview', 'biz.skills', 'biz.about', 'biz.resources']);
+angular.module('biz.index', ['ngRoute', 'jfolio.exception', 'jfolio.alert', 'biz.nav', 'biz.contact', 'biz.resume', 'biz.overview', 'biz.skills', 'biz.about', 'biz.resources']);
 
 var bizPageController = function($scope, Exception, Alerts, overviewDataService, resumeDataService, skillsDataService, aboutDataService, resourcesDataService) {
 
@@ -92,6 +92,26 @@ var bizPageController = function($scope, Exception, Alerts, overviewDataService,
 };
 
 bizPageController.$inject = ['$scope', 'Exception', 'Alerts', 'overviewDataService', 'resumeDataService', 'skillsDataService', 'aboutDataService', 'resourcesDataService'];
+
+angular.module('biz.index').config(
+    function ($routeProvider, $locationProvider) {
+        // @todo
+        //$routeProvider
+        //    .when(
+        //        '/Overview', {
+        //            templateUrl: '/biz/overview/page.html',
+        //        }
+        //    )
+        //    .otherwise(
+        //        '/Overview', {
+        //            templateUrl: '/biz/overview/page.html',
+        //        }
+        //    );
+
+        $locationProvider.html5Mode(true);
+    }
+);
+
 angular.module('biz.about', ['jfolio.alert', 'jfolio.http'])
 
     .factory('aboutDataService', ['CoreHttpService', function(CoreHttpService) {
@@ -106,7 +126,7 @@ angular.module('biz.about', ['jfolio.alert', 'jfolio.http'])
         return {
             restrict: 'A',
             //template : '',
-            templateUrl: 'about/module.tpl',
+            templateUrl: '/biz/about/module.tpl',
             link: function(scope, element, attrs, ngModel) {
 
                 console.log("bizAboutInclude");
@@ -158,7 +178,7 @@ angular.module('biz.contact', ['jfolio.alert', 'jfolio.http'])
         return {
             restrict: 'A',
             //template : '',
-            templateUrl: 'contact/module.tpl',
+            templateUrl: '/biz/contact/module.tpl',
             link: function(scope, element, attrs, ngModel) {
 
                 console.log("bizContactInclude");
@@ -225,7 +245,7 @@ angular.module('biz.nav', [])
         return {
             restrict: 'A',
             //template : '',
-            templateUrl: 'nav/module.tpl',
+            templateUrl: '/biz/nav/module.tpl',
             scope: {
                 navitems: '=',
                 activenavsection: '=',
@@ -292,6 +312,7 @@ angular.module('biz.nav', [])
         };
     }
 ]);
+
 angular.module('biz.overview', ['jfolio.alert', 'jfolio.http'])
 
     .factory('overviewDataService', ['CoreHttpService', function(CoreHttpService) {
@@ -306,7 +327,7 @@ angular.module('biz.overview', ['jfolio.alert', 'jfolio.http'])
         return {
             restrict: 'A',
             //template : '',
-            templateUrl: 'overview/module.tpl',
+            templateUrl: '/biz/overview/module.tpl',
             link: function(scope, element, attrs, ngModel) {
 
                 console.log("bizOverviewInclude");
@@ -353,7 +374,7 @@ angular.module('biz.resources', ['jfolio.alert', 'jfolio.http'])
         return {
             restrict: 'A',
             //template : '',
-            templateUrl: 'resources/module.tpl',
+            templateUrl: '/biz/resources/module.tpl',
             link: function(scope, element, attrs, ngModel) {
 
                 console.log("bizResourcesInclude");
@@ -400,7 +421,7 @@ angular.module('biz.resume', ['ngSanitize', 'jfolio.alert', 'jfolio.http'])
         return {
             restrict: 'A',
             //template : '',
-            templateUrl: 'resume/module.tpl',
+            templateUrl: '/biz/resume/module.tpl',
             link: function(scope, element, attrs, ngModel) {
 
                 console.log("Include module.res1");
@@ -435,66 +456,87 @@ angular.module('biz.resume', ['ngSanitize', 'jfolio.alert', 'jfolio.http'])
 
 angular.module('biz.skills', ['jfolio.alert', 'jfolio.http'])
 
-    .factory('skillsDataService', ['CoreHttpService', function(CoreHttpService) {
+    .factory(
+        'skillsDataService', [
+            'CoreHttpService', function (CoreHttpService) {
 
-        var skillsDataService = new CoreHttpService('/ProfileContents/skills');
+                var skillsDataService = new CoreHttpService('/ProfileContents/skills');
 
-        return skillsDataService;
-    }])
-
-    .directive('bizSkillsInclude', ['Alerts', 'skillsDataService', function(Alerts, skillsDataService) {
-
-        return {
-            restrict: 'A',
-            //template : '',
-            templateUrl: 'skills/module.tpl',
-            link: function(scope, element, attrs, ngModel) {
-
-                console.log("bizSkillsInclude");
-                scope.skillsDataAlerts = new Alerts(scope);
-                scope.skillsDataAlerts.displayTime = 0;
-                scope.error = false;
-
-                skillsDataService.onExecuteStart = function() {
-
-                    scope.skillsDataAlerts.clearAll();
-                    scope.error = false;
-                };
-
-                skillsDataService.onSuccess = function() {
-
-                    scope.skillsDataAlerts.clearAll();
-                    scope.error = false;
-                };
-
-                skillsDataService.onFail = function(exception) {
-
-                    console.log('skillsDataService.onFail');
-                    scope.skillsDataAlerts.thrwNew(exception, 'error');
-                    scope.error = true;
-                };
-
-                scope.skillsDataService = skillsDataService;
+                return skillsDataService;
             }
-        };
-    }
-])
-    .filter('skillLevel', function() {
+        ]
+    )
 
-    var skillLevelMap = {
-        0: "None",
-        1: "Beginner",
-        2: "Intermediate",
-        3: "Advanced",
-        4: "Expert"
-    };
+    .directive(
+        'bizSkillsInclude', [
+            'Alerts', 'skillsDataService', function (Alerts, skillsDataService) {
 
-    return function(input) {
+                return {
+                    restrict: 'A',
+                    //template : '',
+                    templateUrl: '/biz/skills/module.tpl',
+                    link: function (scope, element, attrs, ngModel) {
 
-        if (typeof(skillLevelMap[input]) !== 'undefined') {
+                        console.log("bizSkillsInclude");
+                        scope.skillsDataAlerts = new Alerts(scope);
+                        scope.skillsDataAlerts.displayTime = 0;
+                        scope.error = false;
 
-            return skillLevelMap[input];
+                        skillsDataService.onExecuteStart = function () {
+
+                            scope.skillsDataAlerts.clearAll();
+                            scope.error = false;
+                        };
+
+                        skillsDataService.onSuccess = function (data) {
+                            angular.forEach(
+                                data,
+                                function (value) {
+                                    var dateSince = new Date(value.dateSince);
+                                    var dateLastUsed = new Date();
+                                    if (value.dateLastUsed) {
+                                        dateLastUsed = new Date(value.dateLastUsed);
+                                    }
+
+                                    value.yearsexperience = Math.ceil(dateLastUsed.getFullYear() - dateSince.getFullYear());
+                                }
+                            );
+
+                            scope.skillsDataAlerts.clearAll();
+                            scope.error = false;
+                        };
+
+                        skillsDataService.onFail = function (exception) {
+
+                            console.log('skillsDataService.onFail');
+                            scope.skillsDataAlerts.thrwNew(exception, 'error');
+                            scope.error = true;
+                        };
+
+                        scope.skillsDataService = skillsDataService;
+                    }
+                };
+            }
+        ]
+    )
+    .filter(
+        'skillLevel', function () {
+
+            var skillLevelMap = {
+                0: "None",
+                1: "Beginner",
+                2: "Intermediate",
+                3: "Advanced",
+                4: "Expert"
+            };
+
+            return function (input) {
+
+                if (typeof(skillLevelMap[input]) !== 'undefined') {
+
+                    return skillLevelMap[input];
+                }
+                return skillLevelMap[0];
+            };
         }
-        return skillLevelMap[0];
-    };
-});
+    );

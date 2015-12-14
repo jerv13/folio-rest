@@ -21,6 +21,7 @@ module.exports = function (grunt) {
                         ],
                         'public/biz/js/scripts.min.js': [
                             'public/biz/_js/index.js',
+                            'public/biz/_js/route.js',
                             'public/biz/about/module.js',
                             'public/biz/contact/module.js',
                             'public/biz/nav/module.js',
@@ -45,6 +46,7 @@ module.exports = function (grunt) {
                         ],
                         'public/biz/js/scripts.js': [
                             'public/biz/_js/index.js',
+                            'public/biz/_js/route.js',
                             'public/biz/about/module.js',
                             'public/biz/contact/module.js',
                             'public/biz/nav/module.js',

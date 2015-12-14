@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('biz.index', ['jfolio.exception', 'jfolio.alert', 'biz.nav', 'biz.contact', 'biz.resume', 'biz.overview', 'biz.skills', 'biz.about', 'biz.resources']);
+angular.module('biz.index', ['ngRoute', 'jfolio.exception', 'jfolio.alert', 'biz.nav', 'biz.contact', 'biz.resume', 'biz.overview', 'biz.skills', 'biz.about', 'biz.resources']);
 
 var bizPageController = function($scope, Exception, Alerts, overviewDataService, resumeDataService, skillsDataService, aboutDataService, resourcesDataService) {
 

@@ -18,13 +18,13 @@
                 <div class="yearsexperience">Experience</div>
                 <div class="lastused">Last Used</div>
             </div>
-            <div class="skill" ng-repeat="skill in skillsDataService.data">
+            <div class="skill" ng-repeat="skill in skillsDataService.data" ng-show="skill.active">
                 <div class="info">
                     <div class="name">{{skill.name}}</div>
                     <div class="details">{{skill.details}}</div>
                 </div>
                 <div class="level">{{skill.level  | skillLevel}}</div>
-                <div class="yearsexperience">TBD</div>
+                <div class="yearsexperience">{{skill.yearsexperience}} years</div>
                 <div class="lastused" ng-show="skill.dateLastUsed">{{skill.dateLastUsed | date:'yyyy'}}</div>
                 <div class="lastused" ng-hide="skill.dateLastUsed">present</div>
             </div>

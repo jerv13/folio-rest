@@ -1,67 +1,67 @@
 {
-    "title": "Discovery is Half the Journey",
-    "summary": "Learning new things creates understanding and only through understanding can we truly know.",
-    "outline": [],
-    "schools": [
-        {
-            "content": {
-                "title": "Multimedia and Game Design",
-                "body": "",
-                "detail": null
-            },
-            "dateRange": {
-                "start": "2002-12-01T00:00:00Z",
-                "end": "2003-12-01T00:00:00Z"
-            },
-            "company": {
-                "name": "University of Advancing Technology",
-                "summary": "",
-                "address": {
-                    "address": "",
-                    "addressMore": "",
-                    "city": "Tempe",
-                    "state": "AZ",
-                    "zip": ""
-                },
-                "contacts": []
-            },
-            "degrees": [
-                {
-                    "areaofstudy": "Multimedia and Game Design",
-                    "type": "Assoc. of Arts",
-                    "date": "2003-12-01T00:00:00Z"
-                }
-            ]
+  "title": "Discovery is Half the Journey",
+  "summary": "Learning new things creates understanding and only through understanding can we truly know.",
+  "outline": [],
+  "schools": [
+    {
+      "content": {
+        "title": "Multimedia and Game Design",
+        "body": "",
+        "detail": null
+      },
+      "dateRange": {
+        "start": "2002-12-01T00:00:00Z",
+        "end": "2003-12-01T00:00:00Z"
+      },
+      "company": {
+        "name": "University of Advancing Technology",
+        "summary": "",
+        "address": {
+          "address": "",
+          "addressMore": "",
+          "city": "Tempe",
+          "state": "AZ",
+          "zip": ""
         },
+        "contacts": []
+      },
+      "degrees": [
         {
-            "content": {
-                "title": "Visual Communication",
-                "body": "",
-                "detail": null
-            },
-            "dateRange": {
-                "start": "1998-12-01T00:00:00Z",
-                "end": "2000-12-01T00:00:00Z"
-            },
-            "company": {
-                "name": "Southern Illinois University",
-                "summary": "",
-                "address": {
-                    "address": "",
-                    "addressMore": "",
-                    "city": "Carbondale",
-                    "state": "IL",
-                    "zip": ""
-                },
-                "contacts": []
-            },
-            "degrees": [
-                {
-                    "areaofstudy": "Visual Communication",
-                    "type": "Bachelor of Arts",
-                    "date": "2000-12-01T00:00:00Z"
-                }
-            ]
+          "areaofstudy": "Multimedia and Game Design",
+          "type": "Assoc. of Arts",
+          "date": "2003-12-01T00:00:00Z"
         }
-    ]
+      ]
+    },
+    {
+      "content": {
+        "title": "Visual Communication",
+        "body": "",
+        "detail": null
+      },
+      "dateRange": {
+        "start": "1998-12-01T00:00:00Z",
+        "end": "2000-12-01T00:00:00Z"
+      },
+      "company": {
+        "name": "Southern Illinois University",
+        "summary": "",
+        "address": {
+          "address": "",
+          "addressMore": "",
+          "city": "Carbondale",
+          "state": "IL",
+          "zip": ""
+        },
+        "contacts": []
+      },
+      "degrees": [
+        {
+          "areaofstudy": "Visual Communication",
+          "type": "Bachelor of Arts",
+          "date": "2000-12-01T00:00:00Z"
+        }
+      ]
+    }
+  ]
 }

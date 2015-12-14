@@ -8,48 +8,19 @@
                 <div class="title">Contact</div>
                 <div class="details" >
                     <div class="name">{{contactDataService.data.name}}</div>
-                    <div class="phone">{{contactDataService.data.phone}}</div>
                     <div class="email">{{contactDataService.data.email}}</div>
+                    <div class="clearfix">&nbsp;</div>
+                    <div class="link">{{contactDataService.data.site}}</div>
+                    <div class="link">{{contactDataService.data.linkedin}}</div>
+                    <div class="link">{{contactDataService.data.facebook}}</div>
+                    <div class="clearfix">&nbsp;</div>
+                    <div class="phone">{{contactDataService.data.phone}}</div>
                     <div class="address">
                         <span class="city">{{contactDataService.data.address.city}}</span>
                         <span class="state">,{{contactDataService.data.address.state}}</span>
                         <span class="zip">{{contactDataService.data.address.zip}}</span>
                     </div>
                 </div>
-            </div>
-            <div class="form">
-                <form id="bizContactForm">
-                    <div class="name">
-                        <label for="bizContactFormName">Name</label>
-                        <div class="input">
-                            <input id="bizContactFormName" name="name" type="text" />
-                        </div>
-                    </div>
-                    <div class="email">
-                        <label for="bizContactFormEmail">Email</label>
-                        <div class="input">
-                            <input id="bizContactFormEmail" name="email" type="email" />
-                        </div>
-                    </div>
-                    <div class="subject">
-                        <label for="bizContactFormSubject">Subject</label>
-                        <div class="input">
-                            <input id="bizContactFormSubject" name="subject" type="text" />
-                        </div>
-                    </div>
-                    <div class="message">
-                        <label for="bizContactFormMessage">Message</label>
-                        <div class="input">
-                            <textarea id="bizContactFormMessage" name="message"></textarea>
-                        </div>
-                    </div>
-                    <div class="submit">
-                        <div class="input">
-                            <input type="button" value="Send" ng-click="buildReCaptcha('contactReCaptcha')" />
-                        </div>
-                    </div>
-                    <div id="contactReCaptcha" class="reCAPTCHA"></div>
-                </form>
             </div>
         </div>
     </div>

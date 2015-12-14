@@ -12,7 +12,7 @@ angular.module('biz.resume', ['ngSanitize', 'jfolio.alert', 'jfolio.http'])
         return {
             restrict: 'A',
             //template : '',
-            templateUrl: 'resume/module.tpl',
+            templateUrl: '/biz/resume/module.tpl',
             link: function(scope, element, attrs, ngModel) {
 
                 console.log("Include module.res1");

@@ -74,7 +74,7 @@
                                 <div class="zip">{{experience.position.company.address.zip}}</div>
                             </div>
                         </div>
-                        <div class="body" ng-bind-html="experience.body"></div>
+                        <div class="body"><p ng-repeat="ebody in experience.body" ng-bind-html="ebody"></p></div>
                     </div>
                 </div>
             </section>
@@ -104,8 +104,7 @@
         </section>
 
         <footer class="resumefooter">
-            <div class="link"><a><i class="fa fa-file-text-o" title="Download PDF"></i><div>Download PDF</div></a></div>
-            <div class="link"><a><i class="fa fa-file-text-o" title="Download Word"></i><div>Download Word</div></a></div>
+            <div class="link"><a><i class="fa fa-file-text-o" title="Download PDF"></i><div>Print</div></a></div>
         </footer>
     </div>
 </div>
