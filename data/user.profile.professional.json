@@ -330,7 +330,7 @@
     {
       "active": true,
       "name": "Version Control",
-      "details": "GIT SVN",
+      "details": "GIT, SVN",
       "level": 3,
       "dateSince": "2012-01-01T00:00:00Z",
       "dateLastUsed": "",
@@ -359,6 +359,15 @@
       "name": "Developer Tools",
       "details": "PHPStorm, NetBeans",
       "level": 3,
+      "dateSince": "2006-01-01T00:00:00Z",
+      "dateLastUsed": "",
+      "relatedUsed": []
+    },
+    {
+      "active": true,
+      "name": "Server Admin",
+      "details": "Apache, Nginx",
+      "level": 2,
       "dateSince": "2006-01-01T00:00:00Z",
       "dateLastUsed": "",
       "relatedUsed": []
