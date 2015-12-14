@@ -1,6 +1,72 @@
 module.exports = function (ProfileContent) {
 
+    var fs = require('fs');
     var root = "./../../../data/";
+
+    var backupFile = function (filename, cb) {
+        var currentContent = require(root + filename);
+
+        var dateStr = new Date().toISOString();
+
+        // @todo this path does not work
+        var backupFile = root + filename + '.' + dateStr + '.bak';
+        // console.log("Write backup: " + backupFile);
+
+        fs.writeFile(
+            backupFile,
+            currentContent,
+            'utf8',
+            cb
+        );
+    };
+
+    var writeFile = function (filename, data, cb) {
+
+        //fs.writeFile(
+        //    filename,
+        //    data,
+        //    'utf8',
+        //    cb
+        //);
+
+        cb(null, data);
+
+        //{
+        //    "accessType": "*",
+        //    "principalType": "ROLE",
+        //    "principalId": "$everyone",
+        //    "permission": "DENY"
+        //},
+
+        //{
+        //    "accessType": "READ",
+        //    "principalType": "ROLE",
+        //    "principalId": "$everyone",
+        //    "permission": "ALLOW"
+        //},
+        //
+        //{
+        //    "accessType": "WRITE",
+        //    "principalType": "ROLE",
+        //    "principalId": "$everyone",
+        //    "permission": "ALLOW"
+        //}
+    };
+
+    var writeData = function (filename, data, cb) {
+        backupFile(
+            filename,
+            function() {
+                writeFile(
+                    filename,
+                    data,
+                    function() {
+                        cb(null, data)
+                    }
+                )
+            }
+        )
+    };
 
     ProfileContent.personal = function (req, cb) {
 
@@ -53,6 +119,22 @@ module.exports = function (ProfileContent) {
 
         cb(null, content)
     };
+
+    //ProfileContent.updateResume = function (req, cb) {
+    //
+    //    writeData(
+    //        "user.profile.professional.json",
+    //        req,
+    //        function () {
+    //            var content = require(root + "user.profile.professional.json");
+    //            var edu = require(root + "user.profile.education.json");
+    //
+    //            content.education = edu.schools;
+    //
+    //            cb(null, content)
+    //        }
+    //    );
+    //};
 
     ProfileContent.remoteMethod(
         'personal',
@@ -113,6 +195,16 @@ module.exports = function (ProfileContent) {
             description: 'Resume content.'
         }
     );
+
+    //ProfileContent.remoteMethod(
+    //    'updateResume',
+    //    {
+    //        accepts: {arg: 'data', type: 'object'},
+    //        returns: {root: true},
+    //        http: {verb: 'POST'},
+    //        description: 'Resume content.'
+    //    }
+    //);
 
 
 };
